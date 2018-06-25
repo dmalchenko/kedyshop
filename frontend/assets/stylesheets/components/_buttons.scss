@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+/* buttons */
+
+button {
+  appearance: none;
+}
+
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 1rem;
+  text-align: center;
+  outline: 0;
+  color: $COLOR_BACKGROUND_BASE;
+  background-color: $COLOR_BTN;
+  border: 1px solid $COLOR_BTN;
+  @include border-radius;
+  padding: 0.8rem 1rem;
+  width: 15rem;
+  transition: all $TRANSITION_DURATION_BASE;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $COLOR_BACKGROUND_BASE;
+    border-color: $COLOR_BTN_ACTIVE;
+    background: $COLOR_BTN_ACTIVE;
+  }
+
+  &[disabled]:hover,
+  &[disabled]:active,
+  &[disabled]:focus {
+    opacity: 0.3;
+    cursor: not-allowed;
+    border-color: $COLOR_BTN;
+    background: $COLOR_BTN;
+  }
+
+  &--block {
+    width: 100%;
+  }
+}
+
+.btn--secondary {
+  background: #ecf0f3;
+  color: #000;
+}
+
+.btn--secondary:hover {
+  background: #f1f1f1;
+  opacity: 1;
+  color: #000;
+}
+
+.btns {
+  display: flex;
+
+  &--center {
+    justify-content: center;
+  }
+
+  &--spaced {
+    justify-content: space-between;
+  }
+}
+.btn-close {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: url(../img/sprite.png) no-repeat;
+  background-position: -176px 0;
+  border: none;
+}
+
+.btn-close--active {
+  background-position: -188px 0;
+}
+/* /buttons */

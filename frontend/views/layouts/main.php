@@ -79,15 +79,19 @@ AppAsset::register($this);
 </footer>-->
 
 <header class="c-header">
-    <nav class="c-header__nav">
+    <nav class="c-header__wrap">
         <a class="c-header__logo" href="/">
             <img src="/images/logo.png">
         </a>
-        <div class="c-header__links--left">
+        <div class="c-header__menu">
             <a id="nav-menu-shop" class="c-header__link c-header__link--menu" href="/catalogue">
                 <span class="c-header__link-icon"></span>
                 <span class="c-header__link-text">Меню</span>
             </a>
+        </div>
+        <div class="phones">
+            <a class="phones__phone" href="tel:+ 7 (499) 110-99-71">+ 7 (499) 110-99-71</a>
+            <button class="btn btn--important">Заказать звонок</button>
         </div>
         <div class="c-header__links--right">
             <a id="nav-menu-cart" class="c-header__link c-header__link--cart" href="/cart">

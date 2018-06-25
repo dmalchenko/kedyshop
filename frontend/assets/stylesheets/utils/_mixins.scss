@@ -6,3 +6,15 @@
   margin-right: auto;
   max-width: $LG;
 }
+
+@mixin h1 {
+  font-size: 2.4rem;
+}
+
+@mixin h2 {
+  font-size: 2rem;
+}
+
+@mixin border-radius {
+  border-radius: 8px;
+}

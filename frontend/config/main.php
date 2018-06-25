@@ -12,7 +12,14 @@ return [
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
-        'request' => [
+	'assetManager' => [
+    		'bundles' => [
+        		'yii\bootstrap\BootstrapAsset' => [
+           	 		'css' => [],
+        		],
+   	 	],
+	],        
+	'request' => [
             'csrfParam' => '_csrf-frontend',
         ],
         'user' => [

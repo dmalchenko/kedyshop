@@ -3,9 +3,13 @@
 @import 'vendor/normalize';
 
 @import 'utils/config';
+@import 'utils/functions';
 @import 'utils/variables';
 @import 'utils/mixins';
 @import 'utils/fonts';
+
+@import 'components/buttons';
+@import 'components/phones';
 
 @import 'layout/header';
 @import 'layout/base';

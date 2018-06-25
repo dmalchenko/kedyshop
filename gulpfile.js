@@ -7,12 +7,12 @@ var postcss = require('gulp-postcss');
 
 gulp.task('css', function(){
   return gulp.src('frontend/assets/stylesheets/*.scss')
-    .pipe(sourcemaps.init())
+    // .pipe(sourcemaps.init())
     .pipe(sass(({outputStyle: 'compressed'})).on('error', sass.logError))
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(sourcemaps.write())
+    // .pipe(sourcemaps.write())
     .pipe(gulp.dest('frontend/web/css/'))
 });
 
