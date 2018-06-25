@@ -2,8 +2,10 @@
 
 @import 'vendor/normalize';
 
+@import 'utils/config';
 @import 'utils/variables';
 @import 'utils/mixins';
+@import 'utils/fonts';
 
 @import 'layout/header';
 @import 'layout/base';

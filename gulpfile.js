@@ -17,7 +17,7 @@ gulp.task('css', function(){
 });
 
 gulp.task('watch', function () {
-  gulp.watch('frontend/assets/stylesheets/*.scss', ['css']);
+  gulp.watch('frontend/assets/stylesheets/**/*.scss', ['css']);
 });
 
 gulp.task('js', function(){

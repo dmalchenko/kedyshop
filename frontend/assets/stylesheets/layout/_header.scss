@@ -4,15 +4,42 @@
 .c-header {
   background: $COLOR-BACKGROUND-BASE;
   box-shadow: 0 0 1rem rgba(0,0,0,0.15);
-  padding-top: .75rem;
-  font-size: 16px;
-  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
+
+  @if $STATE_HEADER_FIXED == true {
+    position: fixed;
+  }
+
+  &__nav {
+    @include container;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+
+    @media (min-width: $MD){
+
+    }
+
+    @media (min-width: $LG){
+    }
+  }
+
+  &__logo {
+    display: flex;
+    flex: 1;
+    align-items: center;
+
+    img {
+      width: 100%;
+      max-height: 100%;
+    }
+  }
 }
 
+/*
 @media (min-width: 767px){
   .c-header {
     padding-left: 2rem;
@@ -190,4 +217,4 @@
 
 .c-header__link-counter--active {
   background: #ea823c;
-}
+}*/

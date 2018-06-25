@@ -79,8 +79,8 @@ AppAsset::register($this);
 </footer>-->
 
 <header class="c-header">
-    <nav class="c-header__nav clearfix">
-        <a class="c-header__logo" href="">
+    <nav class="c-header__nav">
+        <a class="c-header__logo" href="/">
             <img src="/images/logo.png">
         </a>
         <div class="c-header__links--left">
@@ -139,7 +139,7 @@ AppAsset::register($this);
 				</span>
         </button>
         <ul class="c-menu__list">
-            <li class="c-menu__list-item c-cart-item clearfix">
+            <li class="c-menu__list-item c-cart-item">
                 <a href="" class="c-cart-item__image" style="background: url(img/content/cart_1.png); background-size: cover;"></a>
                 <div class="c-cart-item__info">
                     <a href="">
@@ -154,7 +154,7 @@ AppAsset::register($this);
                     </div>
                 </div>
             </li>
-            <li class="c-menu__list-item c-cart-item clearfix">
+            <li class="c-menu__list-item c-cart-item">
                 <a href="" class="c-cart-item__image" style="background: url(img/content/cart_2.png); background-size: cover;"></a>
                 <div class="c-cart-item__info">
                     <a href="">
@@ -172,11 +172,11 @@ AppAsset::register($this);
             </li>
         </ul>
         <div class="c-menu__confarmation">
-            <div class="clearfix">
+            <div>
                 <span class="c-menu__confarmation-caption c-menu__confarmation-caption--desc">Скидка:</span>
                 <span class="c-menu__confarmation-price">0 Р</span>
             </div>
-            <div class="clearfix">
+            <div>
                 <span class="c-menu__confarmation-caption">Сумма заказа:</span>
                 <span class="c-menu__confarmation-price">5000 Р</span>
             </div>
@@ -216,7 +216,7 @@ AppAsset::register($this);
 								<img class="c-catalogue-item__img" src="/images/content/content-7.jpg">
 								<span class="c-catalogue-item__desc">
 									<span class="c-catalogue-item__name">Название товара<span  class="c-catalogue-item__name-full"> в каталоге</span></span>
-									<span class="c-catalogue-item__price">2000 <span class="ruble">p</span></span>
+									<span class="c-catalogue-item__price">2000 <span class="ruble">Р</span></span>
 									<span class="c-catalogue-item__buy">
 										<span class="c-catalogue-item__btn-more">
 											<span class="icon icon--more"></span>
