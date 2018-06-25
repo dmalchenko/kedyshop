@@ -17,7 +17,8 @@
     @include container;
     display: flex;
     align-items: center;
-    padding: 1rem;
+    justify-content: space-between;
+    padding: 1rem 0;
 
     @media (min-width: $MD){
 
@@ -32,6 +33,7 @@
     flex: 1;
     align-items: center;
     max-width: 643px;
+    padding: 0 1rem;
 
     img {
       width: 100%;
@@ -44,6 +46,11 @@
     @media (min-width: $LG){
       display: none;
     }
+  }
+
+  &__cart {
+    display: flex;
+    align-items: center;
   }
 }
 

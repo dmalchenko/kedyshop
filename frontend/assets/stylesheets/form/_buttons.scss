@@ -9,15 +9,17 @@ button {
 .btn {
   display: inline-block;
   vertical-align: middle;
-  border-radius: 1rem;
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+  height: 3rem;
   text-align: center;
   outline: 0;
   color: $COLOR_BACKGROUND_BASE;
   background-color: $COLOR_BTN;
   border: 1px solid $COLOR_BTN;
   @include border-radius;
-  padding: 0.8rem 1rem;
-  width: 15rem;
+  padding: 0 1rem;
+  min-width: 7.5rem;
   transition: all $TRANSITION_DURATION_BASE;
 
   &:hover,
