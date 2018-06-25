@@ -1,0 +1,186 @@
+@charset "UTF-8";
+
+/* Footer */
+.c-footer__wrapper {
+  background: $COLOR-BACKGROUND-IMPORTANT;
+}
+
+.c-footer {
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+  font-size: 16px;
+  text-align: center;
+}
+
+.c-footer:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.c-footer a {
+  color: #9fa7aa;
+  font-size: 13px;
+  display: inline-block;
+}
+
+.c-footer a:hover {
+  color: #e87722;
+  text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+  .c-footer {
+    padding-top: 0;
+    padding-bottom: 0.75rem;
+    width: 100%;
+  }
+}
+
+.c-footer__navigation {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  width: 70%;
+}
+
+@media (max-width: 1024px) {
+  .c-footer__navigation {
+    width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .c-footer__navigation {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+.c-footer__navigation li {
+  display: inline-block;
+  padding: 0 4px;
+}
+
+@media (max-width: 767px) {
+  .c-footer__navigation li {
+    display: block;
+    padding: 0;
+  }
+}
+
+.c-footer__navigation a {
+
+}
+
+@media (max-width: 767px) {
+  .c-footer__navigation a {
+    text-transform: uppercase;
+    border-bottom: 1px solid #3e4146;
+    padding: 1rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .c-footer__navigation a:before {
+    content: none;
+  }
+}
+
+.c-footer__links {
+
+}
+
+@media (max-width: 767px) {
+  .c-footer__links {
+    margin: 0 auto;
+    width: 90%;
+  }
+}
+
+a.c-footer__link--city {
+  float: left;
+  position: relative;
+  color: #e87722;
+  padding-left: 25px;
+  padding-right: 20px;
+  margin-top: -21px;
+}
+
+.c-footer__link--city:before {
+  content: '';
+  width: 16px;
+  height: 20px;
+  background: url(../img/sprite.png) no-repeat;
+  background-position: -200px 0;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.c-footer__link--city:after {
+  content: '';
+  width: 10px;
+  height: 7px;
+  background: url(../img/sprite.png) no-repeat;
+  background-position: -216px 0;
+  display: block;
+  position: absolute;
+  top: 8px;
+  right: 0;
+}
+
+@media (max-width: 767px) {
+  a.c-footer__link--city {
+    margin-top: 0;
+  }
+}
+
+.c-visa-icon {
+  width: 61px;
+  height: 20px;
+  background: url(../img/sprite.png) no-repeat;
+  background-position: 0 -70px;
+}
+
+.c-master-card-icon {
+  width: 52px;
+  height: 32px;
+  background: url(../img/sprite.png) no-repeat;
+  background-position: -61px -70px;
+}
+
+.c-footer .c-paying-systems {
+  float: right;
+  margin-top: -27px;
+}
+
+@media (max-width: 767px) {
+  .c-footer .c-paying-systems {
+    margin-top: -6px;
+  }
+}
+
+.c-paying-systems .c-visa-icon {
+  display: inline-block;
+  vertical-align: middle;
+  opacity: 0.8;
+  margin-right: 10px;
+}
+
+.c-paying-systems .c-master-card-icon {
+  display: inline-block;
+  vertical-align: middle;
+  opacity: 0.8;
+}
+
+.c-paying-systems .c-visa-icon:hover {
+  opacity: 1;
+}
+
+.c-paying-systems .c-master-card-icon:hover {
+  opacity: 1;
+}
+/* /footer */
