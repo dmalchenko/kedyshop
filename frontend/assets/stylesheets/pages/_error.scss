@@ -1,0 +1,6 @@
+@charset "UTF-8";
+
+.site-error {
+  @include container;
+  @include content-block;
+}

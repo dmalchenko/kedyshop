@@ -1,0 +1,6 @@
+@charset "UTF-8";
+
+.delivery {
+  @include container;
+  @include content-block;
+}

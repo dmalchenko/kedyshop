@@ -3,7 +3,7 @@
 /* @var $this \yii\web\View */
 ?>
 
-<div>
+<div class="reviews">
         <div class="h2">Отзывы</div>
         <div class="item" itemscope="" itemtype="http://data-vocabulary.org/Review">
             <div>
