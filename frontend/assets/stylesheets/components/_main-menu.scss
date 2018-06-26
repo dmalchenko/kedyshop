@@ -17,6 +17,10 @@
     margin: 0;
     padding: 0;
     display: flex;
+
+    @media only screen and (max-width: $MD) {
+      flex-direction: column;
+    }
   }
 
   &__list-item {
@@ -31,10 +35,12 @@
       &:active {
 
       }
-    }
 
-    @media only screen and (max-width: $MD) {
-
+      @media only screen and (max-width: $MD) {
+        border: none;
+        text-align: center;
+        padding: 0.5rem 2rem;
+      }
     }
 
     &:last-child {

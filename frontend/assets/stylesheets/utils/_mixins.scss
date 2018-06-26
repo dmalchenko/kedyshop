@@ -7,7 +7,8 @@
   max-width: $LG;
 
   @media only screen and (max-width: $LG) {
-    margin: 0 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
     width: calc(100% - 2rem);
   }
 }
@@ -103,6 +104,10 @@
   @media only screen and (min-width: 769px) {
     width: calc(66.67% - 1rem);
   }
+}
+
+@mixin col-md-50 {
+
 }
 
 @mixin col-xs-hidden {

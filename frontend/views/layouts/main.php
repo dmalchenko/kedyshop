@@ -152,37 +152,37 @@ AppAsset::register($this);
 				</span>
         </button>
         <ul class="c-menu__list">
-            <li class="c-menu__list-item c-cart-item">
-                <a href="" class="c-cart-item__image" style="background: url(img/content/cart_1.png); background-size: cover;"></a>
-                <div class="c-cart-item__info">
-                    <a href="">
-                        <span class="c-cart-item__name">Название товара из каталога</span>
-                        <span class="c-cart-item__desc">Размер: XL</span>
-                    </a>
-                    <div class="c-cart-item__price-container">
-                        <span>500 Р</span>
-                        <button class="c-cart-item__btn-del">
-                            <span class="btn-close btn-close--active"></span>Удалить
-                        </button>
-                    </div>
-                </div>
-            </li>
-            <li class="c-menu__list-item c-cart-item">
-                <a href="" class="c-cart-item__image" style="background: url(img/content/cart_2.png); background-size: cover;"></a>
-                <div class="c-cart-item__info">
-                    <a href="">
-                        <span class="c-cart-item__name">Рассыпчатая пудра Multi-Eclat</span>
-                        <span class="c-cart-item__desc">Оттенок: PEACHY PINK</span>
-                        <span class="c-cart-item__desc">Объем: 50мл</span>
-                    </a>
-                    <div class="c-cart-item__price-container">
-                        <span>500 Р</span>
-                        <button class="c-cart-item__btn-del">
-                            <span class="btn-close btn-close--active"></span>Удалить
-                        </button>
-                    </div>
-                </div>
-            </li>
+<!--            <li class="c-menu__list-item c-cart-item">-->
+<!--                <a href="" class="c-cart-item__image" style="background: url(img/content/cart_1.png); background-size: cover;"></a>-->
+<!--                <div class="c-cart-item__info">-->
+<!--                    <a href="">-->
+<!--                        <span class="c-cart-item__name">Название товара из каталога</span>-->
+<!--                        <span class="c-cart-item__desc">Размер: XL</span>-->
+<!--                    </a>-->
+<!--                    <div class="c-cart-item__price-container">-->
+<!--                        <span>500 Р</span>-->
+<!--                        <button class="c-cart-item__btn-del">-->
+<!--                            <span class="btn-close btn-close--active"></span>Удалить-->
+<!--                        </button>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </li>-->
+<!--            <li class="c-menu__list-item c-cart-item">-->
+<!--                <a href="" class="c-cart-item__image" style="background: url(img/content/cart_2.png); background-size: cover;"></a>-->
+<!--                <div class="c-cart-item__info">-->
+<!--                    <a href="">-->
+<!--                        <span class="c-cart-item__name">Рассыпчатая пудра Multi-Eclat</span>-->
+<!--                        <span class="c-cart-item__desc">Оттенок: PEACHY PINK</span>-->
+<!--                        <span class="c-cart-item__desc">Объем: 50мл</span>-->
+<!--                    </a>-->
+<!--                    <div class="c-cart-item__price-container">-->
+<!--                        <span>500 Р</span>-->
+<!--                        <button class="c-cart-item__btn-del">-->
+<!--                            <span class="btn-close btn-close--active"></span>Удалить-->
+<!--                        </button>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </li>-->
         </ul>
         <div class="c-menu__confarmation">
             <div>
@@ -298,10 +298,10 @@ AppAsset::register($this);
             }
             return {
                 init: function() {
-//                    $('#nav-menu-cart').on('click', function(e) {
-//                        e.preventDefault();
-//                        toggleMenu();
-//                    });
+                   $('#nav-menu-cart').on('click', function(e) {
+                       e.preventDefault();
+                       toggleMenu();
+                   });
                     $('#menu-cart-btn-close').on('click', function(e) {
                         e.preventDefault();
                         toggleMenu();

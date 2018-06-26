@@ -16,6 +16,7 @@
   &__list-item {
     @include grid-item;
     @include col-lg-33;
+    @include col-md-50;
     @include col-xs-100;
   }
 }

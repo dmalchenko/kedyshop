@@ -23,7 +23,7 @@ $this->title = 'My Yii Application';
                         </select>
                         <span class="catalogue-item__price catalogue-item__price--old">Старая цена: 5990<span class="ruble">Р</span></span>
                         <span class="catalogue-item__price">Новая цена: 2990<span class="ruble">Р</span></span>
-                        <div class="catalogue-item__btns btns">
+                        <div class="catalogue-item__btns btns btns--spaced">
                             <a class="btn btn--secondary" href="">Подробнее</a>
                             <a class="btn" href="">Заказать</a>
                         </div>
