@@ -8,6 +8,10 @@
   @include container;
   border-radius: 8px;
 
+  @media only screen and (max-width: $MD) {
+    flex-direction: column;
+  }
+
   &__list {
     list-style-type: none;
     margin: 0;
@@ -27,6 +31,10 @@
       &:active {
 
       }
+    }
+
+    @media only screen and (max-width: $MD) {
+
     }
 
     &:last-child {

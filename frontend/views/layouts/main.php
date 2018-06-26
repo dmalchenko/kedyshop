@@ -203,12 +203,12 @@ AppAsset::register($this);
 <main class="c-main">
     <nav class="main-menu">
         <ul class="main-menu__list">
-            <li class="main-menu__list-item main-menu__list-item--active"><a href="">Главная</a></li>
-            <li class="main-menu__list-item"><a href="">Каталог</a></li>
-            <li class="main-menu__list-item"><a href="">Доставка</a></li>
-            <li class="main-menu__list-item"><a href="">О магазине</a></li>
-            <li class="main-menu__list-item"><a href="">Отзывы</a></li>
-            <li class="main-menu__list-item"><a href="">Контакты</a></li>
+            <li class="main-menu__list-item main-menu__list-item--active"><a href="/">Главная</a></li>
+            <li class="main-menu__list-item"><a href="catalogue">Каталог</a></li>
+            <li class="main-menu__list-item"><a href="delivery">Доставка</a></li>
+            <li class="main-menu__list-item"><a href="about">О магазине</a></li>
+            <li class="main-menu__list-item"><a href="reviews">Отзывы</a></li>
+            <li class="main-menu__list-item"><a href="contacts">Контакты</a></li>
         </ul>
     </nav>
     <?= $content ?>
