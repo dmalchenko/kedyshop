@@ -1,0 +1,6 @@
+@charset "UTF-8";
+
+.contacts {
+  @include container;
+  @include content-block;
+}
