@@ -1,0 +1,6 @@
+@charset "UTF-8";
+
+.about {
+  @include container;
+  @include content-block;
+}

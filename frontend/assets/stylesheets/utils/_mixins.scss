@@ -12,6 +12,14 @@
   }
 }
 
+@mixin content-block {
+  padding: 1rem;
+  border-radius: 8px;
+  background: $COLOR_BACKGROUND_BASE;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 @mixin h1 {
   font-size: 2.4rem;
 }
