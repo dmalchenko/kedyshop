@@ -7,14 +7,53 @@
   border: 1px solid $COLOR_BACKGROUND_UNIMPORTANT;
   padding: 1rem;
   border-radius: 8px;
+  transition: $TRANSITION_DURATION_BASE;
+  margin-bottom: 1rem;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border: 1px solid $COLOR_LINK_ACTIVE;
+    box-shadow: 0 0 10px 0 $COLOR_LINK_ACTIVE;
+  }
 
   &__title {
     font-size: 1.6rem;
     color: $COLOR_TEXT_BASE;
     text-align: center;
+    margin-bottom: 0.5rem;
+    display: flex;
+    flex: 1;
   }
 
-  img {
-    max-height: 200px;
+  &__img-link {
+    display: flex;
+    height: 200px;
+    align-items: center;
+    font-size: 0;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+
+  &__img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  &__size {
+    margin-bottom: 0.5rem;
+  }
+
+  &__price {
+    color: $COLOR_TEXT_IMPORTANT;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+
+    &--old {
+      text-decoration: line-through;
+      color: $COLOR_BACKGROUND_UNIMPORTANT;
+      font-size: 1.4rem;
+      margin-bottom: 0.3rem;
+    }
   }
 }

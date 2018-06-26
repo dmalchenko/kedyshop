@@ -18,5 +18,10 @@
     @include col-lg-33;
     @include col-md-50;
     @include col-xs-100;
+    display: flex;
+  }
+
+  &__desc {
+    @include content-block;
   }
 }
