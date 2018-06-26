@@ -4,50 +4,75 @@
 
 $this->title = 'My Yii Application';
 ?>
-<div class="site-index">
-    ABIRVALG!
-    <div class="jumbotron">
-        <h1>Congratulations!</h1>
-
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
-    </div>
-
-    <div class="body-content">
-
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
-            </div>
+<div class="catalogue">
+    <div class="catalogue__row">
+        <div class="catalogue-content">
+            <ul class="catalogue-content__list">
+                <li class="catalogue-content__list-item">
+                    <div class="catalogue-item">
+                        <a class="catalogue-item__title" href="">CONVERSE CHUCK TAYLOR ALL STAR II OX Grey (CONVERSE-89)</a>
+                        <img class="catalogue-item__img" src="images/content/content-7.jpg" alt="">
+                        <select class="catalogue-item__size">
+                            <option>36 euro</option>
+                            <option>37 euro</option>
+                            <option>38 euro</option>
+                            <option>39 euro</option>
+                            <option>40 euro</option>
+                            <option>41 euro</option>
+                            <option>42 euro</option>
+                        </select>
+                        <span class="catalogue-item__price catalogue-item__price--old">Старая цена: 5990<span class="ruble">Р</span></span>
+                        <span class="catalogue-item__price">Новая цена: 2990<span class="ruble">Р</span></span>
+                        <div class="catalogue-item__btns btns">
+                            <a class="btn btn--secondary" href="">Подробнее</a>
+                            <a class="btn" href="">Заказать</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="catalogue-content__list-item">
+                    <div class="catalogue-item">
+                        <a class="catalogue-item__title" href="">CONVERSE CHUCK TAYLOR ALL STAR II OX Grey (CONVERSE-89)</a>
+                        <img class="catalogue-item__img" src="images/content/content-7.jpg" alt="">
+                        <select class="catalogue-item__size">
+                            <option>36 euro</option>
+                            <option>37 euro</option>
+                            <option>38 euro</option>
+                            <option>39 euro</option>
+                            <option>40 euro</option>
+                            <option>41 euro</option>
+                            <option>42 euro</option>
+                        </select>
+                        <span class="catalogue-item__price catalogue-item__price--old">Старая цена: 5990<span class="ruble">Р</span></span>
+                        <span class="catalogue-item__price">Новая цена: 2990<span class="ruble">Р</span></span>
+                        <div class="catalogue-item__btns btns">
+                            <a class="btn btn--secondary" href="">Подробнее</a>
+                            <a class="btn" href="">Заказать</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="catalogue-content__list-item">
+                    <div class="catalogue-item">
+                        <a class="catalogue-item__title" href="">CONVERSE CHUCK TAYLOR ALL STAR II OX Grey (CONVERSE-89)</a>
+                        <img class="catalogue-item__img" src="images/content/content-7.jpg" alt="">
+                        <select class="catalogue-item__size">
+                            <option>36 euro</option>
+                            <option>37 euro</option>
+                            <option>38 euro</option>
+                            <option>39 euro</option>
+                            <option>40 euro</option>
+                            <option>41 euro</option>
+                            <option>42 euro</option>
+                        </select>
+                        <span class="catalogue-item__price catalogue-item__price--old">Старая цена: 5990<span class="ruble">Р</span></span>
+                        <span class="catalogue-item__price">Новая цена: 2990<span class="ruble">Р</span></span>
+                        <div class="catalogue-item__btns btns">
+                            <a class="btn btn--secondary" href="">Подробнее</a>
+                            <a class="btn" href="">Заказать</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
-
+        <div class="catalogue-sidebar">123</div>
     </div>
 </div>
