@@ -217,4 +217,13 @@ class SiteController extends Controller
     {
         return $this->render('contacts');
     }
+
+    public function actionReviews()
+    {
+        return $this->render('reviews');
+    }
+    public function actionDelivery()
+    {
+        return $this->render('delivery');
+    }
 }
