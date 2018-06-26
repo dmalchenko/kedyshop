@@ -212,4 +212,9 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
+
+    public function actionContacts()
+    {
+        return $this->render('contacts');
+    }
 }
