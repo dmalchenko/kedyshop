@@ -3,6 +3,10 @@
 /* Footer */
 .c-footer__wrapper {
   background: $COLOR_BACKGROUND_IMPORTANT;
+
+  @if $STATE_STICKY_FOOTER == true {
+    flex-shrink: 0;
+  }
 }
 
 .c-footer {

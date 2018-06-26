@@ -5,6 +5,11 @@
   margin-left: auto;
   margin-right: auto;
   max-width: $LG;
+
+  @media only screen and (max-width: $LG) {
+    margin: 0 1rem;
+    width: calc(100% - 2rem);
+  }
 }
 
 @mixin h1 {
@@ -17,4 +22,115 @@
 
 @mixin border-radius {
   border-radius: 8px;
+}
+
+
+@mixin grid-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+@mixin grid-item {
+  margin: 0 0.5rem;
+}
+
+@mixin col-lg-16 {
+  @media only screen and (min-width: 769px) {
+    width: 16.67%;
+  }
+}
+
+@mixin col-lg-20 {
+  @media only screen and (min-width: 769px) {
+    width: 20%;
+  }
+}
+
+@mixin col-lg-25 {
+  @media only screen and (min-width: 769px) {
+    width: 25%;
+  }
+}
+
+@mixin col-lg-33 {
+  @media only screen and (min-width: 769px) {
+    width: calc(33.33% - 1rem);
+  }
+}
+
+@mixin col-lg-30 {
+  @media only screen and (min-width: 769px) {
+    width: 30%;
+  }
+}
+
+@mixin col-lg-40 {
+  @media only screen and (min-width: 769px) {
+    width: 40%;
+  }
+}
+
+@mixin col-lg-50 {
+  @media only screen and (min-width: 769px) {
+    width: 50%;
+  }
+}
+
+@mixin col-lg-60 {
+  @media only screen and (min-width: 769px) {
+    width: 60%;
+  }
+}
+
+@mixin col-lg-65 {
+  @media only screen and (min-width: 769px) {
+    width: 65%;
+  }
+}
+
+@mixin col-lg-66 {
+  @media only screen and (min-width: 769px) {
+    width: calc(66.67% - 1rem);
+  }
+}
+
+@mixin col-xs-hidden {
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+@mixin col-xs-16 {
+  width: 16.65%;
+}
+
+@mixin col-xs-25 {
+  width: 25%;
+}
+
+@mixin col-xs-30 {
+  width: 30%;
+}
+
+@mixin col-xs-33 {
+  width: 33.33%;
+}
+
+@mixin col-xs-45 {
+  width: 45%;
+}
+
+@mixin col-xs-50 {
+  width: 50%;
+}
+
+@mixin col-xs-66 {
+  width: 66%;
+}
+
+@mixin col-xs-100 {
+  width: calc(100% - 1rem);
 }

@@ -1,0 +1,44 @@
+.main-menu {
+  background: $COLOR_BACKGROUND_IMPORTANT;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.3);
+  font-size: 1.6rem;
+  padding: 0.8rem 1.5rem;
+  color: $COLOR_BACKGROUND_BASE;
+  display: flex;
+  @include container;
+  border-radius: 8px;
+
+  &__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  &__list-item {
+    a {
+      display: block;
+      padding: 0 2rem;
+      color: $COLOR_BACKGROUND_BASE;
+      border-right: 1px solid $COLOR_BACKGROUND_UNIMPORTANT;
+
+      &:hover,
+      &:focus,
+      &:active {
+
+      }
+    }
+
+    &:last-child {
+      a {
+        border-right: none;
+      }
+    }
+
+    &--active {
+      a {
+        color: $COLOR_LINK_ACTIVE;
+      }
+    }
+  }
+}

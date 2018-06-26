@@ -4,15 +4,17 @@ var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var sourcemaps = require('gulp-sourcemaps');
 var postcss = require('gulp-postcss');
+var rev = require('gulp-rev');
 
 gulp.task('css', function(){
   return gulp.src('frontend/assets/stylesheets/*.scss')
-    // .pipe(sourcemaps.init())
+    .pipe(sourcemaps.init())
     .pipe(sass(({outputStyle: 'compressed'})).on('error', sass.logError))
     .pipe(postcss([
       autoprefixer()
     ]))
-    // .pipe(sourcemaps.write())
+    .pipe(sourcemaps.write())
+    // .pipe(rev())
     .pipe(gulp.dest('frontend/web/css/'))
 });
 

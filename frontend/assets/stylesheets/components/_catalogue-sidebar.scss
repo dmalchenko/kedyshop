@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+.catalogue-sidebar {
+  @include grid-item;
+  @include col-lg-33;
+  background: $COLOR_BACKGROUND_BASE;
+  border-radius: 8px;
+
+  @media only screen and (max-width: $MD) {
+    display: none;
+  }
+}

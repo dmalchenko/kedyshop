@@ -12,12 +12,19 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  @if $STATE_STICKY_FOOTER == true {
+      display: flex;
+  }
+
 }
 
 body {
   display: flex; // 1
   flex-direction: column; // 1
-  background: $COLOR_BACKGROUND_BASE;
+  background-color: $COLOR_BACKGROUND_SECONDARY;
+  background-image: url('/images/background.png');
+  background-repeat: repeat;
   color: $COLOR_TEXT_BASE;
   font-family: $FONT_FAMILY_TEXT;
   font-weight: $FONT_WEIGHT_TEXT;
@@ -69,25 +76,22 @@ select {
 }
 
 a {
-  color: #000;
+  color: $COLOR_LINK;
   text-decoration: none;
-  font-size: 16px;
-  font-family: Tahoma, Arial, sans-serif;
-}
+  font-size: 1.4rem;
+  font-family: $FONT_FAMILY_TEXT;
 
-a:hover,
-a:active,
-a.active {
-  color: #e87722;
-}
+  &:hover,
+  &:active,
+  &:active {
+    color: $COLOR_LINK_ACTIVE;
 
-a.disabled,
-span.disabled {
-  color: #d1d1d1;
-}
-
-a.disabled:hover {
-  color: #e87722;
+    svg {
+      path {
+        fill: $COLOR_LINK_ACTIVE;
+      }
+    }
+  }
 }
 
 input,

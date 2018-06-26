@@ -2,15 +2,20 @@
 /* Header */
 
 .c-header {
-  background: $COLOR_BACKGROUND_BASE;
-  box-shadow: 0 0 1rem rgba(0,0,0,0.15);
+  //background: $COLOR_BACKGROUND_BASE;
+  //box-shadow: 0 3px 5px 1px rgba(0,0,0,0.15);
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
+  margin-top: 5rem;
 
   @if $STATE_HEADER_FIXED == true {
     position: fixed;
+  }
+
+  @if $STATE_STICKY_FOOTER == true {
+    flex-shrink: 0;
   }
 
   &__wrap {
@@ -19,12 +24,14 @@
     align-items: center;
     justify-content: space-between;
     padding: 1rem 0;
+    flex-direction: column;
 
-    @media (min-width: $MD){
 
+    @media only screen and (min-width: $MD){
+      flex-direction: row;
     }
 
-    @media (min-width: $LG){
+    @media only screen and (min-width: $LG){
     }
   }
 
@@ -34,6 +41,11 @@
     align-items: center;
     max-width: 643px;
     padding: 0 1rem;
+    margin-bottom: 1rem;
+
+    @media only screen and (min-width: $MD){
+      margin-bottom: 0;
+    }
 
     img {
       width: 100%;

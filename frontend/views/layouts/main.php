@@ -20,8 +20,7 @@ AppAsset::register($this);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
-<!--    <title>--><?//= Html::encode($this->title) ?><!--</title>-->
-    <title>ALICEMEGASTAR</title>
+    <title>ALICEMEGASTAR<!--<?//= Html::encode($this->title) ?>--></title>
     <?php $this->head() ?>
 </head>
 <body>
@@ -78,27 +77,39 @@ AppAsset::register($this);
     </div>
 </footer>-->
 
+<div id="nav-menu-cart" class="header-informer" href="/cart">
+    <a href="/cart" class="header-informer__link">
+        <svg class="header-informer__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="20" x="0px" y="0px" viewBox="0 0 486.569 486.569" style="enable-background:new 0 0 486.569 486.569;" xml:space="preserve">
+            <path d="M146.069,320.369h268.1c30.4,0,55.2-24.8,55.2-55.2v-112.8c0-0.1,0-0.3,0-0.4c0-0.3,0-0.5,0-0.8c0-0.2,0-0.4-0.1-0.6   c0-0.2-0.1-0.5-0.1-0.7s-0.1-0.4-0.1-0.6c-0.1-0.2-0.1-0.4-0.2-0.7c-0.1-0.2-0.1-0.4-0.2-0.6c-0.1-0.2-0.1-0.4-0.2-0.6   c-0.1-0.2-0.2-0.4-0.3-0.7c-0.1-0.2-0.2-0.4-0.3-0.5c-0.1-0.2-0.2-0.4-0.3-0.6c-0.1-0.2-0.2-0.3-0.3-0.5c-0.1-0.2-0.3-0.4-0.4-0.6   c-0.1-0.2-0.2-0.3-0.4-0.5c-0.1-0.2-0.3-0.3-0.4-0.5s-0.3-0.3-0.4-0.5s-0.3-0.3-0.4-0.4c-0.2-0.2-0.3-0.3-0.5-0.5   c-0.2-0.1-0.3-0.3-0.5-0.4c-0.2-0.1-0.4-0.3-0.6-0.4c-0.2-0.1-0.3-0.2-0.5-0.3s-0.4-0.2-0.6-0.4c-0.2-0.1-0.4-0.2-0.6-0.3   s-0.4-0.2-0.6-0.3s-0.4-0.2-0.6-0.3s-0.4-0.1-0.6-0.2c-0.2-0.1-0.5-0.2-0.7-0.2s-0.4-0.1-0.5-0.1c-0.3-0.1-0.5-0.1-0.8-0.1   c-0.1,0-0.2-0.1-0.4-0.1l-339.8-46.9v-47.4c0-0.5,0-1-0.1-1.4c0-0.1,0-0.2-0.1-0.4c0-0.3-0.1-0.6-0.1-0.9c-0.1-0.3-0.1-0.5-0.2-0.8   c0-0.2-0.1-0.3-0.1-0.5c-0.1-0.3-0.2-0.6-0.3-0.9c0-0.1-0.1-0.3-0.1-0.4c-0.1-0.3-0.2-0.5-0.4-0.8c-0.1-0.1-0.1-0.3-0.2-0.4   c-0.1-0.2-0.2-0.4-0.4-0.6c-0.1-0.2-0.2-0.3-0.3-0.5s-0.2-0.3-0.3-0.5s-0.3-0.4-0.4-0.6c-0.1-0.1-0.2-0.2-0.3-0.3   c-0.2-0.2-0.4-0.4-0.6-0.6c-0.1-0.1-0.2-0.2-0.3-0.3c-0.2-0.2-0.4-0.4-0.7-0.6c-0.1-0.1-0.3-0.2-0.4-0.3c-0.2-0.2-0.4-0.3-0.6-0.5   c-0.3-0.2-0.6-0.4-0.8-0.5c-0.1-0.1-0.2-0.1-0.3-0.2c-0.4-0.2-0.9-0.4-1.3-0.6l-73.7-31c-6.9-2.9-14.8,0.3-17.7,7.2   s0.3,14.8,7.2,17.7l65.4,27.6v61.2v9.7v74.4v66.5v84c0,28,21,51.2,48.1,54.7c-4.9,8.2-7.8,17.8-7.8,28c0,30.1,24.5,54.5,54.5,54.5   s54.5-24.5,54.5-54.5c0-10-2.7-19.5-7.5-27.5h121.4c-4.8,8.1-7.5,17.5-7.5,27.5c0,30.1,24.5,54.5,54.5,54.5s54.5-24.5,54.5-54.5   s-24.5-54.5-54.5-54.5h-255c-15.6,0-28.2-12.7-28.2-28.2v-36.6C126.069,317.569,135.769,320.369,146.069,320.369z M213.269,431.969   c0,15.2-12.4,27.5-27.5,27.5s-27.5-12.4-27.5-27.5s12.4-27.5,27.5-27.5S213.269,416.769,213.269,431.969z M428.669,431.969   c0,15.2-12.4,27.5-27.5,27.5s-27.5-12.4-27.5-27.5s12.4-27.5,27.5-27.5S428.669,416.769,428.669,431.969z M414.169,293.369h-268.1   c-15.6,0-28.2-12.7-28.2-28.2v-66.5v-74.4v-5l324.5,44.7v101.1C442.369,280.769,429.669,293.369,414.169,293.369z"/>
+        </svg>
+        <span class="header-informer__text">Корзина</span>
+        <span class="header-informer__counter">(0)</span>
+    </a>
+</div>
+
+<div id="nav-menu-shop" class="header-informer header-informer--catalogue">
+    <a href="/catalogue" class="header-informer__link">
+        <svg class="header-informer__icon" xmlns="http://www.w3.org/2000/svg" width="26" height="17" viewBox="0 0 26 17">
+            <g fill-rule="nonzero">
+                <path d="M.981 2.186H25.02A.977.977 0 0 0 26 1.214a.977.977 0 0 0-.981-.971H.98A.977.977 0 0 0 0 1.214c0 .537.44.972.981.972zM.981 9.471H25.02A.977.977 0 0 0 26 8.5a.977.977 0 0 0-.981-.971H.98A.977.977 0 0 0 0 8.5c0 .536.44.971.981.971zM.981 16.757H25.02a.977.977 0 0 0 .981-.971.977.977 0 0 0-.981-.972H.98a.977.977 0 0 0-.981.972c0 .536.44.971.981.971z"/>
+            </g>
+        </svg>
+        <span class="header-informer__text"></span>
+        <span class="header-informer__counter">Каталог</span>
+    </a>
+</div>
+
 <header class="c-header">
     <nav class="c-header__wrap">
         <div class="c-header__menu">
-            <a id="nav-menu-shop" class="c-header__link c-header__link--menu" href="/catalogue">
-                <span class="c-header__link-icon"></span>
-                <span class="c-header__link-text">Меню</span>
-            </a>
         </div>
         <a class="c-header__logo" href="/">
             <img src="/images/logo.png">
         </a>
         <div class="phones">
             <a class="phones__phone" href="tel:+ 7 (499) 110-99-71">+ 7 (499) 110-99-71</a>
-            <button class="btn btn--important">Заказать звонок</button>
+            <button class="btn btn--important">Заказать обратный звонок</button>
         </div>
-        <a id="nav-menu-cart" class="c-header__cart" href="/cart">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="22" x="0px" y="0px" viewBox="0 0 486.569 486.569" style="enable-background:new 0 0 486.569 486.569;" xml:space="preserve">
-                <path d="M146.069,320.369h268.1c30.4,0,55.2-24.8,55.2-55.2v-112.8c0-0.1,0-0.3,0-0.4c0-0.3,0-0.5,0-0.8c0-0.2,0-0.4-0.1-0.6   c0-0.2-0.1-0.5-0.1-0.7s-0.1-0.4-0.1-0.6c-0.1-0.2-0.1-0.4-0.2-0.7c-0.1-0.2-0.1-0.4-0.2-0.6c-0.1-0.2-0.1-0.4-0.2-0.6   c-0.1-0.2-0.2-0.4-0.3-0.7c-0.1-0.2-0.2-0.4-0.3-0.5c-0.1-0.2-0.2-0.4-0.3-0.6c-0.1-0.2-0.2-0.3-0.3-0.5c-0.1-0.2-0.3-0.4-0.4-0.6   c-0.1-0.2-0.2-0.3-0.4-0.5c-0.1-0.2-0.3-0.3-0.4-0.5s-0.3-0.3-0.4-0.5s-0.3-0.3-0.4-0.4c-0.2-0.2-0.3-0.3-0.5-0.5   c-0.2-0.1-0.3-0.3-0.5-0.4c-0.2-0.1-0.4-0.3-0.6-0.4c-0.2-0.1-0.3-0.2-0.5-0.3s-0.4-0.2-0.6-0.4c-0.2-0.1-0.4-0.2-0.6-0.3   s-0.4-0.2-0.6-0.3s-0.4-0.2-0.6-0.3s-0.4-0.1-0.6-0.2c-0.2-0.1-0.5-0.2-0.7-0.2s-0.4-0.1-0.5-0.1c-0.3-0.1-0.5-0.1-0.8-0.1   c-0.1,0-0.2-0.1-0.4-0.1l-339.8-46.9v-47.4c0-0.5,0-1-0.1-1.4c0-0.1,0-0.2-0.1-0.4c0-0.3-0.1-0.6-0.1-0.9c-0.1-0.3-0.1-0.5-0.2-0.8   c0-0.2-0.1-0.3-0.1-0.5c-0.1-0.3-0.2-0.6-0.3-0.9c0-0.1-0.1-0.3-0.1-0.4c-0.1-0.3-0.2-0.5-0.4-0.8c-0.1-0.1-0.1-0.3-0.2-0.4   c-0.1-0.2-0.2-0.4-0.4-0.6c-0.1-0.2-0.2-0.3-0.3-0.5s-0.2-0.3-0.3-0.5s-0.3-0.4-0.4-0.6c-0.1-0.1-0.2-0.2-0.3-0.3   c-0.2-0.2-0.4-0.4-0.6-0.6c-0.1-0.1-0.2-0.2-0.3-0.3c-0.2-0.2-0.4-0.4-0.7-0.6c-0.1-0.1-0.3-0.2-0.4-0.3c-0.2-0.2-0.4-0.3-0.6-0.5   c-0.3-0.2-0.6-0.4-0.8-0.5c-0.1-0.1-0.2-0.1-0.3-0.2c-0.4-0.2-0.9-0.4-1.3-0.6l-73.7-31c-6.9-2.9-14.8,0.3-17.7,7.2   s0.3,14.8,7.2,17.7l65.4,27.6v61.2v9.7v74.4v66.5v84c0,28,21,51.2,48.1,54.7c-4.9,8.2-7.8,17.8-7.8,28c0,30.1,24.5,54.5,54.5,54.5   s54.5-24.5,54.5-54.5c0-10-2.7-19.5-7.5-27.5h121.4c-4.8,8.1-7.5,17.5-7.5,27.5c0,30.1,24.5,54.5,54.5,54.5s54.5-24.5,54.5-54.5   s-24.5-54.5-54.5-54.5h-255c-15.6,0-28.2-12.7-28.2-28.2v-36.6C126.069,317.569,135.769,320.369,146.069,320.369z M213.269,431.969   c0,15.2-12.4,27.5-27.5,27.5s-27.5-12.4-27.5-27.5s12.4-27.5,27.5-27.5S213.269,416.769,213.269,431.969z M428.669,431.969   c0,15.2-12.4,27.5-27.5,27.5s-27.5-12.4-27.5-27.5s12.4-27.5,27.5-27.5S428.669,416.769,428.669,431.969z M414.169,293.369h-268.1   c-15.6,0-28.2-12.7-28.2-28.2v-66.5v-74.4v-5l324.5,44.7v101.1C442.369,280.769,429.669,293.369,414.169,293.369z"/>
-            </svg>
-            <span>Корзина</span>
-        </a>
     </nav>
     <!-- Форма поиска -->
     <div id="search-page" class="c-search">
@@ -189,676 +200,90 @@ AppAsset::register($this);
     </div>
     <!-- Меню корзины -->
 </header>
-<main class="c-main container--pre-header">
-<!--    <div id="slider" class="c-slider">-->
-<!--        <div style="background: url(img/content/slider_1.png); background-size: cover; height: 420px; background-position: center;">-->
-<!--            <!-- <img src="img/content/slider_1.png"> -->
-<!--            <h2 class="c-slider__header">Слайдер картинок</h2>-->
-<!--            <p class="c-slider__text">Здесь ещё какая-нибудь надпись</p>-->
-<!--        </div>-->
-<!--        <div style="background: url(img/content/slider_1.png); background-size: cover; height: 420px; background-position: center;">-->
-<!--            <!-- <img src="img/content/slider_1.png"> -->
-<!--            <h1 class="c-slider__header">Слайдер картинок</h1>-->
-<!--            <p class="c-slider__text">Здесь ещё какая-нибудь надпись</p>-->
-<!--        </div>-->
-<!--        <div style="background: url(img/content/slider_1.png); background-size: cover; height: 420px; background-position: center;">-->
-<!--            <!-- <img src="img/content/slider_1.png"> -->
-<!--            <h1 class="c-slider__header">Слайдер картинок</h1>-->
-<!--            <p class="c-slider__text">Здесь ещё какая-нибудь надпись</p>-->
-<!--        </div>-->
-<!--    </div>-->
-
-    <div class="container container--sized">
-<!--        <h2 class="c-catalogue-header">Популярные товары</h2>-->
-        <div class="c-catalogue-slider js-catalogue-slider">
-            <ul class="c-catalogue-item-list">
-                <li class="c-catalogue-list-item">
-                    <a href class="c-catalogue-item">
-							<span class="c-catalogue-item__img-wrapper">
-								<img class="c-catalogue-item__img" src="/images/content/content-7.jpg">
-								<span class="c-catalogue-item__desc">
-									<span class="c-catalogue-item__name">Название товара<span  class="c-catalogue-item__name-full"> в каталоге</span></span>
-									<span class="c-catalogue-item__price">2000 <span class="ruble">Р</span></span>
-									<span class="c-catalogue-item__buy">
-										<span class="c-catalogue-item__btn-more">
-											<span class="icon icon--more"></span>
-											<span class="c-catalogue-item__btn-more-text">Подробнее</span>
-										</span>
-										<span class="c-catalogue-item__btn-cart js-btn-add-to-cart">
-											<span class="icon icon--cart"></span>
-										</span>
-									</span>
-								</span>
-							</span>
-                    </a>
-                </li>
-                <li class="c-catalogue-list-item">
-                    <a href class="c-catalogue-item">
-							<span class="c-catalogue-item__img-wrapper">
-								<img class="c-catalogue-item__img" src="images/content/content-7.jpg">
-								<span class="c-catalogue-item__discount">10%</span>
-								<span class="c-catalogue-item__desc">
-									<span class="c-catalogue-item__name">Название товара<span  class="c-catalogue-item__name-full"> в каталоге</span></span>
-									<span class="c-catalogue-item__price">2000 <span class="ruble">p</span></span>
-									<span class="c-catalogue-item__buy">
-										<span class="c-catalogue-item__btn-more">
-											<span class="icon icon--more"></span>
-											<span class="c-catalogue-item__btn-more-text">Подробнее</span>
-										</span>
-										<span class="c-catalogue-item__btn-cart js-btn-add-to-cart">
-											<span class="icon icon--cart"></span>
-										</span>
-									</span>
-								</span>
-							</span>
-                    </a>
-                </li>
-                <li class="c-catalogue-list-item">
-                    <a href class="c-catalogue-item">
-							<span class="c-catalogue-item__img-wrapper">
-								<img class="c-catalogue-item__img" src="images/content/content-7.jpg">
-								<span class="c-catalogue-item__desc">
-									<span class="c-catalogue-item__name">Название товара<span  class="c-catalogue-item__name-full"> в каталоге</span></span>
-									<span class="c-catalogue-item__price">2000 <span class="ruble">p</span></span>
-									<span class="c-catalogue-item__buy">
-										<span class="c-catalogue-item__btn-more">
-											<span class="icon icon--more"></span>
-											<span class="c-catalogue-item__btn-more-text">Подробнее</span>
-										</span>
-										<span class="c-catalogue-item__btn-cart js-btn-add-to-cart">
-											<span class="icon icon--cart"></span>
-										</span>
-									</span>
-								</span>
-							</span>
-                    </a>
-                </li>
-                <li class="c-catalogue-list-item">
-                    <a href class="c-catalogue-item">
-							<span class="c-catalogue-item__img-wrapper">
-								<img class="c-catalogue-item__img" src="images/content/content-7.jpg">
-								<span class="c-catalogue-item__desc">
-									<span class="c-catalogue-item__name">Название товара<span  class="c-catalogue-item__name-full"> в каталоге</span></span>
-									<span class="c-catalogue-item__price">2000 <span class="ruble">p</span></span>
-									<span class="c-catalogue-item__buy">
-										<span class="c-catalogue-item__btn-more">
-											<span class="icon icon--more"></span>
-											<span class="c-catalogue-item__btn-more-text">Подробнее</span>
-										</span>
-										<span class="c-catalogue-item__btn-cart js-btn-add-to-cart">
-											<span class="icon icon--cart"></span>
-										</span>
-									</span>
-								</span>
-							</span>
-                    </a>
-                </li>
-            </ul>
-            <ul class="c-catalogue-item-list">
-                <li class="c-catalogue-list-item">
-                    <a href class="c-catalogue-item">
-							<span class="c-catalogue-item__img-wrapper">
-								<img class="c-catalogue-item__img" src="images/content/content-7.jpg">
-								<span class="c-catalogue-item__desc">
-									<span class="c-catalogue-item__name">Название товара<span  class="c-catalogue-item__name-full"> в каталоге</span></span>
-									<span class="c-catalogue-item__price">2000 <span class="ruble">p</span></span>
-									<span class="c-catalogue-item__buy">
-										<span class="c-catalogue-item__btn-more">
-											<span class="icon icon--more"></span>
-											<span class="c-catalogue-item__btn-more-text">Подробнее</span>
-										</span>
-										<span class="c-catalogue-item__btn-cart js-btn-add-to-cart">
-											<span class="icon icon--cart"></span>
-										</span>
-									</span>
-								</span>
-							</span>
-                    </a>
-                </li>
-                <li class="c-catalogue-list-item">
-                    <a href class="c-catalogue-item">
-							<span class="c-catalogue-item__img-wrapper">
-								<img class="c-catalogue-item__img" src="images/content/content-7.jpg">
-								<span class="c-catalogue-item__discount">10%</span>
-								<span class="c-catalogue-item__desc">
-									<span class="c-catalogue-item__name">Название товара<span  class="c-catalogue-item__name-full"> в каталоге</span></span>
-									<span class="c-catalogue-item__price">2000 <span class="ruble">p</span></span>
-									<span class="c-catalogue-item__buy">
-										<span class="c-catalogue-item__btn-more">
-											<span class="icon icon--more"></span>
-											<span class="c-catalogue-item__btn-more-text">Подробнее</span>
-										</span>
-										<span class="c-catalogue-item__btn-cart js-btn-add-to-cart">
-											<span class="icon icon--cart"></span>
-										</span>
-									</span>
-								</span>
-							</span>
-                    </a>
-                </li>
-                <li class="c-catalogue-list-item">
-                    <a href class="c-catalogue-item">
-							<span class="c-catalogue-item__img-wrapper">
-								<img class="c-catalogue-item__img" src="images/content/content-7.jpg">
-								<span class="c-catalogue-item__desc">
-									<span class="c-catalogue-item__name">Название товара<span  class="c-catalogue-item__name-full"> в каталоге</span></span>
-									<span class="c-catalogue-item__price">2000 <span class="ruble">p</span></span>
-									<span class="c-catalogue-item__buy">
-										<span class="c-catalogue-item__btn-more">
-											<span class="icon icon--more"></span>
-											<span class="c-catalogue-item__btn-more-text">Подробнее</span>
-										</span>
-										<span class="c-catalogue-item__btn-cart js-btn-add-to-cart">
-											<span class="icon icon--cart"></span>
-										</span>
-									</span>
-								</span>
-							</span>
-                    </a>
-                </li>
-                <li class="c-catalogue-list-item">
-                    <a href class="c-catalogue-item">
-							<span class="c-catalogue-item__img-wrapper">
-								<img class="c-catalogue-item__img" src="images/content/content-7.jpg">
-								<span class="c-catalogue-item__desc">
-									<span class="c-catalogue-item__name">Название товара<span  class="c-catalogue-item__name-full"> в каталоге</span></span>
-									<span class="c-catalogue-item__price">2000 <span class="ruble">p</span></span>
-									<span class="c-catalogue-item__buy">
-										<span class="c-catalogue-item__btn-more">
-											<span class="icon icon--more"></span>
-											<span class="c-catalogue-item__btn-more-text">Подробнее</span>
-										</span>
-										<span class="c-catalogue-item__btn-cart js-btn-add-to-cart">
-											<span class="icon icon--cart"></span>
-										</span>
-									</span>
-								</span>
-							</span>
-                    </a>
-                </li>
-            </ul>
-            <ul class="c-catalogue-item-list">
-                <li class="c-catalogue-list-item">
-                    <a href class="c-catalogue-item">
-							<span class="c-catalogue-item__img-wrapper">
-								<img class="c-catalogue-item__img" src="images/content/content-7.jpg">
-								<span class="c-catalogue-item__desc">
-									<span class="c-catalogue-item__name">Название товара<span  class="c-catalogue-item__name-full"> в каталоге</span></span>
-									<span class="c-catalogue-item__price">2000 <span class="ruble">p</span></span>
-									<span class="c-catalogue-item__buy">
-										<span class="c-catalogue-item__btn-more">
-											<span class="icon icon--more"></span>
-											<span class="c-catalogue-item__btn-more-text">Подробнее</span>
-										</span>
-										<span class="c-catalogue-item__btn-cart js-btn-add-to-cart">
-											<span class="icon icon--cart"></span>
-										</span>
-									</span>
-								</span>
-							</span>
-                    </a>
-                </li>
-                <li class="c-catalogue-list-item">
-                    <a href class="c-catalogue-item">
-							<span class="c-catalogue-item__img-wrapper">
-								<img class="c-catalogue-item__img" src="images/content/content-7.jpg">
-								<span class="c-catalogue-item__discount">10%</span>
-								<span class="c-catalogue-item__desc">
-									<span class="c-catalogue-item__name">Название товара<span  class="c-catalogue-item__name-full"> в каталоге</span></span>
-									<span class="c-catalogue-item__price">2000 <span class="ruble">p</span></span>
-									<span class="c-catalogue-item__buy">
-										<span class="c-catalogue-item__btn-more">
-											<span class="icon icon--more"></span>
-											<span class="c-catalogue-item__btn-more-text">Подробнее</span>
-										</span>
-										<span class="c-catalogue-item__btn-cart js-btn-add-to-cart">
-											<span class="icon icon--cart"></span>
-										</span>
-									</span>
-								</span>
-							</span>
-                    </a>
-                </li>
-                <li class="c-catalogue-list-item">
-                    <a href class="c-catalogue-item">
-							<span class="c-catalogue-item__img-wrapper">
-								<img class="c-catalogue-item__img" src="images/content/content-7.jpg">
-								<span class="c-catalogue-item__desc">
-									<span class="c-catalogue-item__name">Название товара<span  class="c-catalogue-item__name-full"> в каталоге</span></span>
-									<span class="c-catalogue-item__price">2000 <span class="ruble">p</span></span>
-									<span class="c-catalogue-item__buy">
-										<span class="c-catalogue-item__btn-more">
-											<span class="icon icon--more"></span>
-											<span class="c-catalogue-item__btn-more-text">Подробнее</span>
-										</span>
-										<span class="c-catalogue-item__btn-cart js-btn-add-to-cart">
-											<span class="icon icon--cart"></span>
-										</span>
-									</span>
-								</span>
-							</span>
-                    </a>
-                </li>
-                <li class="c-catalogue-list-item">
-                    <a href class="c-catalogue-item">
-							<span class="c-catalogue-item__img-wrapper">
-								<img class="c-catalogue-item__img" src="images/content/content-7.jpg">
-								<span class="c-catalogue-item__desc">
-									<span class="c-catalogue-item__name">Название товара<span  class="c-catalogue-item__name-full"> в каталоге</span></span>
-									<span class="c-catalogue-item__price">2000 <span class="ruble">p</span></span>
-									<span class="c-catalogue-item__buy">
-										<span class="c-catalogue-item__btn-more">
-											<span class="icon icon--more"></span>
-											<span class="c-catalogue-item__btn-more-text">Подробнее</span>
-										</span>
-										<span class="c-catalogue-item__btn-cart js-btn-add-to-cart">
-											<span class="icon icon--cart"></span>
-										</span>
-									</span>
-								</span>
-							</span>
-                    </a>
-                </li>
-            </ul>
-            <ul class="c-catalogue-item-list">
-                <li class="c-catalogue-list-item">
-                    <a href class="c-catalogue-item">
-							<span class="c-catalogue-item__img-wrapper">
-								<img class="c-catalogue-item__img" src="images/content/content-7.jpg">
-								<span class="c-catalogue-item__desc">
-									<span class="c-catalogue-item__name">Название товара<span  class="c-catalogue-item__name-full"> в каталоге</span></span>
-									<span class="c-catalogue-item__price">2000 <span class="ruble">p</span></span>
-									<span class="c-catalogue-item__buy">
-										<span class="c-catalogue-item__btn-more">
-											<span class="icon icon--more"></span>
-											<span class="c-catalogue-item__btn-more-text">Подробнее</span>
-										</span>
-										<span class="c-catalogue-item__btn-cart js-btn-add-to-cart">
-											<span class="icon icon--cart"></span>
-										</span>
-									</span>
-								</span>
-							</span>
-                    </a>
-                </li>
-                <li class="c-catalogue-list-item">
-                    <a href class="c-catalogue-item">
-							<span class="c-catalogue-item__img-wrapper">
-								<img class="c-catalogue-item__img" src="images/content/content-7.jpg">
-								<span class="c-catalogue-item__discount">10%</span>
-								<span class="c-catalogue-item__desc">
-									<span class="c-catalogue-item__name">Название товара<span  class="c-catalogue-item__name-full"> в каталоге</span></span>
-									<span class="c-catalogue-item__price">2000 <span class="ruble">p</span></span>
-									<span class="c-catalogue-item__buy">
-										<span class="c-catalogue-item__btn-more">
-											<span class="icon icon--more"></span>
-											<span class="c-catalogue-item__btn-more-text">Подробнее</span>
-										</span>
-										<span class="c-catalogue-item__btn-cart js-btn-add-to-cart">
-											<span class="icon icon--cart"></span>
-										</span>
-									</span>
-								</span>
-							</span>
-                    </a>
-                </li>
-                <li class="c-catalogue-list-item">
-                    <a href class="c-catalogue-item">
-							<span class="c-catalogue-item__img-wrapper">
-								<img class="c-catalogue-item__img" src="images/content/content-7.jpg">
-								<span class="c-catalogue-item__desc">
-									<span class="c-catalogue-item__name">Название товара<span  class="c-catalogue-item__name-full"> в каталоге</span></span>
-									<span class="c-catalogue-item__price">2000 <span class="ruble">p</span></span>
-									<span class="c-catalogue-item__buy">
-										<span class="c-catalogue-item__btn-more">
-											<span class="icon icon--more"></span>
-											<span class="c-catalogue-item__btn-more-text">Подробнее</span>
-										</span>
-										<span class="c-catalogue-item__btn-cart js-btn-add-to-cart">
-											<span class="icon icon--cart"></span>
-										</span>
-									</span>
-								</span>
-							</span>
-                    </a>
-                </li>
-                <li class="c-catalogue-list-item">
-                    <a href class="c-catalogue-item">
-							<span class="c-catalogue-item__img-wrapper">
-								<img class="c-catalogue-item__img" src="images/content/content-7.jpg">
-								<span class="c-catalogue-item__desc">
-									<span class="c-catalogue-item__name">Название товара<span  class="c-catalogue-item__name-full"> в каталоге</span></span>
-									<span class="c-catalogue-item__price">2000 <span class="ruble">p</span></span>
-									<span class="c-catalogue-item__buy">
-										<span class="c-catalogue-item__btn-more">
-											<span class="icon icon--more"></span>
-											<span class="c-catalogue-item__btn-more-text">Подробнее</span>
-										</span>
-										<span class="c-catalogue-item__btn-cart js-btn-add-to-cart">
-											<span class="icon icon--cart"></span>
-										</span>
-									</span>
-								</span>
-							</span>
-                    </a>
-                </li>
-            </ul>
+<main class="c-main">
+    <nav class="main-menu">
+        <ul class="main-menu__list">
+            <li class="main-menu__list-item main-menu__list-item--active"><a href="">Главная</a></li>
+            <li class="main-menu__list-item"><a href="">Каталог</a></li>
+            <li class="main-menu__list-item"><a href="">Доставка</a></li>
+            <li class="main-menu__list-item"><a href="">О магазине</a></li>
+            <li class="main-menu__list-item"><a href="">Отзывы</a></li>
+            <li class="main-menu__list-item"><a href="">Контакты</a></li>
+        </ul>
+    </nav>
+    <div class="catalogue">
+        <div class="catalogue__row">
+            <div class="catalogue-content">
+                <ul class="catalogue-content__list">
+                    <li class="catalogue-content__list-item">
+                        <div class="catalogue-item">
+                            <a class="catalogue-item__title" href="">CONVERSE CHUCK TAYLOR ALL STAR II OX Grey (CONVERSE-89)</a>
+                            <img class="catalogue-item__img" src="images/content/content-7.jpg" alt="">
+                            <select class="catalogue-item__size">
+                                <option>36 euro</option>
+                                <option>37 euro</option>
+                                <option>38 euro</option>
+                                <option>39 euro</option>
+                                <option>40 euro</option>
+                                <option>41 euro</option>
+                                <option>42 euro</option>
+                            </select>
+                            <span class="catalogue-item__price catalogue-item__price--old">Старая цена: 5990<span class="ruble">Р</span></span>
+                            <span class="catalogue-item__price">Новая цена: 2990<span class="ruble">Р</span></span>
+                            <div class="catalogue-item__btns btns">
+                                <a class="btn btn--secondary" href="">Подробнее</a>
+                                <a class="btn" href="">Заказать</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="catalogue-content__list-item">
+                        <div class="catalogue-item">
+                            <a class="catalogue-item__title" href="">CONVERSE CHUCK TAYLOR ALL STAR II OX Grey (CONVERSE-89)</a>
+                            <img class="catalogue-item__img" src="images/content/content-7.jpg" alt="">
+                            <select class="catalogue-item__size">
+                                <option>36 euro</option>
+                                <option>37 euro</option>
+                                <option>38 euro</option>
+                                <option>39 euro</option>
+                                <option>40 euro</option>
+                                <option>41 euro</option>
+                                <option>42 euro</option>
+                            </select>
+                            <span class="catalogue-item__price catalogue-item__price--old">Старая цена: 5990<span class="ruble">Р</span></span>
+                            <span class="catalogue-item__price">Новая цена: 2990<span class="ruble">Р</span></span>
+                            <div class="catalogue-item__btns btns">
+                                <a class="btn btn--secondary" href="">Подробнее</a>
+                                <a class="btn" href="">Заказать</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="catalogue-content__list-item">
+                        <div class="catalogue-item">
+                            <a class="catalogue-item__title" href="">CONVERSE CHUCK TAYLOR ALL STAR II OX Grey (CONVERSE-89)</a>
+                            <img class="catalogue-item__img" src="images/content/content-7.jpg" alt="">
+                            <select class="catalogue-item__size">
+                                <option>36 euro</option>
+                                <option>37 euro</option>
+                                <option>38 euro</option>
+                                <option>39 euro</option>
+                                <option>40 euro</option>
+                                <option>41 euro</option>
+                                <option>42 euro</option>
+                            </select>
+                            <span class="catalogue-item__price catalogue-item__price--old">Старая цена: 5990<span class="ruble">Р</span></span>
+                            <span class="catalogue-item__price">Новая цена: 2990<span class="ruble">Р</span></span>
+                            <div class="catalogue-item__btns btns">
+                                <a class="btn btn--secondary" href="">Подробнее</a>
+                                <a class="btn" href="">Заказать</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="catalogue-sidebar">123</div>
         </div>
     </div>
-
-<!--    <div class="container container--grey">-->
-<!--        <nav class="c-main-menu__container">-->
-<!--            <ul class="c-main-menu__list">-->
-<!--                <li class="c-main-menu__list-item">-->
-<!--                    <a class="c-main-menu__link" href="">Красота</a>-->
-<!--                </li>-->
-<!--                <li class="c-main-menu__list-item">-->
-<!--                    <a class="c-main-menu__link" href="">Зоотовары</a>-->
-<!--                </li>-->
-<!--                <li class="c-main-menu__list-item">-->
-<!--                    <a class="c-main-menu__link" href="">Мужчинам</a>-->
-<!--                </li>-->
-<!--                <li class="c-main-menu__list-item">-->
-<!--                    <a class="c-main-menu__link" href="">Детское</a>-->
-<!--                </li>-->
-<!--                <li class="c-main-menu__list-item">-->
-<!--                    <a class="c-main-menu__link" href="">Женское</a>-->
-<!--                </li>-->
-<!--                <li class="c-main-menu__list-item">-->
-<!--                    <a class="c-main-menu__link" href="">Одежда</a>-->
-<!--                </li>-->
-<!--                <li class="c-main-menu__list-item">-->
-<!--                    <a class="c-main-menu__link" href="">Гигиена</a>-->
-<!--                </li>-->
-<!--                <li class="c-main-menu__list-item">-->
-<!--                    <a class="c-main-menu__link" href="">Для дома</a>-->
-<!--                </li>-->
-<!--            </ul>-->
-<!--        </nav>-->
-<!--    </div>-->
-
-<!--    <div class="c-main-description container container--centered">-->
-<!--        <ul class="c-main-description__list">-->
-<!--            <li class="c-main-description__list-item">-->
-<!--                <span class="c-main-description__icon c-main-description__icon--choice"></span>-->
-<!--                <div class="c-main-description__caption">-->
-<!--                    <h3>Большой выбор товаров</h3>-->
-<!--                    <p>Небольшое описание текстовое описание. Описание пункта. Текстовое описание пункта в несколько строчек.</p>-->
-<!--                </div>-->
-<!--            </li>-->
-<!--            <li class="c-main-description__list-item">-->
-<!--                <span class="c-main-description__icon c-main-description__icon--delivery"></span>-->
-<!--                <div class="c-main-description__caption">-->
-<!--                    <h3>Быстрая доставка</h3>-->
-<!--                    <p>Небольшое описание текстовое описание. Описание пункта. Текстовое описание пункта в несколько строчек.</p>-->
-<!--                </div>-->
-<!--            </li>-->
-<!--            <li class="c-main-description__list-item">-->
-<!--                <span class="c-main-description__icon c-main-description__icon--payment"></span>-->
-<!--                <div class="c-main-description__caption">-->
-<!--                    <h3>Удобная оплата</h3>-->
-<!--                    <p>Небольшое описание текстовое описание. Описание пункта. Текстовое описание пункта в несколько строчек.</p>-->
-<!--                </div>-->
-<!--            </li>-->
-<!--        </ul>-->
-<!--    </div>-->
-
-<!--    <div class="c-promo-photo" style="background: url(img/content/promo-main.jpg); background-size: cover; background-position: left;">-->
-<!--        <div class="c-promo-photo__caption">-->
-<!--            <h2 class="c-promo-photo__header">Промо картинка и текст о магазине</h2>-->
-<!--            <p class="c-promo-photo__text">Небольшое описание магазина в несколько строчек. Текстовое описание. Промо картинка и небольшое текстовое описание о магазине в несколько строчек.</p>-->
-<!--        </div>-->
-<!--    </div>-->
 </main>
-
-<!--<div class="container container--sized">-->
-<!--    <h2 class="c-catalogue-header">Вы недавно смотрели</h2>-->
-<!--    <div class="c-catalogue-slider js-catalogue-slider">-->
-<!--        <ul class="c-catalogue-item-list">-->
-<!--            <li class="c-catalogue-list-item">-->
-<!--                <a href class="c-catalogue-item">-->
-<!--							<span class="c-catalogue-item__img-wrapper">-->
-<!--								<img class="c-catalogue-item__img" src="img/content/content-5.jpg">-->
-<!--								<span class="c-catalogue-item__desc">-->
-<!--									<span class="c-catalogue-item__name">Название товара<span  class="c-catalogue-item__name-full"> в каталоге</span></span>-->
-<!--									<span class="c-catalogue-item__price">2000 <span class="ruble">p</span></span>-->
-<!--									<span class="c-catalogue-item__buy">-->
-<!--										<span class="c-catalogue-item__btn-more">-->
-<!--											<span class="icon icon--more"></span>-->
-<!--											<span class="c-catalogue-item__btn-more-text">Подробнее</span>-->
-<!--										</span>-->
-<!--										<span class="c-catalogue-item__btn-cart js-btn-add-to-cart">-->
-<!--											<span class="icon icon--cart"></span>-->
-<!--										</span>-->
-<!--									</span>-->
-<!--								</span>-->
-<!--							</span>-->
-<!--                </a>-->
-<!--            </li>-->
-<!--            <li class="c-catalogue-list-item">-->
-<!--                <a href class="c-catalogue-item">-->
-<!--							<span class="c-catalogue-item__img-wrapper">-->
-<!--								<img class="c-catalogue-item__img" src="img/content/content-6.jpg">-->
-<!--								<span class="c-catalogue-item__desc">-->
-<!--									<span class="c-catalogue-item__name">Название товара<span  class="c-catalogue-item__name-full"> в каталоге</span></span>-->
-<!--									<span class="c-catalogue-item__price">2000 <span class="ruble">p</span></span>-->
-<!--									<span class="c-catalogue-item__buy">-->
-<!--										<span class="c-catalogue-item__btn-more">-->
-<!--											<span class="icon icon--more"></span>-->
-<!--											<span class="c-catalogue-item__btn-more-text">Подробнее</span>-->
-<!--										</span>-->
-<!--										<span class="c-catalogue-item__btn-cart js-btn-add-to-cart">-->
-<!--											<span class="icon icon--cart"></span>-->
-<!--										</span>-->
-<!--									</span>-->
-<!--								</span>-->
-<!--							</span>-->
-<!--                </a>-->
-<!--            </li>-->
-<!--            <li class="c-catalogue-list-item">-->
-<!--                <a href class="c-catalogue-item">-->
-<!--							<span class="c-catalogue-item__img-wrapper">-->
-<!--								<span class="c-catalogue-item__desc">-->
-<!--									<span class="c-catalogue-item__name">Название товара<span  class="c-catalogue-item__name-full"> в каталоге</span></span>-->
-<!--									<span class="c-catalogue-item__price">2000 <span class="ruble">p</span></span>-->
-<!--									<span class="c-catalogue-item__buy">-->
-<!--										<span class="c-catalogue-item__btn-more">-->
-<!--											<span class="icon icon--more"></span>-->
-<!--											<span class="c-catalogue-item__btn-more-text">Подробнее</span>-->
-<!--										</span>-->
-<!--										<span class="c-catalogue-item__btn-cart js-btn-add-to-cart">-->
-<!--											<span class="icon icon--cart"></span>-->
-<!--										</span>-->
-<!--									</span>-->
-<!--								</span>-->
-<!--							</span>-->
-<!--                </a>-->
-<!--            </li>-->
-<!--            <li class="c-catalogue-list-item">-->
-<!--                <a href class="c-catalogue-item">-->
-<!--							<span class="c-catalogue-item__img-wrapper">-->
-<!--								<img class="c-catalogue-item__img" src="img/content/content-7.jpg">-->
-<!--								<span class="c-catalogue-item__desc">-->
-<!--									<span class="c-catalogue-item__name">Название товара<span  class="c-catalogue-item__name-full"> в каталоге</span></span>-->
-<!--									<span class="c-catalogue-item__price">2000 <span class="ruble">p</span></span>-->
-<!--									<span class="c-catalogue-item__buy">-->
-<!--										<span class="c-catalogue-item__btn-more">-->
-<!--											<span class="icon icon--more"></span>-->
-<!--											<span class="c-catalogue-item__btn-more-text">Подробнее</span>-->
-<!--										</span>-->
-<!--										<span class="c-catalogue-item__btn-cart js-btn-add-to-cart">-->
-<!--											<span class="icon icon--cart"></span>-->
-<!--										</span>-->
-<!--									</span>-->
-<!--								</span>-->
-<!--							</span>-->
-<!--                </a>-->
-<!--            </li>-->
-<!--        </ul>-->
-<!--        <ul class="c-catalogue-item-list">-->
-<!--            <li class="c-catalogue-list-item">-->
-<!--                <a href class="c-catalogue-item">-->
-<!--							<span class="c-catalogue-item__img-wrapper">-->
-<!--								<img class="c-catalogue-item__img" src="img/content/content-5.jpg">-->
-<!--								<span class="c-catalogue-item__desc">-->
-<!--									<span class="c-catalogue-item__name">Название товара<span  class="c-catalogue-item__name-full"> в каталоге</span></span>-->
-<!--									<span class="c-catalogue-item__price">2000 <span class="ruble">p</span></span>-->
-<!--									<span class="c-catalogue-item__buy">-->
-<!--										<span class="c-catalogue-item__btn-more">-->
-<!--											<span class="icon icon--more"></span>-->
-<!--											<span class="c-catalogue-item__btn-more-text">Подробнее</span>-->
-<!--										</span>-->
-<!--										<span class="c-catalogue-item__btn-cart js-btn-add-to-cart">-->
-<!--											<span class="icon icon--cart"></span>-->
-<!--										</span>-->
-<!--									</span>-->
-<!--								</span>-->
-<!--							</span>-->
-<!--                </a>-->
-<!--            </li>-->
-<!--            <li class="c-catalogue-list-item">-->
-<!--                <a href class="c-catalogue-item">-->
-<!--							<span class="c-catalogue-item__img-wrapper">-->
-<!--								<img class="c-catalogue-item__img" src="images/content/content-7.jpg">-->
-<!--								<span class="c-catalogue-item__desc">-->
-<!--									<span class="c-catalogue-item__name">Название товара<span  class="c-catalogue-item__name-full"> в каталоге</span></span>-->
-<!--									<span class="c-catalogue-item__price">2000 <span class="ruble">p</span></span>-->
-<!--									<span class="c-catalogue-item__buy">-->
-<!--										<span class="c-catalogue-item__btn-more">-->
-<!--											<span class="icon icon--more"></span>-->
-<!--											<span class="c-catalogue-item__btn-more-text">Подробнее</span>-->
-<!--										</span>-->
-<!--										<span class="c-catalogue-item__btn-cart js-btn-add-to-cart">-->
-<!--											<span class="icon icon--cart"></span>-->
-<!--										</span>-->
-<!--									</span>-->
-<!--								</span>-->
-<!--							</span>-->
-<!--                </a>-->
-<!--            </li>-->
-<!--            <li class="c-catalogue-list-item">-->
-<!--                <a href class="c-catalogue-item">-->
-<!--							<span class="c-catalogue-item__img-wrapper">-->
-<!--								<span class="c-catalogue-item__desc">-->
-<!--									<span class="c-catalogue-item__name">Название товара<span  class="c-catalogue-item__name-full"> в каталоге</span></span>-->
-<!--									<span class="c-catalogue-item__price">2000 <span class="ruble">p</span></span>-->
-<!--									<span class="c-catalogue-item__buy">-->
-<!--										<span class="c-catalogue-item__btn-more">-->
-<!--											<span class="icon icon--more"></span>-->
-<!--											<span class="c-catalogue-item__btn-more-text">Подробнее</span>-->
-<!--										</span>-->
-<!--										<span class="c-catalogue-item__btn-cart js-btn-add-to-cart">-->
-<!--											<span class="icon icon--cart"></span>-->
-<!--										</span>-->
-<!--									</span>-->
-<!--								</span>-->
-<!--							</span>-->
-<!--                </a>-->
-<!--            </li>-->
-<!--            <li class="c-catalogue-list-item">-->
-<!--                <a href class="c-catalogue-item">-->
-<!--							<span class="c-catalogue-item__img-wrapper">-->
-<!--								<img class="c-catalogue-item__img" src="img/content/content-7.jpg">-->
-<!--								<span class="c-catalogue-item__desc">-->
-<!--									<span class="c-catalogue-item__name">Название товара<span  class="c-catalogue-item__name-full"> в каталоге</span></span>-->
-<!--									<span class="c-catalogue-item__price">2000 <span class="ruble">p</span></span>-->
-<!--									<span class="c-catalogue-item__buy">-->
-<!--										<span class="c-catalogue-item__btn-more">-->
-<!--											<span class="icon icon--more"></span>-->
-<!--											<span class="c-catalogue-item__btn-more-text">Подробнее</span>-->
-<!--										</span>-->
-<!--										<span class="c-catalogue-item__btn-cart js-btn-add-to-cart">-->
-<!--											<span class="icon icon--cart"></span>-->
-<!--										</span>-->
-<!--									</span>-->
-<!--								</span>-->
-<!--							</span>-->
-<!--                </a>-->
-<!--            </li>-->
-<!--        </ul>-->
-<!--        <ul class="c-catalogue-item-list">-->
-<!--            <li class="c-catalogue-list-item">-->
-<!--                <a href class="c-catalogue-item">-->
-<!--							<span class="c-catalogue-item__img-wrapper">-->
-<!--								<img class="c-catalogue-item__img" src="img/content/content-5.jpg">-->
-<!--								<span class="c-catalogue-item__desc">-->
-<!--									<span class="c-catalogue-item__name">Название товара<span  class="c-catalogue-item__name-full"> в каталоге</span></span>-->
-<!--									<span class="c-catalogue-item__price">2000 <span class="ruble">p</span></span>-->
-<!--									<span class="c-catalogue-item__buy">-->
-<!--										<span class="c-catalogue-item__btn-more">-->
-<!--											<span class="icon icon--more"></span>-->
-<!--											<span class="c-catalogue-item__btn-more-text">Подробнее</span>-->
-<!--										</span>-->
-<!--										<span class="c-catalogue-item__btn-cart js-btn-add-to-cart">-->
-<!--											<span class="icon icon--cart"></span>-->
-<!--										</span>-->
-<!--									</span>-->
-<!--								</span>-->
-<!--							</span>-->
-<!--                </a>-->
-<!--            </li>-->
-<!--            <li class="c-catalogue-list-item">-->
-<!--                <a href class="c-catalogue-item">-->
-<!--							<span class="c-catalogue-item__img-wrapper">-->
-<!--								<img class="c-catalogue-item__img" src="img/content/content-6.jpg">-->
-<!--								<span class="c-catalogue-item__desc">-->
-<!--									<span class="c-catalogue-item__name">Название товара<span  class="c-catalogue-item__name-full"> в каталоге</span></span>-->
-<!--									<span class="c-catalogue-item__price">2000 <span class="ruble">p</span></span>-->
-<!--									<span class="c-catalogue-item__buy">-->
-<!--										<span class="c-catalogue-item__btn-more">-->
-<!--											<span class="icon icon--more"></span>-->
-<!--											<span class="c-catalogue-item__btn-more-text">Подробнее</span>-->
-<!--										</span>-->
-<!--										<span class="c-catalogue-item__btn-cart js-btn-add-to-cart">-->
-<!--											<span class="icon icon--cart"></span>-->
-<!--										</span>-->
-<!--									</span>-->
-<!--								</span>-->
-<!--							</span>-->
-<!--                </a>-->
-<!--            </li>-->
-<!--            <li class="c-catalogue-list-item">-->
-<!--                <a href class="c-catalogue-item">-->
-<!--							<span class="c-catalogue-item__img-wrapper">-->
-<!--								<span class="c-catalogue-item__desc">-->
-<!--									<span class="c-catalogue-item__name">Название товара<span  class="c-catalogue-item__name-full"> в каталоге</span></span>-->
-<!--									<span class="c-catalogue-item__price">2000 <span class="ruble">p</span></span>-->
-<!--									<span class="c-catalogue-item__buy">-->
-<!--										<span class="c-catalogue-item__btn-more">-->
-<!--											<span class="icon icon--more"></span>-->
-<!--											<span class="c-catalogue-item__btn-more-text">Подробнее</span>-->
-<!--										</span>-->
-<!--										<span class="c-catalogue-item__btn-cart js-btn-add-to-cart">-->
-<!--											<span class="icon icon--cart"></span>-->
-<!--										</span>-->
-<!--									</span>-->
-<!--								</span>-->
-<!--							</span>-->
-<!--                </a>-->
-<!--            </li>-->
-<!--            <li class="c-catalogue-list-item">-->
-<!--                <a href class="c-catalogue-item">-->
-<!--							<span class="c-catalogue-item__img-wrapper">-->
-<!--								<img class="c-catalogue-item__img" src="img/content/content-7.jpg">-->
-<!--								<span class="c-catalogue-item__desc">-->
-<!--									<span class="c-catalogue-item__name">Название товара<span  class="c-catalogue-item__name-full"> в каталоге</span></span>-->
-<!--									<span class="c-catalogue-item__price">2000 <span class="ruble">p</span></span>-->
-<!--									<span class="c-catalogue-item__buy">-->
-<!--										<span class="c-catalogue-item__btn-more">-->
-<!--											<span class="icon icon--more"></span>-->
-<!--											<span class="c-catalogue-item__btn-more-text">Подробнее</span>-->
-<!--										</span>-->
-<!--										<span class="c-catalogue-item__btn-cart js-btn-add-to-cart">-->
-<!--											<span class="icon icon--cart"></span>-->
-<!--										</span>-->
-<!--									</span>-->
-<!--								</span>-->
-<!--							</span>-->
-<!--                </a>-->
-<!--            </li>-->
-<!--        </ul>-->
-<!--    </div>-->
-<!--</div>-->
 
 <div class="c-footer__wrapper">
     <footer class="c-footer container container--centered">
@@ -886,11 +311,6 @@ AppAsset::register($this);
             apl.ui.menuShop.init();
             apl.ui.menuCart.init();
             apl.ui.cart.init();
-
-//            $('#slider').slick({
-//                infinite: true,
-//                dots: true
-//            });
         });
 
         apl = {};
