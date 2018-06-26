@@ -5,8 +5,29 @@
   @include col-lg-33;
   background: $COLOR_BACKGROUND_BASE;
   border-radius: 8px;
+  padding: 1rem;
 
   @media only screen and (max-width: $MD) {
     display: none;
+  }
+
+  &__header {
+    background: $COLOR_BACKGROUND_IMPORTANT;
+    margin: -1rem -1rem 2rem -1rem;
+    color: $COLOR_BACKGROUND_BASE;
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: 8px 8px 0 0;
+  }
+
+  &__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__link {
+    display: block;
+    padding: 0.5rem 1rem;
   }
 }

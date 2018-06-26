@@ -18,6 +18,17 @@
     @include col-lg-33;
     @include col-md-50;
     @include col-xs-100;
+
+    width: calc(33.33% - 1rem);
+
+    @media only screen and (max-width: 1000px) {
+      width: calc(50% - 1rem);
+    }
+
+    @media only screen and (max-width: 414px) {
+      width: calc(100% - 1rem);
+    }
+
     display: flex;
   }
 

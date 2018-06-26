@@ -1,0 +1,43 @@
+.gallery {
+  @include container;
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__slider {
+    @include grid-item;
+    @include col-lg-66;
+  }
+
+  &__slider-img {
+    width: 100%;
+  }
+
+  &__descs {
+    @include grid-item;
+    @include col-lg-33;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__desc {
+    @include content-block;
+    background: $COLOR_BACKGROUND_IMPORTANT;
+    color: $COLOR_BACKGROUND_BASE;
+    display: flex;
+    flex: 1;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}

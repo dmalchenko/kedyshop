@@ -4,6 +4,17 @@
 
 $this->title = 'My Yii Application';
 ?>
+<div class="gallery">
+    <div class="gallery__row">
+        <div class="gallery__slider">
+            <img class="gallery__slider-img" src="/images/slider/image.png">
+        </div>
+        <div class="gallery__descs">
+            <div class="gallery__desc">Только надежные поставщики — каждый товар прошел предпродажный контроль</div>
+            <div class="gallery__desc">Бесплатная доставка при покупке 2 и более пар. До 6 пар на примерку</div>
+        </div>
+    </div>
+</div>
 <div class="catalogue">
     <div class="catalogue__row">
         <div class="catalogue-content">
@@ -142,6 +153,32 @@ $this->title = 'My Yii Application';
                     Купить стильные брендовые кроссовки легко. Убедитесь в этом сами, воспользовавшись помощью интернет-магазина StokerMan.</p>
             </div>
         </div>
-        <div class="catalogue-sidebar">123</div>
+        <div class="catalogue-sidebar">
+            <div class="catalogue-sidebar__wrap">
+                <div class="catalogue-sidebar__header">
+                    Каталог
+                </div>
+                <ul class="catalogue-sidebar__list">
+                    <li class="catalogue-sidebar__list">
+                        <a href="" class="catalogue-sidebar__link">Последний размер</a>
+                    </li>
+                    <li class="catalogue-sidebar__list">
+                        <a href="" class="catalogue-sidebar__link">Последний размер</a>
+                    </li>
+                    <li class="catalogue-sidebar__list">
+                        <a href="" class="catalogue-sidebar__link">Последний размер</a>
+                    </li>
+                    <li class="catalogue-sidebar__list">
+                        <a href="" class="catalogue-sidebar__link">Последний размер</a>
+                    </li>
+                    <li class="catalogue-sidebar__list">
+                        <a href="" class="catalogue-sidebar__link">Последний размер</a>
+                    </li>
+                    <li class="catalogue-sidebar__list">
+                        <a href="" class="catalogue-sidebar__link">Последний размер</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
