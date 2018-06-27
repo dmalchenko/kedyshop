@@ -2,12 +2,12 @@
 
 namespace backend\controllers;
 
-use backend\models\Item;
 use Yii;
 use yii\helpers\FileHelper;
 use yii\helpers\Json;
 use yii\web\Controller;
 use yii\web\UploadedFile;
+use backend\models\Item;
 
 class MediaController extends Controller
 {
@@ -19,7 +19,7 @@ class MediaController extends Controller
     {
         $model = new Item();
 
-        $imageFile = UploadedFile::getInstance($model, 'image');
+        $imageFile = UploadedFile::getInstance($model, 'image_file');
 
         $directory = Yii::getAlias('@frontend/web/images/content/');
         if (!is_dir($directory)) {
@@ -31,10 +31,8 @@ class MediaController extends Controller
             $fileName = $uid . '.' . $imageFile->extension;
             $filePath = $directory . $fileName;
             if ($imageFile->saveAs($filePath)) {
-                $path = '/img/temp/' . Yii::$app->session->id . DIRECTORY_SEPARATOR . $fileName;
                 return Json::encode([
                     'name' => $fileName,
-                    'img' => $path,
                 ]);
             }
         }

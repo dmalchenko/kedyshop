@@ -20,6 +20,7 @@ use yii\behaviors\TimestampBehavior;
  */
 class Item extends \yii\db\ActiveRecord
 {
+    public $image_file;
     /**
      * {@inheritdoc}
      */

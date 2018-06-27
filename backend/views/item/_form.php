@@ -23,13 +23,15 @@ use dosamigos\fileupload\FileUpload;
 
     <?= $form->field($model, 'article')->textInput(['maxlength' => true]) ?>
 
+    <?= $form->field($model, 'image')->hiddenInput(['id' => 'itemimage']) ?>
+
 
     <label for="item-image">Upload</label>
     <?php
     try {
          echo FileUpload::widget([
             'model' => $model,
-            'attribute' => 'image',
+            'attribute' => 'image_file',
             'url' => ['media/upload', 'id' => $model->id],
             'options' => ['accept' => 'image/*'],
             'clientOptions' => [
@@ -37,7 +39,9 @@ use dosamigos\fileupload\FileUpload;
             ],
             'clientEvents' => [
                 'fileuploaddone' => 'function(e, data) {
-                                      $( "#item-img" ).val(JSON.parse(data.result).name)
+                                      $("#picture").attr(\'src\',JSON.parse(data.result).name)
+                                      $("#item-img").val(JSON.parse(data.result).name)
+                                      $("#itemimage").val(JSON.parse(data.result).name)
                                 }',
                 'fileuploadfail' => 'function(e, data) {
                                     console.log(e);
@@ -50,11 +54,11 @@ use dosamigos\fileupload\FileUpload;
     } ?>
     <?= $form->field($model, 'image')->textInput(['disabled' => true, 'id' =>'item-img']) ?>
 
+    <img src="" alt="" id="picture">
 
     <div class="form-group" style="margin-top: 20px">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
     </div>
-
     <?php ActiveForm::end(); ?>
 
 </div>
