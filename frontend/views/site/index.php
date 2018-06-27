@@ -10,13 +10,50 @@ $this->title = 'My Yii Application';
             <img class="gallery__slider-img" src="/images/slider/image.png">
         </div>
         <div class="gallery__descs">
-            <div class="gallery__desc">Только надежные поставщики — каждый товар прошел предпродажный контроль</div>
-            <div class="gallery__desc">Бесплатная доставка при покупке 2 и более пар. До 6 пар на примерку</div>
+            <div class="gallery__desc">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 510 510" xml:space="preserve">
+	                <path d="M150.45,206.55l-35.7,35.7L229.5,357l255-255l-35.7-35.7L229.5,285.6L150.45,206.55z M459,255c0,112.2-91.8,204-204,204    S51,367.2,51,255S142.8,51,255,51c20.4,0,38.25,2.55,56.1,7.65l40.801-40.8C321.3,7.65,288.15,0,255,0C114.75,0,0,114.75,0,255    s114.75,255,255,255s255-114.75,255-255H459z" fill="#e87722"/>
+                </svg>
+                <span>Только надежные поставщики — каждый товар прошел предпродажный контроль</span>
+            </div>
+            <div class="gallery__desc">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 510 510" xml:space="preserve">
+	                <path d="M150.45,206.55l-35.7,35.7L229.5,357l255-255l-35.7-35.7L229.5,285.6L150.45,206.55z M459,255c0,112.2-91.8,204-204,204    S51,367.2,51,255S142.8,51,255,51c20.4,0,38.25,2.55,56.1,7.65l40.801-40.8C321.3,7.65,288.15,0,255,0C114.75,0,0,114.75,0,255    s114.75,255,255,255s255-114.75,255-255H459z" fill="#e87722"/>
+                </svg>
+                <span>Бесплатная доставка при покупке 2 и более пар. До 6 пар на примерку</span>
+            </div>
+            <div class="gallery__desc">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 510 510" xml:space="preserve">
+	                <path d="M150.45,206.55l-35.7,35.7L229.5,357l255-255l-35.7-35.7L229.5,285.6L150.45,206.55z M459,255c0,112.2-91.8,204-204,204    S51,367.2,51,255S142.8,51,255,51c20.4,0,38.25,2.55,56.1,7.65l40.801-40.8C321.3,7.65,288.15,0,255,0C114.75,0,0,114.75,0,255    s114.75,255,255,255s255-114.75,255-255H459z" fill="#e87722"/>
+                </svg>
+                <span>Только надежные поставщики — каждый товар прошел предпродажный контроль</span>
+            </div>
         </div>
     </div>
 </div>
 <div class="catalogue">
     <div class="catalogue__row">
+        <div class="catalogue-sidebar">
+            <div class="catalogue-sidebar__wrap">
+                <div class="catalogue-sidebar__header">
+                    Каталог
+                </div>
+                <ul class="catalogue-sidebar__list">
+                    <li class="catalogue-sidebar__list">
+                        <a href="" class="catalogue-sidebar__link">Adidas</a>
+                    </li>
+                    <li class="catalogue-sidebar__list">
+                        <a href="" class="catalogue-sidebar__link">Nike</a>
+                    </li>
+                    <li class="catalogue-sidebar__list">
+                        <a href="" class="catalogue-sidebar__link">Vans</a>
+                    </li>
+                    <li class="catalogue-sidebar__list">
+                        <a href="" class="catalogue-sidebar__link">Reebok</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
         <div class="catalogue-content">
             <ul class="catalogue-content__list">
                 <li class="catalogue-content__list-item">
@@ -151,33 +188,6 @@ $this->title = 'My Yii Application';
                 заказав обратный звонок с помощью специальной формы, оборудованной внизу страницы;
                 добавив товар в корзину и приступив к оформлению заказа.
                     Купить стильные брендовые кроссовки легко. Убедитесь в этом сами, воспользовавшись помощью интернет-магазина StokerMan.</p>
-            </div>
-        </div>
-        <div class="catalogue-sidebar">
-            <div class="catalogue-sidebar__wrap">
-                <div class="catalogue-sidebar__header">
-                    Каталог
-                </div>
-                <ul class="catalogue-sidebar__list">
-                    <li class="catalogue-sidebar__list">
-                        <a href="" class="catalogue-sidebar__link">Последний размер</a>
-                    </li>
-                    <li class="catalogue-sidebar__list">
-                        <a href="" class="catalogue-sidebar__link">Последний размер</a>
-                    </li>
-                    <li class="catalogue-sidebar__list">
-                        <a href="" class="catalogue-sidebar__link">Последний размер</a>
-                    </li>
-                    <li class="catalogue-sidebar__list">
-                        <a href="" class="catalogue-sidebar__link">Последний размер</a>
-                    </li>
-                    <li class="catalogue-sidebar__list">
-                        <a href="" class="catalogue-sidebar__link">Последний размер</a>
-                    </li>
-                    <li class="catalogue-sidebar__list">
-                        <a href="" class="catalogue-sidebar__link">Последний размер</a>
-                    </li>
-                </ul>
             </div>
         </div>
     </div>
