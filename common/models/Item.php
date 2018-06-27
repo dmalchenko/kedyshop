@@ -15,12 +15,15 @@ use yii\behaviors\TimestampBehavior;
  * @property int $new_price
  * @property string $image
  * @property string $article
+ * @property string $imageUrl
+ * @property string $category_id
  * @property int $created_at
  * @property int $updated_at
  */
 class Item extends \yii\db\ActiveRecord
 {
     public $image_file;
+
     /**
      * {@inheritdoc}
      */
@@ -46,7 +49,7 @@ class Item extends \yii\db\ActiveRecord
         return [
             [['old_price', 'new_price', 'created_at', 'updated_at'], 'default', 'value' => null],
             [['old_price', 'new_price', 'created_at', 'updated_at'], 'integer'],
-            [['title', 'description', 'image', 'article'], 'string', 'max' => 255],
+            [['title', 'description', 'image', 'article', 'category_id'], 'string', 'max' => 255],
         ];
     }
 
@@ -65,6 +68,25 @@ class Item extends \yii\db\ActiveRecord
             'article' => 'Article',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
+        ];
+    }
+
+    public function getImageUrl()
+    {
+        return Yii::getAlias('/images/content/' . $this->image);
+    }
+
+    /**
+     * @return array
+     */
+    public static function getCategories()
+    {
+        return [
+            'Adidas' => 'Adidas',
+            'Nike' => 'Nike',
+            'Vans' => 'Vans',
+            'Reebok' => 'Reebok',
+            'Other' => 'Other',
         ];
     }
 }

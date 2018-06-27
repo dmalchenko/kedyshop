@@ -21,6 +21,8 @@ use dosamigos\fileupload\FileUpload;
 
     <?= $form->field($model, 'new_price')->textInput() ?>
 
+    <?= $form->field($model, 'category_id')->dropDownList(\common\models\Item::getCategories()) ?>
+
     <?= $form->field($model, 'article')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'image')->hiddenInput(['id' => 'itemimage']) ?>

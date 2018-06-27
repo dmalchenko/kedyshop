@@ -1,6 +1,8 @@
 <?php
+
 namespace frontend\controllers;
 
+use common\models\Item;
 use Yii;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
@@ -68,11 +70,19 @@ class SiteController extends Controller
     /**
      * Displays homepage.
      *
+     * @param null $category
+     * @param null $min_price
+     * @param null $max_price
      * @return mixed
      */
-    public function actionIndex()
+    public function actionIndex($category = null, $min_price = null, $max_price = null)
     {
-        return $this->render('index');
+        $items = Item::find()
+            ->andFilterWhere(['category_id' => $category])
+            ->andFilterWhere(['>=', 'new_price', $min_price])
+            ->andFilterWhere(['<=', 'new_price', $max_price])
+            ->all();
+        return $this->render('index', ['items' => $items]);
     }
 
     /**
@@ -222,6 +232,7 @@ class SiteController extends Controller
     {
         return $this->render('reviews');
     }
+
     public function actionDelivery()
     {
         return $this->render('delivery');

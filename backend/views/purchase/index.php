@@ -6,16 +6,11 @@ use yii\grid\GridView;
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Items';
-$this->params['breadcrumbs'][] = $this->title;
+$this->title = 'Заказы';
 ?>
-<div class="item-index">
+<div class="purchase-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
-
-    <p>
-        <?= Html::a('Create Item', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -23,15 +18,11 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'title',
-            'description',
-            'old_price',
-            'new_price',
-            'image',
-            'category_id',
-            'article',
-            //'created_at',
-            //'updated_at',
+            'name',
+            'phone',
+            'address',
+            'price',
+            //'title',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

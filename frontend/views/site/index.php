@@ -1,8 +1,8 @@
 <?php
 
 /* @var $this yii\web\View */
+/* @var $items \common\models\Item[] */
 
-$this->title = 'My Yii Application';
 ?>
 <div class="gallery">
     <div class="gallery__row">
@@ -40,114 +40,30 @@ $this->title = 'My Yii Application';
                 </div>
                 <ul class="catalogue-sidebar__list">
                     <li class="catalogue-sidebar__list">
-                        <a href="" class="catalogue-sidebar__link">Adidas</a>
+                        <a href="/" class="catalogue-sidebar__link">Все</a>
                     </li>
                     <li class="catalogue-sidebar__list">
-                        <a href="" class="catalogue-sidebar__link">Nike</a>
+                        <a href="/?category=Adidas" class="catalogue-sidebar__link">Adidas</a>
                     </li>
                     <li class="catalogue-sidebar__list">
-                        <a href="" class="catalogue-sidebar__link">Vans</a>
+                        <a href="/?category=Nike" class="catalogue-sidebar__link">Nike</a>
                     </li>
                     <li class="catalogue-sidebar__list">
-                        <a href="" class="catalogue-sidebar__link">Reebok</a>
+                        <a href="/?category=Vans" class="catalogue-sidebar__link">Vans</a>
+                    </li>
+                    <li class="catalogue-sidebar__list">
+                        <a href="/?category=Reebok" class="catalogue-sidebar__link">Reebok</a>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="catalogue-content">
             <ul class="catalogue-content__list">
-                <li class="catalogue-content__list-item">
-                    <div class="catalogue-item">
-                        <a class="catalogue-item__title" href="">CONVERSE CHUCK TAYLOR ALL STAR II OX Grey (CONVERSE-89)</a>
-                        <a class="catalogue-item__img-link" href="">
-                            <img class="catalogue-item__img" src="images/content/content-7.jpg" alt="">
-                        </a>
-                        <select class="catalogue-item__size">
-                            <option>36 euro</option>
-                            <option>37 euro</option>
-                            <option>38 euro</option>
-                            <option>39 euro</option>
-                            <option>40 euro</option>
-                            <option>41 euro</option>
-                            <option>42 euro</option>
-                        </select>
-                        <span class="catalogue-item__price catalogue-item__price--old">Старая цена: 5990<span class="ruble">Р</span></span>
-                        <span class="catalogue-item__price">Новая цена: 2990<span class="ruble">Р</span></span>
-                        <div class="catalogue-item__btns btns btns--spaced">
-                            <a class="btn btn--secondary" href="">Подробнее</a>
-                            <a class="btn" href="">Заказать</a>
-                        </div>
-                    </div>
-                </li>
-                <li class="catalogue-content__list-item">
-                    <div class="catalogue-item">
-                        <a class="catalogue-item__title" href="">CONVERSE CHUCK TAYLOR ALL STAR II OX Grey (CONVERSE-89)</a>
-                        <a class="catalogue-item__img-link" href="">
-                            <img class="catalogue-item__img" src="images/content/content-7.jpg" alt="">
-                        </a>
-                        <select class="catalogue-item__size">
-                            <option>36 euro</option>
-                            <option>37 euro</option>
-                            <option>38 euro</option>
-                            <option>39 euro</option>
-                            <option>40 euro</option>
-                            <option>41 euro</option>
-                            <option>42 euro</option>
-                        </select>
-                        <span class="catalogue-item__price catalogue-item__price--old">Старая цена: 5990<span class="ruble">Р</span></span>
-                        <span class="catalogue-item__price">Новая цена: 2990<span class="ruble">Р</span></span>
-                        <div class="catalogue-item__btns btns btns--spaced">
-                            <a class="btn btn--secondary" href="">Подробнее</a>
-                            <a class="btn" href="">Заказать</a>
-                        </div>
-                    </div>
-                </li>
-                <li class="catalogue-content__list-item">
-                    <div class="catalogue-item">
-                        <a class="catalogue-item__title" href="">CONVERSE CHUCK TAYLOR ALL STAR II OX Grey (CONVERSE-89)</a>
-                        <a class="catalogue-item__img-link" href="">
-                            <img class="catalogue-item__img" src="images/content/content-7.jpg" alt="">
-                        </a>
-                        <select class="catalogue-item__size">
-                            <option>36 euro</option>
-                            <option>37 euro</option>
-                            <option>38 euro</option>
-                            <option>39 euro</option>
-                            <option>40 euro</option>
-                            <option>41 euro</option>
-                            <option>42 euro</option>
-                        </select>
-                        <span class="catalogue-item__price catalogue-item__price--old">Старая цена: 5990<span class="ruble">Р</span></span>
-                        <span class="catalogue-item__price">Новая цена: 2990<span class="ruble">Р</span></span>
-                        <div class="catalogue-item__btns btns btns--spaced">
-                            <a class="btn btn--secondary" href="">Подробнее</a>
-                            <a class="btn" href="">Заказать</a>
-                        </div>
-                    </div>
-                </li>
-                <li class="catalogue-content__list-item">
-                    <div class="catalogue-item">
-                        <a class="catalogue-item__title" href="">CONVERSE CHUCK TAYLOR ALL STAR II OX Grey (CONVERSE-89)</a>
-                        <a class="catalogue-item__img-link" href="">
-                            <img class="catalogue-item__img" src="images/content/content-7.jpg" alt="">
-                        </a>
-                        <select class="catalogue-item__size">
-                            <option>36 euro</option>
-                            <option>37 euro</option>
-                            <option>38 euro</option>
-                            <option>39 euro</option>
-                            <option>40 euro</option>
-                            <option>41 euro</option>
-                            <option>42 euro</option>
-                        </select>
-                        <span class="catalogue-item__price catalogue-item__price--old">Старая цена: 5990<span class="ruble">Р</span></span>
-                        <span class="catalogue-item__price">Новая цена: 2990<span class="ruble">Р</span></span>
-                        <div class="catalogue-item__btns btns btns--spaced">
-                            <a class="btn btn--secondary" href="">Подробнее</a>
-                            <a class="btn" href="">Заказать</a>
-                        </div>
-                    </div>
-                </li>
+                <?php
+                foreach ($items as $item) {
+                    echo $this->render('_small_card', ['item' => $item]);
+                }
+                ?>
             </ul>
             <div class="catalogue-content__desc">
                 <h2>Интернет-магазин кроссовок в Москве</h2>
