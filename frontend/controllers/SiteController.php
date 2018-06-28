@@ -14,6 +14,7 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+use yii\web\Response;
 
 /**
  * Site controller
@@ -236,5 +237,12 @@ class SiteController extends Controller
     public function actionDelivery()
     {
         return $this->render('delivery');
+    }
+
+    public function actionPurchase()
+    {
+        Yii::$app->response->format = Response::FORMAT_JSON;
+
+        return ['status' => 'OK', 'code' => 200, 'data' => []];
     }
 }
