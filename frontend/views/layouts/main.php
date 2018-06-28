@@ -11,6 +11,14 @@ use frontend\assets\AppAsset;
 use common\widgets\Alert;
 
 AppAsset::register($this);
+
+$route = Yii::$app->controller->getRoute();
+$isIndex = $route == 'site/index' ? 'main-menu__list-item--active' : '';
+$isCatalogue = $route == 'site/catalogue' ? 'main-menu__list-item--active' : '';
+$isDelivery = $route == 'site/delivery' ? 'main-menu__list-item--active' : '';
+$isReviews = $route == 'site/reviews' ? 'main-menu__list-item--active' : '';
+$isContacts = $route == 'site/contacts' ? 'main-menu__list-item--active' : '';
+
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -204,11 +212,11 @@ AppAsset::register($this);
 <main class="c-main">
     <nav class="main-menu">
         <ul class="main-menu__list">
-            <li class="main-menu__list-item main-menu__list-item--active"><a href="/">Главная</a></li>
-            <li class="main-menu__list-item"><a href="catalogue">Каталог</a></li>
-            <li class="main-menu__list-item"><a href="delivery">Доставка</a></li>
-            <li class="main-menu__list-item"><a href="reviews">Отзывы</a></li>
-            <li class="main-menu__list-item"><a href="contacts">Контакты</a></li>
+            <li class="main-menu__list-item <?= $isIndex?>"><a href="/">Главная</a></li>
+            <li class="main-menu__list-item <?= $isCatalogue?>"><a href="catalogue">Каталог</a></li>
+            <li class="main-menu__list-item <?= $isDelivery?>"><a href="delivery">Доставка</a></li>
+            <li class="main-menu__list-item <?= $isReviews?>"><a href="reviews">Отзывы</a></li>
+            <li class="main-menu__list-item <?= $isContacts?>"><a href="contacts">Контакты</a></li>
         </ul>
     </nav>
     <?= $content ?>
