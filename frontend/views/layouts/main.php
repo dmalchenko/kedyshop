@@ -244,8 +244,43 @@ $isContacts = $route == 'site/contacts' ? 'main-menu__list-item--active' : '';
         </div>
     </footer>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
+    new Vue({
+        //this targets the div id app
+        el: '#search-panel',
+        data: {
+            minprice: '',
+            maxprice: ''
+        },
+        methods: {
+            submitForm: function () {
+                var minPriceString = '';
+                if (this.minprice != '' && this.isNumeric(this.minprice)) {
+                    minPriceString = 'min_price=' + this.minprice + '&';
+                }
+                var maxPriceString = '';
+                if (this.maxprice != '' && this.isNumeric(this.maxprice)) {
+                    maxPriceString = 'max_price=' + this.maxprice;
+                }
+                console.log(minPriceString);
+                console.log(maxPriceString);
+                console.log(minPriceString == '' && maxPriceString == '');
+
+                if (minPriceString == '' && maxPriceString == '') {
+                    return;
+                }
+
+                location.href = '/?' + minPriceString + maxPriceString;
+            },
+            isNumeric: function (n) {
+                return !isNaN(parseFloat(n)) && isFinite(n);
+            },
+        }
+    });
+
+
     (function($) {
         $(function() {
             apl.ui.search.init();

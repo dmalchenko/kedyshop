@@ -36,7 +36,7 @@
 </div>
 <div class="catalogue">
     <div class="catalogue__row">
-        <div class="catalogue-sidebar">
+        <div id="search-panel" class="catalogue-sidebar">
             <div class="catalogue-sidebar__wrap">
                 <div class="catalogue-sidebar__header">
                     Каталог
@@ -58,6 +58,15 @@
                         <a href="/?category=Reebok" class="catalogue-sidebar__link">Reebok</a>
                     </li>
                 </ul>
+                <form class="search-form" @submit.prevent="submitForm" v-cloak>
+                    <div class="search-form__prices">
+                        <label class="search-form__label" for="minprice">От</label>
+                        <input id="minprice" class="search-form__price search-form__price--min" type="text" v-model.number="minprice" />
+                        <label class="search-form__label" for="maxprice">До</label>
+                        <input id="maxprice" class="search-form__price search-form__price--max" type="text" v-model.number="maxprice" />
+                    </div>
+                    <button class="btn btn--ebn">Найти</button>
+                </form>
             </div>
         </div>
         <div class="catalogue-content">

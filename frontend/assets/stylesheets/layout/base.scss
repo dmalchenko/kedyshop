@@ -6,6 +6,9 @@
   box-sizing: border-box;
 }
 
+[v-cloak] > * { display:none }
+[v-cloak]::before { content: "загрузка…" }
+
 html {
   font-size: 62.5%;
   text-rendering: optimizeLegibility;
