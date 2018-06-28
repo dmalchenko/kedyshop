@@ -7,7 +7,7 @@
 
 <li class="catalogue-content__list-item">
     <div class="catalogue-item" data-id="<?= $item->id ?>">
-        <span style="color: #9fa7aa; font-size: 10px; margin: 0 0 10px 0">Артикул <?= $item->article ?></span>
+        <span class="catalogue-item__articul">Артикул <?= $item->article ?></span>
         <a class="catalogue-item__title" href=""><?= $item->title ?></a>
         <a class="catalogue-item__img-link" href="">
             <img class="catalogue-item__img" src="<?= $item->imageUrl ?>" alt="">
