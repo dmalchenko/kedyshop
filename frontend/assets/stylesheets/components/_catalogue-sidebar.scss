@@ -3,12 +3,15 @@
 .catalogue-sidebar {
   @include grid-item;
   @include col-lg-25;
-  background: $COLOR_BACKGROUND_BASE;
-  border-radius: 8px;
-  padding: 1rem;
 
   @media only screen and (max-width: $MD) {
     display: none;
+  }
+
+  &__wrap {
+    background: $COLOR_BACKGROUND_BASE;
+    border-radius: 8px;
+    padding: 1rem;
   }
 
   &__header {
