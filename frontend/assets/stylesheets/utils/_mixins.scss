@@ -78,7 +78,7 @@
 
 @mixin col-lg-40 {
   @media only screen and (min-width: 769px) {
-    width: 40%;
+    width: calc(40% - 1rem);
   }
 }
 
@@ -90,7 +90,7 @@
 
 @mixin col-lg-60 {
   @media only screen and (min-width: 769px) {
-    width: 60%;
+    width: calc(60% - 1rem);
   }
 }
 
@@ -143,7 +143,7 @@
 }
 
 @mixin col-xs-50 {
-  width: 50%;
+  width: calc(50% - 1rem);
 }
 
 @mixin col-xs-66 {

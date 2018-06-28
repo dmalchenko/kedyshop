@@ -39,10 +39,6 @@ button {
     background: $COLOR_BTN;
   }
 
-  &--block {
-    width: 100%;
-  }
-
   &--ebn {
     background-color: $COLOR_EBN; /* Old browsers */
     background-image: url('/images/btn-img.png');
@@ -63,6 +59,25 @@ button {
       background-repeat:  repeat-x;
       border: 1px solid $COLOR_EBN;
     }
+  }
+
+  &--red {
+    background: linear-gradient(to top, #be0101, #f30202);
+    border: none;
+    height: 4rem;
+    line-height: 4rem;
+
+    &:hover,
+    &:active,
+    &:focus {
+      transform: translateY(1px);
+      background: linear-gradient(to top, #be0101, #f30202);
+      border: none;
+    }
+  }
+
+  &--block {
+    width: 100%;
   }
 }
 

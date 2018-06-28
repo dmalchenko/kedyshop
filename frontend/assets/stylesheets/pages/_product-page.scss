@@ -1,0 +1,105 @@
+.product-page {
+  @include container;
+
+  &__row {
+    @include grid-row;
+    justify-content: flex-end;
+  }
+
+  &__product {
+    @include grid-item;
+    @include col-lg-75;
+    @include col-xs-100;
+  }
+}
+
+.product {
+  @include content-block;
+
+  &__title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: $COLOR-TEXT_BASE;
+    text-align: left;
+    display: block;
+  }
+
+  &__articul {
+    color: $COLOR_EBN_2;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+
+  &__img-link {
+    display: flex;
+    height: 320px;
+    align-items: center;
+    font-size: 0;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    border: 1px solid $COLOR_BACKGROUND_SECONDARY;
+  }
+
+  &__img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  &__info {
+    @include grid-row;
+
+    @media only screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  &__promo {
+    @include grid-item;
+    @include col-lg-60;
+    @include col-xs-100;
+    padding: 1rem;
+  }
+
+  &__promo-item {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+
+    svg {
+      width: 20px;
+      margin-right: 1rem;
+      vertical-align: bottom;
+      path {
+        fill: $COLOR_EBN;
+      }
+    }
+  }
+
+  &__desc {
+    @include grid-item;
+    @include col-lg-40;
+    @include col-xs-100;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__price {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+
+    &--old {
+      font-size: 2rem;
+      font-weight: bold;
+      text-decoration: line-through;
+      color: $COLOR_BACKGROUND_UNIMPORTANT;
+    }
+  }
+
+  &__size {
+    width: 80%;
+    margin-bottom: 1rem;
+  }
+}
