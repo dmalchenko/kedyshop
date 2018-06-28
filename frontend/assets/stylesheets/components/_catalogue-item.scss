@@ -10,12 +10,20 @@
   border-radius: 8px;
   transition: $TRANSITION_DURATION_BASE;
   margin-bottom: 1rem;
+  text-align: center;
+  align-items: center;
 
   &:hover,
   &:focus,
   &:active {
     border: 1px solid $COLOR_LINK_ACTIVE;
     box-shadow: 0 0 10px 0 $COLOR_LINK_ACTIVE;
+  }
+
+  &__articul {
+    color: $COLOR_EBN_2;
+    font-size: 1.2rem;
+    margin: 0 0 10px 0;
   }
 
   &__title {
@@ -25,6 +33,7 @@
     margin-bottom: 0.5rem;
     display: flex;
     flex: 1;
+    justify-content: center;
   }
 
   &__img-link {
@@ -43,24 +52,35 @@
 
   &__size {
     margin-bottom: 0.5rem;
+    width: 140px;
   }
 
   &__price {
     color: $COLOR_TEXT_IMPORTANT;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     margin-bottom: 0.5rem;
 
     &--old {
       text-decoration: line-through;
-      color: $COLOR_BACKGROUND_UNIMPORTANT;
-      font-size: 1.4rem;
+      color: $COLOR_BACKGROUND_IMPORTANT;
+      font-size: 1.6rem;
       margin-bottom: 0.3rem;
     }
   }
 
-  &__articul {
-    color: #9fa7aa;
-    font-size: 1rem;
-    margin: 0 0 10px 0;
+  &__more {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: $COLOR_BACKGROUND_IMPORTANT;
+    margin-top: 1rem;
+    text-decoration: underline;
+    font-weight: bold;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $COLOR_BACKGROUND_IMPORTANT;
+      text-decoration: none;
+    }
   }
 }

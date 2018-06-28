@@ -94,12 +94,6 @@ a {
   }
 }
 
-input,
-select,
-fieldset {
-  font-family: Tahoma, Arial, sans-serif;
-}
-
 fieldset {
   font-size: 0;
   border: none;
@@ -118,12 +112,12 @@ select {
   vertical-align: middle;
   padding: 0.5rem 1rem;
   outline: none;
-  border: none;
-  border-bottom: 1px solid $COLOR_TEXT_BASE;
+  //border: none;
+  //border-bottom: 1px solid $COLOR_TEXT_BASE;
   font-size: 1rem;
   line-height: 2.25rem;
   height: 2.25rem;
-  background: transparent;
+  //background: transparent;
 }
 
 select {
@@ -134,7 +128,7 @@ select {
 input[type=text]:focus,
 input[type=text]:hover,
 select:hover {
-  border-bottom: 1px solid #e87722;
+  //border-bottom: 1px solid #e87722;
 }
 
 input[type=radio] {

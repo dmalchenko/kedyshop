@@ -2,13 +2,11 @@
 /* Header */
 
 .c-header {
-  //background: $COLOR_BACKGROUND_BASE;
-  //box-shadow: 0 3px 5px 1px rgba(0,0,0,0.15);
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
-  margin-top: 5rem;
+  margin-top: 3.5rem;
 
   @if $STATE_HEADER_FIXED == true {
     position: fixed;

@@ -42,6 +42,28 @@ button {
   &--block {
     width: 100%;
   }
+
+  &--ebn {
+    background-color: $COLOR_EBN; /* Old browsers */
+    background-image: url('/images/btn-img.png');
+    background-repeat:  repeat-x;
+    border: 1px solid $COLOR_EBN;
+    border-radius: 3px;
+    width: 70%;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &:hover,
+    &:active,
+    &:focus {
+      transform: translateY(1px);
+      background-color: $COLOR_EBN; /* Old browsers */
+      background-image: url('/images/btn-img.png');
+      background-repeat:  repeat-x;
+      border: 1px solid $COLOR_EBN;
+    }
+  }
 }
 
 .btn--secondary {
