@@ -8,8 +8,8 @@
 <li class="catalogue-content__list-item">
     <div class="catalogue-item" data-id="<?= $item->id ?>">
         <span class="catalogue-item__articul">Артикул <?= $item->article ?></span>
-        <a class="catalogue-item__title" href=""><?= $item->title ?></a>
-        <a class="catalogue-item__img-link" href="">
+        <a class="catalogue-item__title" href="<?= \yii\helpers\Url::toRoute(['site/item', 'id' => $item->id])?>"><?= $item->title ?></a>
+        <a class="catalogue-item__img-link" href="<?= \yii\helpers\Url::toRoute(['site/item', 'id' => $item->id])?>">
             <img class="catalogue-item__img" src="<?= $item->imageUrl ?>" alt="">
         </a>
         <select class="catalogue-item__size">
