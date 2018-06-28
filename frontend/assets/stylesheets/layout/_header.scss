@@ -21,7 +21,7 @@
   &__wrap {
     @include container;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     padding: 1rem 0;
     flex-direction: column;

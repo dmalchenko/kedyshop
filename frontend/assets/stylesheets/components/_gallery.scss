@@ -31,12 +31,21 @@
     color: $COLOR_BACKGROUND_BASE;
     display: flex;
     flex: 1;
+    align-items: flex-start;
     margin: 0.5rem 0;
 
     svg {
-      width: 40px;
-      height: 40px;
-      margin-right: 1rem;
+      margin-right: 2rem;
+      width: 60px;
+
+      path {
+        fill: $COLOR_BTN;
+      }
+    }
+
+    span {
+      flex: 1;
+      display: flex;
     }
 
     &:first-child {

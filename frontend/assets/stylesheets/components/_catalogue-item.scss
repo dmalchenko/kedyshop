@@ -3,6 +3,7 @@
 .catalogue-item {
   display: flex;
   flex-direction: column;
+  flex: 1;
   background: $COLOR_BACKGROUND_BASE;
   border: 1px solid $COLOR_BACKGROUND_UNIMPORTANT;
   padding: 1rem;

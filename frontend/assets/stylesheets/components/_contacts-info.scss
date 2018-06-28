@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+.contacts-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+
+  &__phone {
+    font-size: 2rem;
+    color: $COLOR_TEXT_BASE;
+    margin-bottom: 1rem;
+    font-weight: bold;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $COLOR_TEXT_BASE;
+    }
+  }
+
+  &__job-time {
+    font-size: 1.4rem;
+    font-weight: bold;
+    max-width: 210px;
+  }
+
+  &__address {
+    display: flex;
+    font-size: 1.4rem;
+    font-weight: bold;
+    max-width: 180px;
+    justify-content: flex-end;
+  }
+
+  &__adress-text {
+    flex: 1;
+  }
+
+  &--footer {
+    text-align: center;
+    color: $COLOR_BACKGROUND_BASE;
+    align-items: center;
+    margin-top: 1rem;
+
+    .contacts-info__phone {
+      color: $COLOR_BACKGROUND_UNIMPORTANT;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: $COLOR_BACKGROUND_UNIMPORTANT;
+      }
+    }
+
+    svg {
+      path {
+        fill: $COLOR_BACKGROUND_BASE
+      }
+    }
+  }
+}

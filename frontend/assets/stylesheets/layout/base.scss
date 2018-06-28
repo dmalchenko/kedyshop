@@ -119,10 +119,11 @@ select {
   padding: 0.5rem 1rem;
   outline: none;
   border: none;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid $COLOR_TEXT_BASE;
   font-size: 1rem;
   line-height: 2.25rem;
   height: 2.25rem;
+  background: transparent;
 }
 
 select {
