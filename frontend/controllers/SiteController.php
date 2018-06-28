@@ -2,8 +2,10 @@
 
 namespace frontend\controllers;
 
+use backend\models\Purchase;
 use common\models\Item;
 use Yii;
+use yii\base\InvalidConfigException;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
@@ -66,24 +68,6 @@ class SiteController extends Controller
                 'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
             ],
         ];
-    }
-
-    /**
-     * Displays homepage.
-     *
-     * @param null $category
-     * @param null $min_price
-     * @param null $max_price
-     * @return mixed
-     */
-    public function actionIndex($category = null, $min_price = null, $max_price = null)
-    {
-        $items = Item::find()
-            ->andFilterWhere(['category_id' => $category])
-            ->andFilterWhere(['>=', 'new_price', $min_price])
-            ->andFilterWhere(['<=', 'new_price', $max_price])
-            ->all();
-        return $this->render('index', ['items' => $items]);
     }
 
     /**
@@ -224,6 +208,24 @@ class SiteController extends Controller
         ]);
     }
 
+    /**
+     * Displays homepage.
+     *
+     * @param null $category
+     * @param null $min_price
+     * @param null $max_price
+     * @return mixed
+     */
+    public function actionIndex($category = null, $min_price = null, $max_price = null)
+    {
+        $items = Item::find()
+            ->andFilterWhere(['category_id' => $category])
+            ->andFilterWhere(['>=', 'new_price', $min_price])
+            ->andFilterWhere(['<=', 'new_price', $max_price])
+            ->all();
+        return $this->render('index', ['items' => $items]);
+    }
+
     public function actionContacts()
     {
         return $this->render('contacts');
@@ -234,6 +236,16 @@ class SiteController extends Controller
         return $this->render('reviews');
     }
 
+    public function actionCatalogue($category = null, $min_price = null, $max_price = null)
+    {
+        $items = Item::find()
+            ->andFilterWhere(['category_id' => $category])
+            ->andFilterWhere(['>=', 'new_price', $min_price])
+            ->andFilterWhere(['<=', 'new_price', $max_price])
+            ->all();
+        return $this->render('index', ['items' => $items]);
+    }
+
     public function actionDelivery()
     {
         return $this->render('delivery');
@@ -242,6 +254,18 @@ class SiteController extends Controller
     public function actionPurchase()
     {
         Yii::$app->response->format = Response::FORMAT_JSON;
+        try {
+            $data = Yii::$app->request->getBodyParams();
+        } catch (InvalidConfigException $e) {
+            $data = [];
+        }
+
+        $purchase = new Purchase();
+        $purchase->name = '';
+        $purchase->title = '';
+        $purchase->phone ='';
+        $purchase->address ='';
+//        $purchase->save();
 
         return ['status' => 'OK', 'code' => 200, 'data' => []];
     }
