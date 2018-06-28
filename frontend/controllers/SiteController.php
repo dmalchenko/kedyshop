@@ -269,4 +269,10 @@ class SiteController extends Controller
 
         return ['status' => 'OK', 'code' => 200, 'data' => []];
     }
+
+    public function actionItem($id = 0)
+    {
+        $item = Item::findOne($id);
+        return $this->render('item', ['item' => $item]);
+    }
 }

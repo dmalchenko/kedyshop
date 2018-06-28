@@ -47,7 +47,8 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                '<action>' => 'site/<action>'
+                'item/<id:\d+>' => 'site/item',
+                '<action>' => 'site/<action>',
             ],
         ],
     ],
