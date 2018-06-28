@@ -28,7 +28,7 @@ $isContacts = $route == 'site/contacts' ? 'main-menu__list-item--active' : '';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
-    <title>ALICEMEGASTAR</title>
+    <title>ALISAMEGASTAR</title>
     <?php $this->head() ?>
 </head>
 <body>
