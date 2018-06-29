@@ -34,57 +34,6 @@ $isContacts = $route == 'site/contacts' ? 'main-menu__list-item--active' : '';
 <body>
 <?php $this->beginBody() ?>
 
-<!--<div class="wrap">
-    <?php
-    NavBar::begin([
-        'brandLabel' => Yii::$app->name,
-        'brandUrl' => Yii::$app->homeUrl,
-        'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
-        ],
-    ]);
-    $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'About', 'url' => ['/site/about']],
-        ['label' => 'Contact', 'url' => ['/site/contact']],
-    ];
-    if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
-        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
-    } else {
-        $menuItems[] = '<li>'
-            . Html::beginForm(['/site/logout'], 'post')
-            . Html::submitButton(
-                'Logout (' . Yii::$app->user->identity->username . ')',
-                ['class' => 'btn btn-link logout']
-            )
-            . Html::endForm()
-            . '</li>';
-    }
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
-        'items' => $menuItems,
-    ]);
-    NavBar::end();
-    ?>
-
-    <div class="container">
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-        <?= Alert::widget() ?>
-        <?= $content ?>
-    </div>
-</div>
-
-<footer class="footer">
-    <div class="container">
-        <p class="pull-left">&copy; <?= Html::encode(Yii::$app->name) ?> <?= date('Y') ?></p>
-
-        <p class="pull-right"><?= Yii::powered() ?></p>
-    </div>
-</footer>-->
-
 <div id="app">
     <button id="show-modal" @click="showModal = true" class="header-informer">
         <svg class="header-informer__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="20" x="0px" y="0px" viewBox="0 0 486.569 486.569" style="enable-background:new 0 0 486.569 486.569;" xml:space="preserve">
@@ -165,39 +114,7 @@ $isContacts = $route == 'site/contacts' ? 'main-menu__list-item--active' : '';
 					<span class="c-header__link-counter c-header__link-counter--active">4</span>
 				</span>
         </button>
-        <ul class="c-menu__list">
-<!--            <li class="c-menu__list-item c-cart-item">-->
-<!--                <a href="" class="c-cart-item__image" style="background: url(img/content/cart_1.png); background-size: cover;"></a>-->
-<!--                <div class="c-cart-item__info">-->
-<!--                    <a href="">-->
-<!--                        <span class="c-cart-item__name">Название товара из каталога</span>-->
-<!--                        <span class="c-cart-item__desc">Размер: XL</span>-->
-<!--                    </a>-->
-<!--                    <div class="c-cart-item__price-container">-->
-<!--                        <span>500 Р</span>-->
-<!--                        <button class="c-cart-item__btn-del">-->
-<!--                            <span class="btn-close btn-close--active"></span>Удалить-->
-<!--                        </button>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </li>-->
-<!--            <li class="c-menu__list-item c-cart-item">-->
-<!--                <a href="" class="c-cart-item__image" style="background: url(img/content/cart_2.png); background-size: cover;"></a>-->
-<!--                <div class="c-cart-item__info">-->
-<!--                    <a href="">-->
-<!--                        <span class="c-cart-item__name">Рассыпчатая пудра Multi-Eclat</span>-->
-<!--                        <span class="c-cart-item__desc">Оттенок: PEACHY PINK</span>-->
-<!--                        <span class="c-cart-item__desc">Объем: 50мл</span>-->
-<!--                    </a>-->
-<!--                    <div class="c-cart-item__price-container">-->
-<!--                        <span>500 Р</span>-->
-<!--                        <button class="c-cart-item__btn-del">-->
-<!--                            <span class="btn-close btn-close--active"></span>Удалить-->
-<!--                        </button>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </li>-->
-        </ul>
+
         <div class="c-menu__confarmation">
             <div>
                 <span class="c-menu__confarmation-caption c-menu__confarmation-caption--desc">Скидка:</span>
@@ -319,10 +236,11 @@ $isContacts = $route == 'site/contacts' ? 'main-menu__list-item--active' : '';
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
+    // start app
     new Vue({
-        //this targets the div id app
-        el: '#search-panel',
+        el: '#app',
         data: {
+            showModal: false,
             minprice: '',
             maxprice: ''
         },
@@ -336,9 +254,6 @@ $isContacts = $route == 'site/contacts' ? 'main-menu__list-item--active' : '';
                 if (this.maxprice != '' && this.isNumeric(this.maxprice)) {
                     maxPriceString = 'max_price=' + this.maxprice;
                 }
-                console.log(minPriceString);
-                console.log(maxPriceString);
-                console.log(minPriceString == '' && maxPriceString == '');
 
                 if (minPriceString == '' && maxPriceString == '') {
                     return;
@@ -355,14 +270,6 @@ $isContacts = $route == 'site/contacts' ? 'main-menu__list-item--active' : '';
     // register modal component
     Vue.component('modal', {
         template: '#modal-template'
-    });
-
-    // start app
-    new Vue({
-        el: '#app',
-        data: {
-            showModal: false
-        }
     });
 
 

@@ -36,7 +36,7 @@
 </div>
 <div class="catalogue">
     <div class="catalogue__row">
-        <div id="search-panel" class="catalogue-sidebar">
+        <div class="catalogue-sidebar">
             <div class="catalogue-sidebar__wrap">
                 <div class="catalogue-sidebar__header">
                     Каталог
