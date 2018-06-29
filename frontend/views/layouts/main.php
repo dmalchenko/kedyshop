@@ -74,14 +74,6 @@ $isContacts = $route == 'site/contacts' ? 'main-menu__list-item--active' : '';
                 </span>
             </div>
         </nav>
-        <!-- Форма поиска -->
-        <div id="search-page" class="c-search">
-            <form id="search-form" class="c-search__form" action="/search" method="post">
-                <input id="search-input" class="c-search__input" type="search" name="searchTerms" placeholder="Введите название товара" autocomplete="off" required="">
-                <button id="search-clean-btn" class="btn-close" type="button"></button>
-            </form>
-        </div>
-        <!-- /Форма поиска -->
         <!-- Меню магазина -->
         <div id="menu-shop" class="c-menu c-menu--shop">
             <button id="menu-shop-btn-close" class="c-menu__btn c-menu__btn--close">Меню сайта
@@ -106,30 +98,6 @@ $isContacts = $route == 'site/contacts' ? 'main-menu__list-item--active' : '';
             </ul>
         </div>
         <!-- /Меню магазина -->
-        <!-- Меню корзины -->
-        <div id="menu-cart" class="c-menu c-menu--cart">
-            <button id="menu-cart-btn-close" class="c-menu__btn c-menu__btn--close">Корзина
-                <span class="btn-close"></span>
-                <span class="c-header__link-icon">
-                        <span class="c-header__link-counter c-header__link-counter--active">4</span>
-                    </span>
-            </button>
-
-            <div class="c-menu__confarmation">
-                <div>
-                    <span class="c-menu__confarmation-caption c-menu__confarmation-caption--desc">Скидка:</span>
-                    <span class="c-menu__confarmation-price">0 Р</span>
-                </div>
-                <div>
-                    <span class="c-menu__confarmation-caption">Сумма заказа:</span>
-                    <span class="c-menu__confarmation-price">5000 Р</span>
-                </div>
-            </div>
-            <div class="btns">
-                <a href="" class="btn">Перейти к оплате</a>
-            </div>
-        </div>
-        <!-- Меню корзины -->
     </header>
     <main class="c-main">
         <nav class="main-menu">
