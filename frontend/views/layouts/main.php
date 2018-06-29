@@ -167,6 +167,50 @@ $isContacts = $route == 'site/contacts' ? 'main-menu__list-item--active' : '';
         </footer>
     </div>
 </div>
+
+<template id="template-vss-cart">
+    <div class="vss-cart">
+
+        <ul class="cart-table">
+            <li class="cart-table__row cart-table__row--header">
+                <div class="cart-table__cell">Наименование</div>
+                <div class="cart-table__cell">Кол-во</div>
+                <div class="cart-table__cell">Стоимость</div>
+                <div class="cart-table__cell"></div>
+            </li>
+            <li class="cart-table__row" v-for="product in data.products">
+                <div class="cart-table__cell">{{ product.title }} / </div>
+                <div class="cart-table__cell">
+                    <input class="cart-table__input" type="text" :value="product.count">
+                </div>
+                <div class="cart-table__cell">
+                    <span>${{ getProductTotalPrice(product) }}</span>
+                    <span class="ruble">Р</span>
+                </div>
+                <div class="cart-table__cell">
+                    <button @click="removeProduct(product)" class="cart-table__erase">
+                        <img src="/images/close.png">
+                    </button>
+                </div>
+<!--                <button @click="removeProduct(product)">Remove</button>-->
+<!--                <button @click="increaseProduct(product)">Increase</button>-->
+<!--                <button @click="reduceProduct(product)">Reduce</button>-->
+            </li>
+            <li class="cart-table__row cart-table__row--last">
+                <div class="cart-table__cell"></div>
+                <div class="cart-table__cell">
+                    Итого:
+                </div>
+                <div class="cart-table__cell">
+                    <span>0</span>
+                    <span class="ruble">Р</span>
+                </div>
+                <div class="cart-table__cell">
+                </div>
+            </li>
+        </ul>
+    </div>
+</template>
     <!-- template for the modal component -->
 
 <script type="text/x-template" id="modal-template">
@@ -184,41 +228,7 @@ $isContacts = $route == 'site/contacts' ? 'main-menu__list-item--active' : '';
 
                     <div class="modal-body">
                         <slot name="body">
-                            <div class="cart-table">
-                                <div class="cart-table__row cart-table__row--header">
-                                    <div class="cart-table__cell">Наименование</div>
-                                    <div class="cart-table__cell">Кол-во</div>
-                                    <div class="cart-table__cell">Стоимость</div>
-                                    <div class="cart-table__cell"></div>
-                                </div>
-                                <div class="cart-table__row">
-                                    <div class="cart-table__cell">Saucony / 41</div>
-                                    <div class="cart-table__cell">
-                                        <input class="cart-table__input" type="text">
-                                    </div>
-                                    <div class="cart-table__cell">
-                                        <span>2870</span>
-                                        <span class="ruble">Р</span>
-                                    </div>
-                                    <div class="cart-table__cell">
-                                        <button class="cart-table__erase">
-                                            <img src="/images/close.png">
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="cart-table__row cart-table__row--last">
-                                    <div class="cart-table__cell"></div>
-                                    <div class="cart-table__cell">
-                                        Итого:
-                                    </div>
-                                    <div class="cart-table__cell">
-                                        <span>5550</span>
-                                        <span class="ruble">Р</span>
-                                    </div>
-                                    <div class="cart-table__cell">
-                                    </div>
-                                </div>
-                            </div>
+                            <vss-cart></vss-cart>
                         </slot>
                     </div>
 
@@ -239,8 +249,143 @@ $isContacts = $route == 'site/contacts' ? 'main-menu__list-item--active' : '';
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
     // start app
+
+    // register modal component
+
+    var vssCartBus = new Vue();
+
+    /* ----- vssCart Init ----- */
+
+    var vssCartData = {
+        data: {
+            products: []
+        }
+    };
+
+    var vssCart = Vue.extend({
+        template: '#template-vss-cart',
+        props: {
+            type: String,
+//            eventable: Boolean
+        },
+        name: 'vss-cart',
+        data: function() {
+            return vssCartData
+        },
+        methods: {
+            initVssCart: function() {
+                if (localStorage) {
+                    if (localStorage.getItem('vssCart')) {
+                        this.$set(this, 'data', JSON.parse(localStorage.getItem('vssCart')));
+                    }
+                }
+                else {
+                    console.log("localStorage isn't support!");
+                }
+            },
+            setVssCart: function() {
+                if (localStorage) {
+                    localStorage.setItem('vssCart', JSON.stringify(this.data));
+                }
+                else {
+                    console.log("localStorage isn't support!");
+                }
+            },
+            addProduct: function(product) {
+                var self          = this;
+                var productNumber = self.findProductNumber(product);
+                if (productNumber === undefined) {
+                    self.data.products.push({
+                        id: product.id,
+                        title: product.title,
+                        image: product.image,
+                        price: product.price,
+                        count: 1
+                    });
+                }
+                else {
+                    self.data.products[productNumber].count += 1;
+                }
+                this.setVssCart();
+            },
+            removeProduct: function(product) {
+                var productNumber = this.findProductNumber(product);
+                this.data.products.splice(productNumber, 1);
+                this.setVssCart();
+            },
+            reduceProduct: function(product) {
+                var productNumber = this.findProductNumber(product);
+                if (this.data.products[productNumber].count > 1) {
+                    this.data.products[productNumber].count--;
+                    this.setVssCart();
+                }
+                else {
+                    this.removeProduct(product);
+                }
+            },
+            increaseProduct: function(product) {
+                var productNumber = this.findProductNumber(product);
+                this.data.products[productNumber].count++;
+                this.setVssCart();
+            },
+            findProductNumber: function(product) {
+                for (var i = 0; i < this.data.products.length; i++) {
+                    if (this.data.products[i].id === product.id) {
+                        return i;
+                    }
+                }
+            },
+            getProductCount: function(product) {
+                var productNumber = this.findProductNumber(product);
+
+                return this.data.products[productNumber].count
+            },
+            getProductsCount: function() {
+                var count = 0;
+                for (var i = 0; i < this.data.products.length; i++) {
+                    count += this.data.products[i].count;
+                }
+
+                return count;
+            },
+            getProductsTotalPrice: function() {
+                var price = 0;
+                for (var i = 0; i < this.data.products.length; i++) {
+                    price += this.data.products[i].count * this.data.products[i].price;
+                }
+
+                return price.toFixed(2);
+            },
+            getProductTotalPrice: function(product) {
+                var productNumber = this.findProductNumber(product);
+
+                return this.data.products[productNumber].count * this.data.products[productNumber].price;
+            }
+        },
+        created: function() {
+            var self = this;
+            self.initVssCart();
+            vssCartBus.$on('vss-cart-add-product', function(product) {
+//                if (self.eventable) {
+                    self.addProduct(product);
+//                }
+            });
+        }
+    });
+
+    Vue.component('modal', {
+        template: '#modal-template',
+        components: {
+            'vss-cart': vssCart
+        }
+    });
+
+
     new Vue({
         el: '#app',
+        components: {
+            'vss-cart': vssCart
+        },
         data: {
             showModal: false,
             minprice: '',
@@ -269,11 +414,26 @@ $isContacts = $route == 'site/contacts' ? 'main-menu__list-item--active' : '';
         }
     });
 
-    // register modal component
-    Vue.component('modal', {
-        template: '#modal-template'
-    });
+    /* ----- Vue Init ----- */
 
+
+    /* ----- jQuery ----- */
+
+    $(function() {
+
+        $('.vss-cart-add-product').click(function(e) {
+            e.preventDefault();
+            var $product = $(this).closest('.js-product');
+            vssCartBus.$emit('vss-cart-add-product', {
+                id: $product.data('id'),
+                title: $product.data('title'),
+                image: $product.data('image'),
+                price: $product.data('price'),
+                count: 1
+            })
+        });
+
+    });
 
     (function($) {
         $(function() {
