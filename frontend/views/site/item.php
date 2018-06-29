@@ -42,13 +42,17 @@
                         ?>
                         <span class="product__price">Цена: <?= $item->new_price ?><span class="ruble">Р</span></span>
                         <select class="product__size">
-                            <option>36 euro</option>
-                            <option>37 euro</option>
-                            <option>38 euro</option>
-                            <option>39 euro</option>
-                            <option>40 euro</option>
-                            <option>41 euro</option>
-                            <option>42 euro</option>
+                            <option>35 EUR / 22 см</option>
+                            <option>36 EUR / 22,5 см</option>
+                            <option>37 EUR / 23 см</option>
+                            <option>38 EUR / 23,5 см</option>
+                            <option>39 EUR / 24 см</option>
+                            <option>40 EUR / 24,5 см</option>
+                            <option>41 EUR / 25 см</option>
+                            <option>42 EUR / 26 см</option>
+                            <option>43 EUR / 26,5 см</option>
+                            <option>44 EUR / 27 см</option>
+                            <option>45 EUR / 28 см</option>
                         </select>
                         <a class="btn btn--ebn btn--block btn--red btn--xl" href="">Заказать по акции</a>
                     </div>
