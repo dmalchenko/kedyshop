@@ -47,192 +47,194 @@ $isContacts = $route == 'site/contacts' ? 'main-menu__list-item--active' : '';
         <h3 slot="header">Корзина</h3>
     </modal>
 
-<a id="nav-menu-shop" href="/catalogue" class="header-informer header-informer--catalogue">
-    <svg class="header-informer__icon" xmlns="http://www.w3.org/2000/svg" width="26" height="17" viewBox="0 0 26 17">
-        <g fill-rule="nonzero">
-            <path d="M.981 2.186H25.02A.977.977 0 0 0 26 1.214a.977.977 0 0 0-.981-.971H.98A.977.977 0 0 0 0 1.214c0 .537.44.972.981.972zM.981 9.471H25.02A.977.977 0 0 0 26 8.5a.977.977 0 0 0-.981-.971H.98A.977.977 0 0 0 0 8.5c0 .536.44.971.981.971zM.981 16.757H25.02a.977.977 0 0 0 .981-.971.977.977 0 0 0-.981-.972H.98a.977.977 0 0 0-.981.972c0 .536.44.971.981.971z"/>
-        </g>
-    </svg>
-    <span class="header-informer__text">Каталог</span>
-    <span class="header-informer__counter"></span>
-</a>
+    <a id="nav-menu-shop" href="/catalogue" class="header-informer header-informer--catalogue">
+        <svg class="header-informer__icon" xmlns="http://www.w3.org/2000/svg" width="26" height="17" viewBox="0 0 26 17">
+            <g fill-rule="nonzero">
+                <path d="M.981 2.186H25.02A.977.977 0 0 0 26 1.214a.977.977 0 0 0-.981-.971H.98A.977.977 0 0 0 0 1.214c0 .537.44.972.981.972zM.981 9.471H25.02A.977.977 0 0 0 26 8.5a.977.977 0 0 0-.981-.971H.98A.977.977 0 0 0 0 8.5c0 .536.44.971.981.971zM.981 16.757H25.02a.977.977 0 0 0 .981-.971.977.977 0 0 0-.981-.972H.98a.977.977 0 0 0-.981.972c0 .536.44.971.981.971z"/>
+            </g>
+        </svg>
+        <span class="header-informer__text">Каталог</span>
+        <span class="header-informer__counter"></span>
+    </a>
 
-<header class="c-header">
-    <nav class="c-header__wrap">
-        <a class="c-header__logo" href="/">
-            <img src="/images/logo.png">
-            <span class="c-header__logo-desc">Магазин спортивной обуви</span>
-        </a>
-        <div class="contacts-info">
-            <a class="contacts-info__phone" href="tel:+ 7 (499) 110-99-71">+ 7 (499) 110-99-71</a>
-            <span class="contacts-info__job-time">ПН-ВС с 09:00 до 21:00</span>
-            <span class="contacts-info__address">
-                <svg width="15" height="20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-                    <path d="M256,0C153.755,0,70.573,83.182,70.573,185.426c0,126.888,165.939,313.167,173.004,321.035    c6.636,7.391,18.222,7.378,24.846,0c7.065-7.868,173.004-194.147,173.004-321.035C441.425,83.182,358.244,0,256,0z M256,278.719    c-51.442,0-93.292-41.851-93.292-93.293S204.559,92.134,256,92.134s93.291,41.851,93.291,93.293S307.441,278.719,256,278.719z"/>
-                </svg>
-                <span class="contacts-info__adress-text">г. Москва, ул. Илона Маска, 90, стр 1</span>
-            </span>
-        </div>
-    </nav>
-    <!-- Форма поиска -->
-    <div id="search-page" class="c-search">
-        <form id="search-form" class="c-search__form" action="/search" method="post">
-            <input id="search-input" class="c-search__input" type="search" name="searchTerms" placeholder="Введите название товара" autocomplete="off" required="">
-            <button id="search-clean-btn" class="btn-close" type="button"></button>
-        </form>
-    </div>
-    <!-- /Форма поиска -->
-    <!-- Меню магазина -->
-    <div id="menu-shop" class="c-menu c-menu--shop">
-        <button id="menu-shop-btn-close" class="c-menu__btn c-menu__btn--close">Меню сайта
-            <span class="btn-close"></span>
-        </button>
-        <ul class="c-menu__list">
-            <li>
-                <a class="c-menu__btn" href="#">Главная</a>
-            </li>
-            <li>
-                <a class="c-menu__btn" href="#">Каталог</a>
-            </li>
-            <li>
-                <a class="c-menu__btn c-menu__btn--active" href="#">Доставка</a>
-            </li>
-            <li>
-                <a class="c-menu__btn" href="#">Отзывы</a>
-            </li>
-            <li>
-                <a class="c-menu__btn" href="#">Контакты</a>
-            </li>
-        </ul>
-    </div>
-    <!-- /Меню магазина -->
-    <!-- Меню корзины -->
-    <div id="menu-cart" class="c-menu c-menu--cart">
-        <button id="menu-cart-btn-close" class="c-menu__btn c-menu__btn--close">Корзина
-            <span class="btn-close"></span>
-            <span class="c-header__link-icon">
-					<span class="c-header__link-counter c-header__link-counter--active">4</span>
-				</span>
-        </button>
-
-        <div class="c-menu__confarmation">
-            <div>
-                <span class="c-menu__confarmation-caption c-menu__confarmation-caption--desc">Скидка:</span>
-                <span class="c-menu__confarmation-price">0 Р</span>
+    <header class="c-header">
+        <nav class="c-header__wrap">
+            <a class="c-header__logo" href="/">
+                <img src="/images/logo.png">
+                <span class="c-header__logo-desc">Магазин спортивной обуви</span>
+            </a>
+            <div class="contacts-info">
+                <a class="contacts-info__phone" href="tel:+ 7 (499) 110-99-71">+ 7 (499) 110-99-71</a>
+                <span class="contacts-info__job-time">ПН-ВС с 09:00 до 21:00</span>
+                <span class="contacts-info__address">
+                    <svg width="15" height="20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                        <path d="M256,0C153.755,0,70.573,83.182,70.573,185.426c0,126.888,165.939,313.167,173.004,321.035    c6.636,7.391,18.222,7.378,24.846,0c7.065-7.868,173.004-194.147,173.004-321.035C441.425,83.182,358.244,0,256,0z M256,278.719    c-51.442,0-93.292-41.851-93.292-93.293S204.559,92.134,256,92.134s93.291,41.851,93.291,93.293S307.441,278.719,256,278.719z"/>
+                    </svg>
+                    <span class="contacts-info__adress-text">г. Москва, ул. Илона Маска, 90, стр 1</span>
+                </span>
             </div>
-            <div>
-                <span class="c-menu__confarmation-caption">Сумма заказа:</span>
-                <span class="c-menu__confarmation-price">5000 Р</span>
+        </nav>
+        <!-- Форма поиска -->
+        <div id="search-page" class="c-search">
+            <form id="search-form" class="c-search__form" action="/search" method="post">
+                <input id="search-input" class="c-search__input" type="search" name="searchTerms" placeholder="Введите название товара" autocomplete="off" required="">
+                <button id="search-clean-btn" class="btn-close" type="button"></button>
+            </form>
+        </div>
+        <!-- /Форма поиска -->
+        <!-- Меню магазина -->
+        <div id="menu-shop" class="c-menu c-menu--shop">
+            <button id="menu-shop-btn-close" class="c-menu__btn c-menu__btn--close">Меню сайта
+                <span class="btn-close"></span>
+            </button>
+            <ul class="c-menu__list">
+                <li>
+                    <a class="c-menu__btn" href="#">Главная</a>
+                </li>
+                <li>
+                    <a class="c-menu__btn" href="#">Каталог</a>
+                </li>
+                <li>
+                    <a class="c-menu__btn c-menu__btn--active" href="#">Доставка</a>
+                </li>
+                <li>
+                    <a class="c-menu__btn" href="#">Отзывы</a>
+                </li>
+                <li>
+                    <a class="c-menu__btn" href="#">Контакты</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /Меню магазина -->
+        <!-- Меню корзины -->
+        <div id="menu-cart" class="c-menu c-menu--cart">
+            <button id="menu-cart-btn-close" class="c-menu__btn c-menu__btn--close">Корзина
+                <span class="btn-close"></span>
+                <span class="c-header__link-icon">
+                        <span class="c-header__link-counter c-header__link-counter--active">4</span>
+                    </span>
+            </button>
+
+            <div class="c-menu__confarmation">
+                <div>
+                    <span class="c-menu__confarmation-caption c-menu__confarmation-caption--desc">Скидка:</span>
+                    <span class="c-menu__confarmation-price">0 Р</span>
+                </div>
+                <div>
+                    <span class="c-menu__confarmation-caption">Сумма заказа:</span>
+                    <span class="c-menu__confarmation-price">5000 Р</span>
+                </div>
+            </div>
+            <div class="btns">
+                <a href="" class="btn">Перейти к оплате</a>
             </div>
         </div>
-        <div class="btns">
-            <a href="" class="btn">Перейти к оплате</a>
-        </div>
-    </div>
-    <!-- Меню корзины -->
-</header>
-<main class="c-main">
-    <nav class="main-menu">
-        <ul class="main-menu__list">
-            <li class="main-menu__list-item <?= $isIndex?>"><a href="/">Главная</a></li>
-            <li class="main-menu__list-item <?= $isCatalogue?>"><a href="catalogue">Каталог</a></li>
-            <li class="main-menu__list-item <?= $isDelivery?>"><a href="delivery">Доставка</a></li>
-            <li class="main-menu__list-item <?= $isReviews?>"><a href="reviews">Отзывы</a></li>
-            <li class="main-menu__list-item <?= $isContacts?>"><a href="contacts">Контакты</a></li>
-        </ul>
-    </nav>
-    <?= $content ?>
-</main>
+        <!-- Меню корзины -->
+    </header>
+    <main class="c-main">
+        <nav class="main-menu">
+            <ul class="main-menu__list">
+                <li class="main-menu__list-item <?= $isIndex?>"><a href="/">Главная</a></li>
+                <li class="main-menu__list-item <?= $isCatalogue?>"><a href="catalogue">Каталог</a></li>
+                <li class="main-menu__list-item <?= $isDelivery?>"><a href="delivery">Доставка</a></li>
+                <li class="main-menu__list-item <?= $isReviews?>"><a href="reviews">Отзывы</a></li>
+                <li class="main-menu__list-item <?= $isContacts?>"><a href="contacts">Контакты</a></li>
+            </ul>
+        </nav>
+        <?= $content ?>
+    </main>
 
-<div class="c-footer__wrapper">
-    <footer class="c-footer container container--centered">
-        <ul class="c-footer__navigation">
-            <li><a class="link" href="">Главная</a></li>
-            <li><a class="link link--border-left" href="">Каталог</a></li>
-            <li><a class="link link--border-left" href="">Доставка</a></li>
-            <li><a class="link link--border-left" href="">О магазине</a></li>
-            <li><a class="link link--border-left" href="">Отзывы</a></li>
-            <li><a class="link link--border-left" href="">Контакты</a></li>
-        </ul>
-        <div class="contacts-info contacts-info--footer">
-            <a class="contacts-info__phone" href="tel:+ 7 (499) 110-99-71">+ 7 (499) 110-99-71</a>
-            <span class="contacts-info__job-time">ПН-ВС с 09:00 до 21:00</span>
-            <span class="contacts-info__address">
-                <svg width="15" height="20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-                    <path d="M256,0C153.755,0,70.573,83.182,70.573,185.426c0,126.888,165.939,313.167,173.004,321.035    c6.636,7.391,18.222,7.378,24.846,0c7.065-7.868,173.004-194.147,173.004-321.035C441.425,83.182,358.244,0,256,0z M256,278.719    c-51.442,0-93.292-41.851-93.292-93.293S204.559,92.134,256,92.134s93.291,41.851,93.291,93.293S307.441,278.719,256,278.719z"/>
-                </svg>
-                <span class="contacts-info__adress-text">г. Москва, ул. Илона Маска, 90, стр 1</span>
-            </span>
-        </div>
-    </footer>
+    <div class="c-footer__wrapper">
+        <footer class="c-footer container container--centered">
+            <ul class="c-footer__navigation">
+                <li><a class="link" href="">Главная</a></li>
+                <li><a class="link link--border-left" href="">Каталог</a></li>
+                <li><a class="link link--border-left" href="">Доставка</a></li>
+                <li><a class="link link--border-left" href="">О магазине</a></li>
+                <li><a class="link link--border-left" href="">Отзывы</a></li>
+                <li><a class="link link--border-left" href="">Контакты</a></li>
+            </ul>
+            <div class="contacts-info contacts-info--footer">
+                <a class="contacts-info__phone" href="tel:+ 7 (499) 110-99-71">+ 7 (499) 110-99-71</a>
+                <span class="contacts-info__job-time">ПН-ВС с 09:00 до 21:00</span>
+                <span class="contacts-info__address">
+                    <svg width="15" height="20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                        <path d="M256,0C153.755,0,70.573,83.182,70.573,185.426c0,126.888,165.939,313.167,173.004,321.035    c6.636,7.391,18.222,7.378,24.846,0c7.065-7.868,173.004-194.147,173.004-321.035C441.425,83.182,358.244,0,256,0z M256,278.719    c-51.442,0-93.292-41.851-93.292-93.293S204.559,92.134,256,92.134s93.291,41.851,93.291,93.293S307.441,278.719,256,278.719z"/>
+                    </svg>
+                    <span class="contacts-info__adress-text">г. Москва, ул. Илона Маска, 90, стр 1</span>
+                </span>
+            </div>
+        </footer>
+    </div>
+</div>
     <!-- template for the modal component -->
-    <script type="text/x-template" id="modal-template">
-        <transition name="modal">
-            <div class="modal-mask">
-                <div class="modal-wrapper">
-                    <div class="modal-container">
 
-                        <button class="modal-close" @click="$emit('close')"><img src="/images/modal-close.png"></button>
-                        <div class="modal-header">
-                            <slot name="header">
-                                default header
-                            </slot>
-                        </div>
+<script type="text/x-template" id="modal-template">
+    <transition name="modal">
+        <div class="modal-mask">
+            <div class="modal-wrapper">
+                <div class="modal-container">
 
-                        <div class="modal-body">
-                            <slot name="body">
-                                <div class="cart-table">
-                                    <div class="cart-table__row cart-table__row--header">
-                                        <div class="cart-table__cell">Наименование</div>
-                                        <div class="cart-table__cell">Кол-во</div>
-                                        <div class="cart-table__cell">Стоимость</div>
-                                        <div class="cart-table__cell"></div>
+                    <button class="modal-close" @click="$emit('close')"><img src="/images/modal-close.png"></button>
+                    <div class="modal-header">
+                        <slot name="header">
+                            default header
+                        </slot>
+                    </div>
+
+                    <div class="modal-body">
+                        <slot name="body">
+                            <div class="cart-table">
+                                <div class="cart-table__row cart-table__row--header">
+                                    <div class="cart-table__cell">Наименование</div>
+                                    <div class="cart-table__cell">Кол-во</div>
+                                    <div class="cart-table__cell">Стоимость</div>
+                                    <div class="cart-table__cell"></div>
+                                </div>
+                                <div class="cart-table__row">
+                                    <div class="cart-table__cell">Saucony / 41</div>
+                                    <div class="cart-table__cell">
+                                        <input class="cart-table__input" type="text">
                                     </div>
-                                    <div class="cart-table__row">
-                                        <div class="cart-table__cell">Saucony / 41</div>
-                                        <div class="cart-table__cell">
-                                            <input class="cart-table__input" type="text">
-                                        </div>
-                                        <div class="cart-table__cell">
-                                            <span>2870</span>
-                                            <span class="ruble">Р</span>
-                                        </div>
-                                        <div class="cart-table__cell">
-                                            <button class="cart-table__erase">
-                                                <img src="/images/close.png">
-                                            </button>
-                                        </div>
+                                    <div class="cart-table__cell">
+                                        <span>2870</span>
+                                        <span class="ruble">Р</span>
                                     </div>
-                                    <div class="cart-table__row cart-table__row--last">
-                                        <div class="cart-table__cell"></div>
-                                        <div class="cart-table__cell">
-                                            Итого:
-                                        </div>
-                                        <div class="cart-table__cell">
-                                            <span>5550</span>
-                                            <span class="ruble">Р</span>
-                                        </div>
-                                        <div class="cart-table__cell">
-                                        </div>
+                                    <div class="cart-table__cell">
+                                        <button class="cart-table__erase">
+                                            <img src="/images/close.png">
+                                        </button>
                                     </div>
                                 </div>
-                            </slot>
-                        </div>
-
-                        <div class="modal-footer">
-                            <slot name="footer">
-                                <div class="cart-btns">
-                                    <button class="btn btn--ebn" @click="$emit('close')">Продолжить покупки</button>
-                                    <button class="btn btn--ebn btn--red" @click="$emit('close')">Сделать заказ</button>
+                                <div class="cart-table__row cart-table__row--last">
+                                    <div class="cart-table__cell"></div>
+                                    <div class="cart-table__cell">
+                                        Итого:
+                                    </div>
+                                    <div class="cart-table__cell">
+                                        <span>5550</span>
+                                        <span class="ruble">Р</span>
+                                    </div>
+                                    <div class="cart-table__cell">
+                                    </div>
                                 </div>
-                            </slot>
-                        </div>
+                            </div>
+                        </slot>
+                    </div>
+
+                    <div class="modal-footer">
+                        <slot name="footer">
+                            <div class="cart-btns">
+                                <button class="btn btn--ebn" @click="$emit('close')">Продолжить покупки</button>
+                                <button class="btn btn--ebn btn--red" @click="$emit('close')">Сделать заказ</button>
+                            </div>
+                        </slot>
                     </div>
                 </div>
             </div>
-        </transition>
-    </script>
-</div>
+        </div>
+    </transition>
+</script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>

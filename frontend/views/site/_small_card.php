@@ -6,7 +6,7 @@
 ?>
 
 <li class="catalogue-content__list-item">
-    <div class="catalogue-item" data-id="<?= $item->id ?>">
+    <div class="js-product catalogue-item" data-id="<?= $item->id ?>" data-title="Test product 1" data-image="http://placehold.it/300x300" data-price="100">
         <a class="catalogue-item__title" href="<?= \yii\helpers\Url::toRoute(['site/item', 'id' => $item->id])?>"><?= $item->title ?></a>
         <span class="catalogue-item__articul">Артикул <?= $item->article ?></span>
         <a class="catalogue-item__img-link" href="<?= \yii\helpers\Url::toRoute(['site/item', 'id' => $item->id])?>">
@@ -28,7 +28,7 @@
         ?>
 
         <span class="catalogue-item__price">Цена: <?= $item->new_price ?><span class="ruble">Р</span></span>
-        <a class="btn btn--ebn" href="<?= \yii\helpers\Url::toRoute(['site/item', 'id' => $item->id])?>">Заказать</a>
+        <a class="vss-cart-add-product btn btn--ebn" href="<?= \yii\helpers\Url::toRoute(['site/item', 'id' => $item->id])?>">Заказать</a>
         <a class="catalogue-item__more" href="<?= \yii\helpers\Url::toRoute(['site/item', 'id' => $item->id])?>">Подробнее</a>
     </div>
 </li>
