@@ -50,7 +50,7 @@
                             <option>41 euro</option>
                             <option>42 euro</option>
                         </select>
-                        <a class="btn btn--ebn btn--block btn--red" href="">Заказать по акции</a>
+                        <a class="btn btn--ebn btn--block btn--red btn--xl" href="">Заказать по акции</a>
                     </div>
                 </div>
             </div>

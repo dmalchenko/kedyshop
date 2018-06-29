@@ -64,8 +64,6 @@ button {
   &--red {
     background: linear-gradient(to top, #be0101, #f30202);
     border: none;
-    height: 4rem;
-    line-height: 4rem;
 
     &:hover,
     &:active,
@@ -74,6 +72,11 @@ button {
       background: linear-gradient(to top, #be0101, #f30202);
       border: none;
     }
+  }
+
+  &--xl {
+    height: 4rem;
+    line-height: 4rem;
   }
 
   &--block {

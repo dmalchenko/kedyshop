@@ -7,7 +7,7 @@
 }
 
 [v-cloak] > * { display:none }
-[v-cloak]::before { content: "загрузка…" }
+//[v-cloak]::before { content: "загрузка…" }
 
 html {
   font-size: 62.5%;
