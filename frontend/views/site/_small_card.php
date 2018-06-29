@@ -13,17 +13,17 @@
             <img class="catalogue-item__img" src="<?= $item->imageUrl ?>" alt="">
         </a>
         <select class="catalogue-item__size">
-            <option>35 EUR / 22 см</option>
-            <option>36 EUR / 22,5 см</option>
-            <option>37 EUR / 23 см</option>
-            <option>38 EUR / 23,5 см</option>
-            <option>39 EUR / 24 см</option>
-            <option>40 EUR / 24,5 см</option>
-            <option>41 EUR / 25 см</option>
-            <option>42 EUR / 26 см</option>
-            <option>43 EUR / 26,5 см</option>
-            <option>44 EUR / 27 см</option>
-            <option>45 EUR / 28 см</option>
+            <option value="35">35 EUR / 22 см</option>
+            <option value="36">36 EUR / 22,5 см</option>
+            <option value="37">37 EUR / 23 см</option>
+            <option value="38">38 EUR / 23,5 см</option>
+            <option value="39">39 EUR / 24 см</option>
+            <option value="40">40 EUR / 24,5 см</option>
+            <option value="41">41 EUR / 25 см</option>
+            <option value="42">42 EUR / 26 см</option>
+            <option value="43">43 EUR / 26,5 см</option>
+            <option value="44">44 EUR / 27 см</option>
+            <option value="45">45 EUR / 28 см</option>
         </select>
         <?php
         if ($item->old_price) {
