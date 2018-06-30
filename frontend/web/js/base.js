@@ -169,6 +169,9 @@ Vue.component('modal', {
     template: '#modal-template',
     components: {
         'vss-cart': vssCart
+    },
+    mounted: function () {
+
     }
 });
 
@@ -263,13 +266,27 @@ $(function() {
     });
 
     $('.js-send-data').on('click', function () {
-        console.log(vssCartData.data.products);
         var megaProducts = vssCartData.data.products;
-        if (!megaProducts.length) {
-            alert('Массив пустой!');
-        }
+        var errors = 0;
+
         var regName = $('#reg-name').val();
         var regPhone = $('#reg-phone').val();
+        if (jQuery.isEmptyObject(regName)) {
+            $('#label-reg-name').show().text('Введите имя');
+            errors = 1;
+        } else {
+            $('#label-reg-name').hide();
+        }
+        if (jQuery.isEmptyObject(regPhone)) {
+            $('#label-reg-phone').show().text('Введите телефон');
+            errors = 1;
+        } else {
+            $('#label-reg-phone').hide();
+        }
+
+        if (errors) {
+            return;
+        }
         var regAdress = $('#reg-adress').val();
         $.ajax({
             url: "/site/purchase",
@@ -282,6 +299,8 @@ $(function() {
                 _csrf: csrfToken
             }
         }).done(function() {
+            vm.showModalReg = false;
+            vm.showModalSuccess = true;
             vssCartBus.$emit('vss-cart-del-products');
         });
     });

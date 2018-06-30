@@ -60,14 +60,17 @@ $isContacts = $route == 'site/contacts' ? 'main-menu__list-item--active' : '';
         <h3 slot="header">Введите данные</h3>
         <div slot="body">
             <div class="reg">
+                <label id="label-reg-name"></label>
                 <input id="reg-name" class="reg-input" type="text" placeholder="Ваше имя">
-                <input id="reg-adress" class="reg-input" type="text" placeholder="Адрес">
+                <label id="label-reg-phone"></label>
                 <input id="reg-phone" class="reg-input" type="text" placeholder="Телефон">
+                <input id="reg-adress" class="reg-input" type="text" placeholder="Адрес">
             </div>
         </div>
         <div slot="footer">
             <div class="btns btns--center">
-                <button class="btn btn--ebn btn--red js-send-data" @click="showModalSuccess = true; showModalReg = false">Сделать заказ</button>
+                <button class="btn btn--ebn btn--red js-send-data">Сделать заказ</button>
+<!--                @click="showModalSuccess = true; showModalReg = false"-->
             </div>
         </div>
     </modal>
