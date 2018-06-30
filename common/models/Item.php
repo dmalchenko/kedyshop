@@ -15,6 +15,7 @@ use yii\behaviors\TimestampBehavior;
  * @property int $old_price
  * @property int $new_price
  * @property string $image
+ * @property array $images
  * @property string $article
  * @property string $imageUrl
  * @property string $category_id
@@ -45,15 +46,18 @@ class Item extends \yii\db\ActiveRecord
         ];
     }
 
+    public $files;
+
     /**
      * {@inheritdoc}
      */
     public function rules()
     {
         return [
+            [['files'], 'file', 'extensions' => 'jpg', 'mimeTypes' => 'image/jpeg', 'maxFiles' => 5, 'skipOnEmpty' => true],
             [['old_price', 'new_price', 'created_at', 'updated_at'], 'default', 'value' => null],
             [['old_price', 'new_price', 'created_at', 'updated_at'], 'integer'],
-            [['title', 'description', 'image', 'article', 'category_id', 'sex'], 'string', 'max' => 255],
+            [['title', 'description', 'image', 'image2', 'image3', 'image4', 'image5', 'article', 'category_id', 'sex'], 'string', 'max' => 255],
         ];
     }
 
@@ -78,7 +82,25 @@ class Item extends \yii\db\ActiveRecord
 
     public function getImageUrl()
     {
-        return Yii::getAlias('/images/content/' . $this->image);
+        $imgs = $this->image ? json_decode($this->image) : null;
+        if (!$imgs) {
+            return null;
+        }
+        return Yii::getAlias('/images/content/' . $imgs[0]);
+    }
+
+    public function getImages()
+    {
+        $imgs = $this->image ? json_decode($this->image) : null;
+        if (!$imgs) {
+            return null;
+        }
+        $result = [];
+        foreach ($imgs as $i) {
+            $result[] = Yii::getAlias('/images/content/' . $i);
+        }
+
+        return $result;
     }
 
     /**
