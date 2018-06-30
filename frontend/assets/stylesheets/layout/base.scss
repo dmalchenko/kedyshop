@@ -224,18 +224,6 @@ label {
   display: inline-block;
 }
 
-.link--bordered-hover:hover {
-  text-decoration: underline;
-}
-
-.link--border-left:before {
-  border-left: 1px solid #e87722;
-  content: '';
-  padding-right: 8px;
-  height: 8px;
-  display: inline-block;
-}
-
 /* container */
 .container {
   margin: 0 auto;

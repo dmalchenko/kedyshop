@@ -3,14 +3,22 @@
 .contacts-info {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  text-align: right;
+  align-items: flex-start;
+  text-align: left;
+  max-width: 300px;
+
+  @media only screen and (max-width: 768px) {
+    max-width: none;
+    width: 100%;
+    align-items: center;
+  }
 
   &__phone {
-    font-size: 2rem;
+    font-size: 3.2rem;
     color: $COLOR_TEXT_BASE;
-    margin-bottom: 1rem;
     font-weight: bold;
+    line-height: 1.2;
+    letter-spacing: 2px;
 
     &:hover,
     &:focus,
@@ -21,8 +29,20 @@
 
   &__job-time {
     font-size: 1.4rem;
-    font-weight: bold;
-    max-width: 210px;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-top: 1rem;
+    font-weight: normal;
+
+    &--important {
+      color: $COLOR_TEXT_IMPORTANT;
+    }
+
+    &--time {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 
   &__address {
@@ -42,14 +62,20 @@
     color: $COLOR_BACKGROUND_BASE;
     align-items: center;
     margin-top: 1rem;
+    margin-bottom: 1rem;
+    max-width: none;
 
     .contacts-info__phone {
-      color: $COLOR_BACKGROUND_UNIMPORTANT;
+      color: $COLOR_BACKGROUND_BASE;
+      text-decoration: none;
+      font-size: 2rem;
+      margin-bottom: 0;
+      font-weight: normal;
 
       &:hover,
       &:focus,
       &:active {
-        color: $COLOR_BACKGROUND_UNIMPORTANT;
+        color: $COLOR_BACKGROUND_BASE;
       }
     }
 

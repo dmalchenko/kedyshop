@@ -23,14 +23,15 @@
 }
 
 .c-footer a {
-  color: #9fa7aa;
+  color: $COLOR_BACKGROUND_BASE;
   font-size: 13px;
   display: inline-block;
+  text-decoration: underline;
 }
 
 .c-footer a:hover {
-  color: #e87722;
-  text-decoration: underline;
+  color: $COLOR_BACKGROUND_BASE;
+  text-decoration: none;
 }
 
 @media (max-width: 767px) {
@@ -75,6 +76,18 @@
 
 .c-footer__navigation a {
 
+}
+
+.link--bordered-hover:hover {
+  text-decoration: underline;
+}
+
+.link--border-left:before {
+  border-left: 1px solid $COLOR_BACKGROUND_BASE;
+  content: '';
+  padding-right: 8px;
+  height: 8px;
+  display: inline-block;
 }
 
 @media (max-width: 767px) {
@@ -186,5 +199,11 @@ a.c-footer__link--city {
 
 .c-paying-systems .c-master-card-icon:hover {
   opacity: 1;
+}
+
+.c-footer__copyright {
+  font-size: 1.2rem;
+  color: $COLOR_BACKGROUND_BASE;
+  text-align: center;
 }
 /* /footer */

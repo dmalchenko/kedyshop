@@ -66,7 +66,7 @@ $isContacts = $route == 'site/contacts' ? 'main-menu__list-item--active' : '';
         </div>
         <div slot="footer">
             <div class="cart-btns">
-                <button class="btn btn--ebn" @click="$emit('close')">Продолжить покупки</button>
+                <button class="btn btn--ebn" @click="showModalCart = false;">Продолжить покупки</button>
                 <button class="btn btn--ebn btn--red" @click="showModalCart = false; showModalReg = true;">Сделать заказ</button>
             </div>
         </div>
@@ -89,13 +89,12 @@ $isContacts = $route == 'site/contacts' ? 'main-menu__list-item--active' : '';
                 <span class="c-header__logo-desc">Магазин спортивной обуви</span>
             </a>
             <div class="contacts-info">
-                <a class="contacts-info__phone" href="tel:+ 7 (499) 110-99-71">+ 7 (499) 110-99-71</a>
-                <span class="contacts-info__job-time">ПН-ВС с 09:00 до 21:00</span>
-                <span class="contacts-info__address">
-                    <svg width="15" height="20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-                        <path d="M256,0C153.755,0,70.573,83.182,70.573,185.426c0,126.888,165.939,313.167,173.004,321.035    c6.636,7.391,18.222,7.378,24.846,0c7.065-7.868,173.004-194.147,173.004-321.035C441.425,83.182,358.244,0,256,0z M256,278.719    c-51.442,0-93.292-41.851-93.292-93.293S204.559,92.134,256,92.134s93.291,41.851,93.291,93.293S307.441,278.719,256,278.719z"/>
-                    </svg>
-                    <span class="contacts-info__adress-text">г. Москва, ул. Илона Маска, 90, стр 1</span>
+                <a class="contacts-info__phone" href="tel:+ 7 (499) 490-04-62">8 (499) 490-04-62</a>
+                <a class="contacts-info__phone" href="tel:+ 7 (499) 490-16-93">8 (499) 490-16-93</a>
+                <span class="contacts-info__job-time">ВРЕМЯ РАБОТЫ: <span class="contacts-info__job-time--important">С 9:00 ДО 21:00 ЕЖЕДНЕВНО.</span></span>
+                <span class="contacts-info__job-time contacts-info__job-time--time">
+                    <span>ЗАКАЗЫ ЧЕРЕЗ САЙТ ПРИНИМАЮТСЯ&nbsp;КРУГЛОСУТОЧНО.</span>
+                    <img src="/images/time.png" width="33" height="33" style="margin-left: 10px">
                 </span>
             </div>
         </nav>
@@ -148,15 +147,17 @@ $isContacts = $route == 'site/contacts' ? 'main-menu__list-item--active' : '';
                 <li><a class="link link--border-left" href="">Контакты</a></li>
             </ul>
             <div class="contacts-info contacts-info--footer">
-                <a class="contacts-info__phone" href="tel:+ 7 (499) 110-99-71">+ 7 (499) 110-99-71</a>
-                <span class="contacts-info__job-time">ПН-ВС с 09:00 до 21:00</span>
-                <span class="contacts-info__address">
-                    <svg width="15" height="20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-                        <path d="M256,0C153.755,0,70.573,83.182,70.573,185.426c0,126.888,165.939,313.167,173.004,321.035    c6.636,7.391,18.222,7.378,24.846,0c7.065-7.868,173.004-194.147,173.004-321.035C441.425,83.182,358.244,0,256,0z M256,278.719    c-51.442,0-93.292-41.851-93.292-93.293S204.559,92.134,256,92.134s93.291,41.851,93.291,93.293S307.441,278.719,256,278.719z"/>
-                    </svg>
-                    <span class="contacts-info__adress-text">г. Москва, ул. Илона Маска, 90, стр 1</span>
-                </span>
+                <a class="contacts-info__phone" href="tel:+ 7 (499) 490-04-62">8 (499) 490-04-62</a>
+                <a class="contacts-info__phone" href="tel:+ 7 (499) 490-16-93">8 (499) 490-16-93</a>
+<!--                <span class="contacts-info__job-time">ПН-ВС с 09:00 до 21:00</span>-->
+<!--                <span class="contacts-info__address">-->
+<!--                    <svg width="15" height="20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">-->
+<!--                        <path d="M256,0C153.755,0,70.573,83.182,70.573,185.426c0,126.888,165.939,313.167,173.004,321.035    c6.636,7.391,18.222,7.378,24.846,0c7.065-7.868,173.004-194.147,173.004-321.035C441.425,83.182,358.244,0,256,0z M256,278.719    c-51.442,0-93.292-41.851-93.292-93.293S204.559,92.134,256,92.134s93.291,41.851,93.291,93.293S307.441,278.719,256,278.719z"/>-->
+<!--                    </svg>-->
+<!--                    <span class="contacts-info__adress-text">г. Москва, ул. Илона Маска, 90, стр 1</span>-->
+<!--                </span>-->
             </div>
+            <div class="c-footer__copyright">2015-2018 © «ALICENEGASTAR»</div>
         </footer>
     </div>
 </div>
@@ -235,370 +236,7 @@ $isContacts = $route == 'site/contacts' ? 'main-menu__list-item--active' : '';
 </script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
-    // start app
-
-    // register modal component
-
-    var vssCartBus = new Vue();
-
-    /* ----- vssCart Init ----- */
-
-    var vssCartData = {
-        data: {
-            products: []
-        }
-    };
-
-    var vssCart = Vue.extend({
-        template: '#template-vss-cart',
-        props: {
-            type: String,
-            eventable: Boolean
-        },
-        name: 'vss-cart',
-        data: function() {
-            return vssCartData
-        },
-        methods: {
-            initVssCart: function() {
-                if (localStorage) {
-                    if (localStorage.getItem('vssCart')) {
-                        this.$set(this, 'data', JSON.parse(localStorage.getItem('vssCart')));
-                    }
-                }
-                else {
-                    console.log("localStorage isn't support!");
-                }
-            },
-            setVssCart: function() {
-                if (localStorage) {
-                    localStorage.setItem('vssCart', JSON.stringify(this.data));
-                }
-                else {
-                    console.log("localStorage isn't support!");
-                }
-            },
-            addProduct: function(product) {
-                var self          = this;
-                var productNumber = self.findProductNumber(product);
-                if (productNumber === undefined) {
-                    console.log(1);
-//                    if (this.data.products[productNumber].size != product.size) {
-//
-//                    }
-                    console.log(4);
-                        self.data.products.push({
-                            id: product.id,
-                            title: product.title,
-                            price: product.price,
-                            size: product.size,
-                            count: 1
-                        });
-                } else {
-                    console.log(2);
-                    self.data.products[productNumber].count += 1;
-                }
-                this.setVssCart();
-            },
-            removeProduct: function(product) {
-                var productNumber = this.findProductNumber(product);
-                this.data.products.splice(productNumber, 1);
-                this.setVssCart();
-            },
-            reduceProduct: function(product) {
-                var productNumber = this.findProductNumber(product);
-                if (this.data.products[productNumber].count > 1) {
-                    this.data.products[productNumber].count--;
-                    this.setVssCart();
-                }
-                else {
-                    this.removeProduct(product);
-                }
-            },
-            increaseProduct: function(product) {
-                var productNumber = this.findProductNumber(product);
-                this.data.products[productNumber].count++;
-                this.setVssCart();
-            },
-            setProduct: function(product, value) {
-                var productNumber = this.findProductNumber(product);
-                this.data.products[productNumber].count++;
-                this.setVssCart();
-            },
-            findProductNumber: function(product) {
-                for (var i = 0; i < this.data.products.length; i++) {
-                    if (this.data.products[i].id === product.id) {
-                        return i;
-                    }
-                }
-            },
-            findProductNumbers: function(product) {
-                var productNumbers = [];
-                for (var i = 0; i < this.data.products.length; i++) {
-                    if (this.data.products[i].id === product.id) {
-                        productNumbers.push(i);
-                    }
-                }
-                return productNumbers;
-            },
-            getProductCount: function(product) {
-                var productNumber = this.findProductNumber(product);
-
-                return this.data.products[productNumber].count
-            },
-            getProductsCount: function() {
-                var count = 0;
-                for (var i = 0; i < this.data.products.length; i++) {
-                    count += this.data.products[i].count;
-                }
-
-                return count;
-            },
-            getProductsTotalPrice: function() {
-                var price = 0;
-                for (var i = 0; i < this.data.products.length; i++) {
-                    price += this.data.products[i].count * this.data.products[i].price;
-                }
-
-                return price.toFixed(0);
-            },
-            getProductTotalPrice: function(product) {
-                var productNumber = this.findProductNumber(product);
-
-                return this.data.products[productNumber].count * this.data.products[productNumber].price;
-            }
-        },
-        created: function() {
-            var self = this;
-            self.initVssCart();
-            vssCartBus.$on('vss-cart-add-product', function(product) {
-//                if (self.eventable) {
-                console.log(3);
-                    self.addProduct(product);
-//                }
-            });
-        }
-    });
-
-    Vue.component('modal', {
-        template: '#modal-template',
-        components: {
-            'vss-cart': vssCart
-        }
-    });
-
-
-    new Vue({
-        el: '#app',
-        components: {
-            'vss-cart': vssCart
-        },
-        data: {
-            showModalCart: false,
-            showModalReg: false,
-            minprice: '',
-            maxprice: '',
-            prodcount: vssCartData.data.products.length
-        },
-        prop: {
-
-        },
-        methods: {
-            submitForm: function () {
-                var minPriceString = '';
-                if (this.minprice != '' && this.isNumeric(this.minprice)) {
-                    minPriceString = 'min_price=' + this.minprice + '&';
-                }
-                var maxPriceString = '';
-                if (this.maxprice != '' && this.isNumeric(this.maxprice)) {
-                    maxPriceString = 'max_price=' + this.maxprice;
-                }
-
-                if (minPriceString == '' && maxPriceString == '') {
-                    return;
-                }
-
-                location.href = '/?' + minPriceString + maxPriceString;
-            },
-            isNumeric: function (n) {
-                return !isNaN(parseFloat(n)) && isFinite(n);
-            }
-        }
-    });
-
-    /* ----- Vue Init ----- */
-
-
-    /* ----- jQuery ----- */
-    var csrfToken = $('meta[name="csrf-token"]').attr("content");
-
-    $(function() {
-
-        $('.vss-cart-add-product').click(function(e) {
-            e.preventDefault();
-            var $product = $(this).closest('.js-product');
-            var $size = $($(this).siblings('.catalogue-item__size')).val();
-            console.log($size);
-            vssCartBus.$emit('vss-cart-add-product', {
-                id: $product.data('id'),
-                title: $product.data('title'),
-                image: $product.data('image'),
-                price: $product.data('price'),
-                size: $size,
-                count: 1
-            })
-        });
-
-    });
-
-    (function($) {
-        $(function() {
-            apl.ui.search.init();
-            apl.ui.menuShop.init();
-            apl.ui.menuCart.init();
-            apl.ui.cart.init();
-
-            $("#btn-catalogue").click(function(e) {
-                e.preventDefault();
-                if ($("#catalogue").length) {
-                    $('html, body').animate({
-                        scrollTop: $("#catalogue").offset().top
-                    }, 500);
-                } else {
-                    location.href = '/';
-                }
-            });
-        });
-
-        $('.js-send-data').on('click', function () {
-           console.log(vssCartData.data.products);
-            var megaProducts = vssCartData.data.products;
-            if (!megaProducts.length) {
-                alert('Массив пустой!');
-            }
-            $.ajax({
-                url: "/site/purchase",
-                method: "POST",
-                data: {
-                    name: 'Илон Маск',
-                    phone: '999 999 99',
-                    address: 'г. Москва, ул. Илона Маска, 90, стр 1',
-                    products: megaProducts,
-                    _csrf: csrfToken
-                }
-            }).done(function() {
-                alert('Успех!');
-            });
-        });
-
-        apl = {};
-        apl.ui = {};
-
-        apl.ui.search = (function($) {
-            return {
-                init: function() {
-                    $('#nav-search').on('click', function(e) {
-                        e.preventDefault();
-                        $('#nav-search').addClass('c-header__link--active');
-                        $('#search-page').show();
-                        window.history.pushState('Поиск', 'Поиск', '/search');
-                    });
-                    $('#search-clean-btn').on('click', function() {
-                        $('#search-input').val('');
-                    });
-                }
-            }
-        })(jQuery);
-
-        apl.ui.menuShop = (function($) {
-            function toggleMenu() {
-                if ($('#menu-shop').hasClass('c-menu--opened')) {
-                    $('#menu-shop').removeClass('c-menu--opened');
-                } else {
-                    $('#menu-shop').addClass('c-menu--opened');
-                }
-            }
-            return {
-                init: function() {
-                    $('#nav-menu-shop').on('click', function(e) {
-                        e.preventDefault();
-                        toggleMenu();
-                    });
-                    $('#menu-shop-btn-close').on('click', function(e) {
-                        e.preventDefault();
-                        toggleMenu();
-                    });
-                    $(document).on('click', function(e) {
-                        if ((!$(e.target).is($('#nav-menu-shop')) && $('#nav-menu-shop').has($(e.target)).length === 0) && (!$(e.target).is($('#menu-shop')) && $('#menu-shop').has($(e.target)).length === 0)) {
-                            $('#menu-shop').removeClass('c-menu--opened ');
-                        }
-                    });
-                }
-            }
-        })(jQuery);
-
-        apl.ui.menuCart = (function($) {
-            function toggleMenu() {
-                if ($('#menu-cart').hasClass('c-menu--opened')) {
-                    $('#menu-cart').removeClass('c-menu--opened');
-                } else {
-                    $('#menu-cart').addClass('c-menu--opened');
-                }
-            }
-            return {
-                init: function() {
-//                   $('#nav-menu-cart').on('click', function(e) {
-//                       e.preventDefault();
-//                       toggleMenu();
-//                   });
-//                    $('#menu-cart-btn-close').on('click', function(e) {
-//                        e.preventDefault();
-//                        toggleMenu();
-//                    });
-//                    $(document).on('click', function(e) {
-//                        if ((!$(e.target).is($('#nav-menu-cart')) && $('#nav-menu-cart').has($(e.target)).length === 0) && (!$(e.target).is($('#menu-cart')) && $('#menu-cart').has($(e.target)).length === 0)) {
-//                            $('#menu-cart').removeClass('c-menu--opened ');
-//                        }
-//                    });
-                }
-            }
-        })(jQuery);
-
-        apl.ui.cityModal = (function($) {
-            return {
-                init: function() {
-                    $('.js-footer-link-city').on('click', function() {
-                        var megaProducts = vssCartData.data.products;
-                        $.ajax({
-                            method: "POST",
-                            url: "/site/purchase",
-                            data: {
-                                name: 'Илон Маск',
-                                phone: '999 999 99',
-                                address: 'г. Москва, ул. Илона Маска, 90, стр 1',
-                                products: megaProducts
-                            }
-                        }).done(function() {
-                            alert('Успех!');
-                        });
-                    });
-                }
-            }
-        })(jQuery);
-
-        apl.ui.cart = (function($) {
-            return {
-                init: function() {
-                    $('.js-btn-add-to-cart').on('click', function(e) {
-                        e.preventDefault();
-                        /*Код добавления в корзину*/
-                    });
-                }
-            }
-        })(jQuery);
-    })(jQuery);
-</script>
+<script src="/js/base.js"></script>
 
 <?php $this->endBody() ?>
 </div>

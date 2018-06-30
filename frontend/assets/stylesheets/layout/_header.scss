@@ -6,7 +6,11 @@
   left: 0;
   right: 0;
   z-index: 100;
-  margin-top: 3.5rem;
+  margin-top: 0;
+
+  @media only screen and (max-width: 768px) {
+    margin-top: 3.5rem;
+  }
 
   @if $STATE_HEADER_FIXED == true {
     position: fixed;
@@ -19,7 +23,7 @@
   &__wrap {
     @include container;
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end;
     justify-content: space-between;
     padding: 1rem 0;
     flex-direction: column;
@@ -63,11 +67,11 @@
 
   &__logo-desc {
     display: block;
-    margin: 1rem;
     width: 100%;
     font-size: 2.6rem;
     font-weight: bold;
     text-transform: uppercase;
+    margin-top: 1rem;
 
     @media only screen and (max-width: 768px) {
       font-size: 1.6rem;
