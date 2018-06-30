@@ -557,6 +557,7 @@ $isContacts = $route == 'site/contacts' ? 'main-menu__list-item--active' : '';
                     $('.js-footer-link-city').on('click', function() {
                         var megaProducts = vssCartData.data.products;
                         $.ajax({
+                            method: "POST",
                             url: "/site/purchase",
                             data: {
                                 name: 'Илон Маск',
