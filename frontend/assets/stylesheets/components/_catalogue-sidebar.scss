@@ -29,6 +29,8 @@
 
   &__link {
     display: block;
-    padding: 0.5rem 1rem;
+    padding: 0.8rem 1rem;
+    font-size: 1.6rem;
+    border-bottom: 1px solid $COLOR_BACKGROUND_IMPORTANT;
   }
 }

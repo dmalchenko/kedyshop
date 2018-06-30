@@ -53,6 +53,8 @@
   &__size {
     margin-bottom: 0.5rem;
     width: 140px;
+    padding: 0 0 0 0.5rem;
+    font-size: 1.4rem;
   }
 
   &__price {
@@ -62,7 +64,7 @@
 
     &--old {
       text-decoration: line-through;
-      color: $COLOR_BACKGROUND_IMPORTANT;
+      color: $COLOR_BACKGROUND_VERY_IMPORTANT;
       font-size: 1.6rem;
       margin-bottom: 0.3rem;
     }
@@ -71,7 +73,7 @@
   &__more {
     font-size: 1.4rem;
     text-transform: uppercase;
-    color: $COLOR_BACKGROUND_IMPORTANT;
+    color: $COLOR_BACKGROUND_VERY_IMPORTANT;
     margin-top: 1rem;
     text-decoration: underline;
     font-weight: bold;
@@ -79,7 +81,7 @@
     &:hover,
     &:focus,
     &:active {
-      color: $COLOR_BACKGROUND_IMPORTANT;
+      color: $COLOR_BACKGROUND_VERY_IMPORTANT;
       text-decoration: none;
     }
   }

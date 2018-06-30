@@ -37,7 +37,7 @@
       display: block;
       padding: 0 2rem;
       color: $COLOR_BACKGROUND_BASE;
-      border-right: 1px solid $COLOR_BACKGROUND_UNIMPORTANT;
+      border-right: 1px solid $COLOR_BACKGROUND_BASE;
       font-size: 1.6rem;
       font-weight: bold;
       text-align: center;
@@ -45,7 +45,7 @@
       &:hover,
       &:focus,
       &:active {
-
+        color: $COLOR_BACKGROUND_VERY_IMPORTANT;
       }
 
       @media only screen and (max-width: $MD) {
@@ -63,7 +63,7 @@
 
     &--active {
       a {
-        color: $COLOR_LINK_ACTIVE;
+        color: $COLOR_BACKGROUND_VERY_IMPORTANT;
       }
     }
   }
