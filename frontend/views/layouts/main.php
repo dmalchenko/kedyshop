@@ -43,22 +43,6 @@ $isContacts = $route == 'site/contacts' ? 'main-menu__list-item--active' : '';
         <span class="header-informer__counter"></span>
     </button>
 
-    <modal v-show="showModalReg" @close="showModalReg = false" v-cloak>
-        <h3 slot="header">Введите данные</h3>
-        <div slot="body">
-            <div class="reg">
-                <input class="reg-input" type="text" placeholder="Ваше имя">
-                <input class="reg-input" type="text" placeholder="Адрес">
-                <input class="reg-input" type="text" placeholder="Телефон">
-            </div>
-        </div>
-        <div slot="footer">
-            <div class="btns btns--center">
-                <button class="btn btn--ebn btn--red js-send-data">Сделать заказ</button>
-            </div>
-        </div>
-    </modal>
-
     <modal v-show="showModalCart" @close="showModalCart = false" v-cloak>
         <h3 slot="header">Корзина</h3>
         <div slot="body">
@@ -68,6 +52,34 @@ $isContacts = $route == 'site/contacts' ? 'main-menu__list-item--active' : '';
             <div class="cart-btns">
                 <button class="btn btn--ebn" @click="showModalCart = false;">Продолжить покупки</button>
                 <button class="btn btn--ebn btn--red" @click="showModalCart = false; showModalReg = true;">Сделать заказ</button>
+            </div>
+        </div>
+    </modal>
+
+    <modal v-show="showModalReg" @close="showModalReg = false" v-cloak>
+        <h3 slot="header">Введите данные</h3>
+        <div slot="body">
+            <div class="reg">
+                <input id="reg-name" class="reg-input" type="text" placeholder="Ваше имя">
+                <input id="reg-adress" class="reg-input" type="text" placeholder="Адрес">
+                <input id="reg-phone" class="reg-input" type="text" placeholder="Телефон">
+            </div>
+        </div>
+        <div slot="footer">
+            <div class="btns btns--center">
+                <button class="btn btn--ebn btn--red js-send-data" @click="showModalSuccess = true; showModalReg = false">Сделать заказ</button>
+            </div>
+        </div>
+    </modal>
+
+    <modal v-show="showModalSuccess" @close="showModalSuccess = false" v-cloak>
+        <h3 slot="header">Оформление заказа</h3>
+        <div slot="body">
+            Ваш заказ принят! Наши менеджеры рассмотрят его в рабочие часы и свяжутся с вами.
+        </div>
+        <div slot="footer">
+            <div class="btns btns--center">
+                <button class="btn btn--ebn btn--red" @click="showModalSuccess = false;">Ок</button>
             </div>
         </div>
     </modal>

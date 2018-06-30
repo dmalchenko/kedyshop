@@ -68,6 +68,10 @@ var vssCart = Vue.extend({
             this.data.products.splice(productNumber, 1);
             this.setVssCart();
         },
+        removeProducts: function() {
+            this.data.products = [];
+            this.setVssCart();
+        },
         reduceProduct: function(product) {
             var productNumber = this.findProductNumber(product);
             if (this.data.products[productNumber].count > 1) {
@@ -140,6 +144,12 @@ var vssCart = Vue.extend({
             self.addProduct(product);
 //                }
         });
+        vssCartBus.$on('vss-cart-del-products', function(product) {
+            self.removeProducts();
+        });
+        vssCartBus.$on('vss-cart-get-products-count', function(product) {
+            self.getProductsCount();
+        });
     }
 });
 
@@ -159,9 +169,9 @@ vm = new Vue({
     data: {
         showModalCart: false,
         showModalReg: false,
+        showModalSuccess: false,
         minprice: '',
-        maxprice: '',
-        prodcount: vssCart.data
+        maxprice: ''
     },
     prop: {
 
@@ -236,18 +246,21 @@ $(function() {
         if (!megaProducts.length) {
             alert('Массив пустой!');
         }
+        var regName = $('#reg-name').val();
+        var regPhone = $('#reg-phone').val();
+        var regAdress = $('#reg-adress').val();
         $.ajax({
             url: "/site/purchase",
             method: "POST",
             data: {
-                name: 'Илон Маск',
-                phone: '999 999 99',
-                address: 'г. Москва, ул. Илона Маска, 90, стр 1',
+                name: regName,
+                phone: regPhone,
+                address: regAdress,
                 products: megaProducts,
                 _csrf: csrfToken
             }
         }).done(function() {
-            alert('Успех!');
+            vssCartBus.$emit('vss-cart-del-products');
         });
     });
 
