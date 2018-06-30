@@ -30,17 +30,22 @@ button {
     background: $COLOR_BTN_ACTIVE;
   }
 
+  &[disabled] {
+    opacity: 0.3;
+    cursor: not-allowed;
+    transform: none !important;
+  }
+
   &[disabled]:hover,
   &[disabled]:active,
   &[disabled]:focus {
-    opacity: 0.3;
-    cursor: not-allowed;
     border-color: $COLOR_BTN;
     background: $COLOR_BTN;
+
   }
 
   &--ebn {
-    background-color: $COLOR_EBN; /* Old browsers */
+    background-color: $COLOR_EBN;
     background-image: url('/images/btn-img.png');
     background-repeat:  repeat-x;
     border: 1px solid $COLOR_EBN;
@@ -59,6 +64,13 @@ button {
       background-repeat:  repeat-x;
       border: 1px solid $COLOR_EBN;
     }
+
+    &[disabled]:hover,
+    &[disabled]:active,
+    &[disabled]:focus {
+      background-color: $COLOR_EBN;
+      border: 1px solid $COLOR_EBN;
+    }
   }
 
   &--red {
@@ -69,6 +81,13 @@ button {
     &:active,
     &:focus {
       transform: translateY(1px);
+      background: linear-gradient(to top, #be0101, #f30202);
+      border: none;
+    }
+
+    &[disabled]:hover,
+    &[disabled]:active,
+    &[disabled]:focus {
       background: linear-gradient(to top, #be0101, #f30202);
       border: none;
     }
