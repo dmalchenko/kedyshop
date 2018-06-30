@@ -128,10 +128,10 @@ $isContacts = $route == 'site/contacts' ? 'main-menu__list-item--active' : '';
         <nav class="main-menu">
             <ul class="main-menu__list">
                 <li class="main-menu__list-item <?= $isIndex?>"><a href="/">Главная</a></li>
-                <li class="main-menu__list-item <?= $isCatalogue?>"><a href="catalogue">Каталог</a></li>
-                <li class="main-menu__list-item <?= $isDelivery?>"><a href="delivery">Доставка</a></li>
-                <li class="main-menu__list-item <?= $isReviews?>"><a href="reviews">Отзывы</a></li>
-                <li class="main-menu__list-item <?= $isContacts?>"><a href="contacts">Контакты</a></li>
+                <li class="main-menu__list-item <?= $isCatalogue?>"><a href="/catalogue">Каталог</a></li>
+                <li class="main-menu__list-item <?= $isDelivery?>"><a href="/delivery">Доставка</a></li>
+                <li class="main-menu__list-item <?= $isReviews?>"><a href="/reviews">Отзывы</a></li>
+                <li class="main-menu__list-item <?= $isContacts?>"><a href="/contacts">Контакты</a></li>
             </ul>
         </nav>
         <?= $content ?>

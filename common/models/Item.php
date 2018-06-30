@@ -2,6 +2,7 @@
 
 namespace common\models;
 
+use backend\models\Category;
 use Yii;
 use yii\behaviors\TimestampBehavior;
 
@@ -17,6 +18,9 @@ use yii\behaviors\TimestampBehavior;
  * @property string $article
  * @property string $imageUrl
  * @property string $category_id
+ * @property Category $category
+ * @property string $categoryName
+ * @property string $sex
  * @property int $created_at
  * @property int $updated_at
  */
@@ -49,7 +53,7 @@ class Item extends \yii\db\ActiveRecord
         return [
             [['old_price', 'new_price', 'created_at', 'updated_at'], 'default', 'value' => null],
             [['old_price', 'new_price', 'created_at', 'updated_at'], 'integer'],
-            [['title', 'description', 'image', 'article', 'category_id'], 'string', 'max' => 255],
+            [['title', 'description', 'image', 'article', 'category_id', 'sex'], 'string', 'max' => 255],
         ];
     }
 
@@ -60,12 +64,13 @@ class Item extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'title' => 'Title',
-            'description' => 'Description',
-            'old_price' => 'Old Price',
-            'new_price' => 'New Price',
-            'image' => 'Image',
-            'article' => 'Article',
+            'title' => 'Название',
+            'description' => 'Описание',
+            'old_price' => 'Цена без скидки',
+            'new_price' => 'Цена по скидке',
+            'image' => 'Картинка',
+            'sex' => 'Пол',
+            'article' => 'Ариткул',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
         ];
@@ -88,5 +93,17 @@ class Item extends \yii\db\ActiveRecord
             'Reebok' => 'Reebok',
             'Other' => 'Other',
         ];
+    }
+
+    public function getCategory()
+    {
+        return $this->hasOne(Category::className(), ['id' => 'category_id']);
+    }
+
+    public function getCategoryName()
+    {
+        if ($this->category) {
+            return $this->category->name;
+        }
     }
 }

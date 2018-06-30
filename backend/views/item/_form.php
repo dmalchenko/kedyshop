@@ -21,7 +21,9 @@ use dosamigos\fileupload\FileUpload;
 
     <?= $form->field($model, 'new_price')->textInput() ?>
 
-    <?= $form->field($model, 'category_id')->dropDownList(\common\models\Item::getCategories()) ?>
+    <?= $form->field($model, 'category_id')->dropDownList(\backend\models\Category::getCategoryList()) ?>
+
+    <?= $form->field($model, 'sex')->dropDownList(['men' => 'мужская', 'women' => 'женская']) ?>
 
     <?= $form->field($model, 'article')->textInput(['maxlength' => true]) ?>
 
@@ -31,7 +33,7 @@ use dosamigos\fileupload\FileUpload;
     <label for="item-image">Upload</label>
     <?php
     try {
-         echo FileUpload::widget([
+        echo FileUpload::widget([
             'model' => $model,
             'attribute' => 'image_file',
             'url' => ['media/upload', 'id' => $model->id],
@@ -54,7 +56,7 @@ use dosamigos\fileupload\FileUpload;
     } catch (Exception $e) {
         echo $e->getMessage();
     } ?>
-    <?= $form->field($model, 'image')->textInput(['disabled' => true, 'id' =>'item-img']) ?>
+    <?= $form->field($model, 'image')->textInput(['disabled' => true, 'id' => 'item-img']) ?>
 
     <img src="" alt="" id="picture">
 

@@ -2,6 +2,7 @@
 
 /* @var $this yii\web\View */
 /* @var $items \common\models\Item[] */
+/* @var $categories \common\models\Category[] */
 
 ?>
 <div class="gallery">
@@ -46,17 +47,18 @@
                         <a href="/" class="catalogue-sidebar__link">Все</a>
                     </li>
                     <li class="catalogue-sidebar__list">
-                        <a href="/?category=Adidas" class="catalogue-sidebar__link">Adidas</a>
+                        <a href="/?sex=men" class="catalogue-sidebar__link">Мужские кроссовки</a>
                     </li>
                     <li class="catalogue-sidebar__list">
-                        <a href="/?category=Nike" class="catalogue-sidebar__link">Nike</a>
+                        <a href="/?sex=women" class="catalogue-sidebar__link">Женские кроссовки</a>
                     </li>
-                    <li class="catalogue-sidebar__list">
-                        <a href="/?category=Vans" class="catalogue-sidebar__link">Vans</a>
-                    </li>
-                    <li class="catalogue-sidebar__list">
-                        <a href="/?category=Reebok" class="catalogue-sidebar__link">Reebok</a>
-                    </li>
+                    <?php
+                    if (is_array($categories)) {
+                        foreach ($categories as $category) {
+                            echo $this->render('_category_link', ['category' => $category]);
+                        }
+                    }
+                    ?>
                 </ul>
                 <form class="search-form" @submit.prevent="submitForm" v-cloak>
                     <div class="search-form__prices">

@@ -2,21 +2,23 @@
 
 namespace frontend\controllers;
 
-use backend\models\Purchase;
-use common\models\Item;
 use Yii;
 use yii\base\InvalidConfigException;
 use yii\base\InvalidParamException;
+use yii\filters\AccessControl;
+use yii\filters\VerbFilter;
+use yii\helpers\ArrayHelper;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
-use yii\filters\VerbFilter;
-use yii\filters\AccessControl;
+use yii\web\Response;
+use backend\models\Purchase;
+use common\models\Category;
+use common\models\Item;
 use common\models\LoginForm;
+use frontend\models\ContactForm;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
-use frontend\models\ContactForm;
-use yii\web\Response;
 
 /**
  * Site controller
@@ -214,16 +216,27 @@ class SiteController extends Controller
      * @param null $category
      * @param null $min_price
      * @param null $max_price
+     * @param null $sex
      * @return mixed
      */
-    public function actionIndex($category = null, $min_price = null, $max_price = null)
+    public function actionIndex($category = null, $min_price = null, $max_price = null, $sex = null)
     {
+        if ($category) {
+            $category = Category::getAllCategories($category);
+        }
         $items = Item::find()
             ->andFilterWhere(['category_id' => $category])
             ->andFilterWhere(['>=', 'new_price', $min_price])
             ->andFilterWhere(['<=', 'new_price', $max_price])
+            ->andFilterWhere(['sex' => $sex])
             ->all();
-        return $this->render('index', ['items' => $items]);
+
+        $categories = Category::getCategoryMenu();
+
+        return $this->render('index', [
+            'items' => $items,
+            'categories' => $categories,
+        ]);
     }
 
     public function actionContacts()
@@ -238,12 +251,7 @@ class SiteController extends Controller
 
     public function actionCatalogue($category = null, $min_price = null, $max_price = null)
     {
-        $items = Item::find()
-            ->andFilterWhere(['category_id' => $category])
-            ->andFilterWhere(['>=', 'new_price', $min_price])
-            ->andFilterWhere(['<=', 'new_price', $max_price])
-            ->all();
-        return $this->render('index', ['items' => $items]);
+        return null;
     }
 
     public function actionDelivery()
@@ -255,17 +263,25 @@ class SiteController extends Controller
     {
         Yii::$app->response->format = Response::FORMAT_JSON;
         try {
-            $data = Yii::$app->request->getBodyParams();
+            $data = Yii::$app->request->get();
         } catch (InvalidConfigException $e) {
             $data = [];
         }
 
-        $purchase = new Purchase();
-        $purchase->name = '';
-        $purchase->title = '';
-        $purchase->phone ='';
-        $purchase->address ='';
-//        $purchase->save();
+        if (isset($data['products']) && is_array($data['products'])) {
+            foreach ($data['products'] as $item) {
+                $purchase = new Purchase();
+                $purchase->name = ArrayHelper::getValue($data, 'name');
+                $purchase->address = ArrayHelper::getValue($data, 'adress');
+                $purchase->phone = ArrayHelper::getValue($data, 'phone');
+                $purchase->title = ArrayHelper::getValue($item, 'title')
+                    . ', размер ' . ArrayHelper::getValue($item, 'size')
+                    . ', количество ' . ArrayHelper::getValue($item, 'count');
+                $purchase->price = ArrayHelper::getValue($item, 'price');
+                $purchase->save();
+            }
+        }
+
 
         return ['status' => 'OK', 'code' => 200, 'data' => []];
     }

@@ -37,6 +37,7 @@ AppAsset::register($this);
     ]);
     $menuItems = [
         ['label' => 'Товары', 'url' => ['/item/index']],
+        ['label' => 'Категории', 'url' => ['/category/index']],
         ['label' => 'Заказы', 'url' => ['/purchase/index']],
     ];
     if (Yii::$app->user->isGuest) {
