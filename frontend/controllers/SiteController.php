@@ -73,6 +73,16 @@ class SiteController extends Controller
     }
 
     /**
+     * @param $action
+     * @return bool
+     * @throws BadRequestHttpException
+     */
+    public function beforeAction($action)
+    {
+        $this->enableCsrfValidation = false;
+        return parent::beforeAction($action);
+    }
+    /**
      * Logs in a user.
      *
      * @return mixed
@@ -272,7 +282,7 @@ class SiteController extends Controller
             foreach ($data['products'] as $item) {
                 $purchase = new Purchase();
                 $purchase->name = ArrayHelper::getValue($data, 'name');
-                $purchase->address = ArrayHelper::getValue($data, 'adress');
+                $purchase->address = ArrayHelper::getValue($data, 'address');
                 $purchase->phone = ArrayHelper::getValue($data, 'phone');
                 $purchase->title = ArrayHelper::getValue($item, 'title')
                     . ', размер ' . ArrayHelper::getValue($item, 'size')

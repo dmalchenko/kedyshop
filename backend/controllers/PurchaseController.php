@@ -36,7 +36,7 @@ class PurchaseController extends Controller
     public function actionIndex()
     {
         $dataProvider = new ActiveDataProvider([
-            'query' => Purchase::find(),
+            'query' => Purchase::find()->orderBy(['id' => SORT_DESC]),
         ]);
 
         return $this->render('index', [

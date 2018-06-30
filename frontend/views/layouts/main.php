@@ -431,6 +431,7 @@ $isContacts = $route == 'site/contacts' ? 'main-menu__list-item--active' : '';
 
 
     /* ----- jQuery ----- */
+    var csrfToken = $('meta[name="csrf-token"]').attr("content");
 
     $(function() {
 
@@ -467,11 +468,13 @@ $isContacts = $route == 'site/contacts' ? 'main-menu__list-item--active' : '';
             }
             $.ajax({
                 url: "/site/purchase",
+                method: "POST",
                 data: {
                     name: 'Илон Маск',
                     phone: '999 999 99',
-                    adress: 'г. Москва, ул. Илона Маска, 90, стр 1',
-                    products: megaProducts
+                    address: 'г. Москва, ул. Илона Маска, 90, стр 1',
+                    products: megaProducts,
+                    _csrf: csrfToken
                 }
             }).done(function() {
                 alert('Успех!');
@@ -562,7 +565,7 @@ $isContacts = $route == 'site/contacts' ? 'main-menu__list-item--active' : '';
                             data: {
                                 name: 'Илон Маск',
                                 phone: '999 999 99',
-                                adress: 'г. Москва, ул. Илона Маска, 90, стр 1',
+                                address: 'г. Москва, ул. Илона Маска, 90, стр 1',
                                 products: megaProducts
                             }
                         }).done(function() {
