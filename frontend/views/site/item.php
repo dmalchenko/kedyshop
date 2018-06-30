@@ -2,6 +2,8 @@
 
 /* @var $this \yii\web\View */
 /* @var $item \common\models\Item */
+
+var_dump($item->images);
 ?>
 
 <div class="product-page">

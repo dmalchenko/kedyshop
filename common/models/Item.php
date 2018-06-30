@@ -15,10 +15,7 @@ use yii\behaviors\TimestampBehavior;
  * @property int $old_price
  * @property int $new_price
  * @property string $image
- * @property string $image2
- * @property string $image3
- * @property string $image4
- * @property string $image5
+ * @property array $images
  * @property string $article
  * @property string $imageUrl
  * @property string $category_id
