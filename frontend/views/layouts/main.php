@@ -128,7 +128,7 @@ $isContacts = $route == 'site/contacts' ? 'main-menu__list-item--active' : '';
         <nav class="main-menu">
             <ul class="main-menu__list">
                 <li class="main-menu__list-item <?= $isIndex?>"><a href="/">Главная</a></li>
-                <li class="main-menu__list-item <?= $isCatalogue?>"><a href="/catalogue">Каталог</a></li>
+                <li class="main-menu__list-item <?= $isCatalogue?>"><a id="btn-catalogue" href="/">Каталог</a></li>
                 <li class="main-menu__list-item <?= $isDelivery?>"><a href="/delivery">Доставка</a></li>
                 <li class="main-menu__list-item <?= $isReviews?>"><a href="/reviews">Отзывы</a></li>
                 <li class="main-menu__list-item <?= $isContacts?>"><a href="/contacts">Контакты</a></li>
@@ -458,6 +458,17 @@ $isContacts = $route == 'site/contacts' ? 'main-menu__list-item--active' : '';
             apl.ui.menuShop.init();
             apl.ui.menuCart.init();
             apl.ui.cart.init();
+
+            $("#btn-catalogue").click(function(e) {
+                e.preventDefault();
+                if ($("#catalogue").length) {
+                    $('html, body').animate({
+                        scrollTop: $("#catalogue").offset().top
+                    }, 500);
+                } else {
+                    location.href = '/';
+                }
+            });
         });
 
         $('.js-send-data').on('click', function () {

@@ -8,7 +8,6 @@
 
   &__product {
     @include grid-item;
-    @include col-lg-75;
     @include col-xs-100;
   }
 }

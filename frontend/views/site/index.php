@@ -35,7 +35,7 @@
         </div>
     </div>
 </div>
-<div class="catalogue">
+<div id="catalogue" class="catalogue">
     <div class="catalogue__row">
         <div class="catalogue-sidebar">
             <div class="catalogue-sidebar__wrap">
