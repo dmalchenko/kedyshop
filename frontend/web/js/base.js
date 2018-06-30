@@ -8,7 +8,8 @@ var vssCartBus = new Vue();
 
 var vssCartData = {
     data: {
-        products: []
+        products: [],
+        productsCount: 0
     }
 };
 
@@ -32,14 +33,25 @@ var vssCart = Vue.extend({
             else {
                 console.log("localStorage isn't support!");
             }
+            console.log(this.getProductsCount());
+            this.data.productsCount = this.getProductsCount();
         },
         setVssCart: function() {
+            var self = this;
+            console.info(this.getProductsCount());
+
+
+            console.info(vssCartData.data.productsCount);
             if (localStorage) {
                 localStorage.setItem('vssCart', JSON.stringify(this.data));
             }
             else {
                 console.log("localStorage isn't support!");
             }
+
+            this.data.productsCount = this.getProductsCount();
+
+            vssCartBus.$emit('vss-cart-update');
         },
         addProduct: function(product) {
             var self          = this;
@@ -148,7 +160,7 @@ var vssCart = Vue.extend({
             self.removeProducts();
         });
         vssCartBus.$on('vss-cart-get-products-count', function(product) {
-            self.getProductsCount();
+             self.getProductsCount();
         });
     }
 });
@@ -171,7 +183,8 @@ vm = new Vue({
         showModalReg: false,
         showModalSuccess: false,
         minprice: '',
-        maxprice: ''
+        maxprice: '',
+        productscount: vssCartData.data.productsCount
     },
     prop: {
 
@@ -196,6 +209,15 @@ vm = new Vue({
         isNumeric: function (n) {
             return !isNaN(parseFloat(n)) && isFinite(n);
         }
+    },
+    mounted: function () {
+        var self = this;
+        var tempVar = vssCartData.data.productsCount;
+        this.productscount = tempVar;
+
+        vssCartBus.$on('vss-cart-update', function() {
+            self.productscount = vssCartData.data.productsCount;
+        });
     }
 });
 
