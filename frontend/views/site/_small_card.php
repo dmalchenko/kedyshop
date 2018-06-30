@@ -12,7 +12,7 @@
         <a class="catalogue-item__img-link" href="<?= \yii\helpers\Url::toRoute(['site/item', 'id' => $item->id])?>">
             <img class="catalogue-item__img" src="<?= $item->imageUrl ?>" alt="">
         </a>
-        <select class="catalogue-item__size">
+        <select class="catalogue-item__size js-size">
             <option value="35">35 EUR / 22 см</option>
             <option value="36">36 EUR / 22,5 см</option>
             <option value="37">37 EUR / 23 см</option>
@@ -32,7 +32,7 @@
         ?>
 
         <span class="catalogue-item__price">Цена: <?= $item->new_price ?><span class="ruble">Р</span></span>
-        <a class="vss-cart-add-product btn btn--ebn" href="<?= \yii\helpers\Url::toRoute(['site/item', 'id' => $item->id])?>">Заказать</a>
+        <a class="vss-cart-add-product btn btn--ebn" href="<?= \yii\helpers\Url::toRoute(['site/item', 'id' => $item->id])?>" @click="showModalCart = true;">Заказать</a>
         <a class="catalogue-item__more" href="<?= \yii\helpers\Url::toRoute(['site/item', 'id' => $item->id])?>">Подробнее</a>
     </div>
 </li>

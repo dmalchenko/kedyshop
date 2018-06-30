@@ -151,7 +151,7 @@ Vue.component('modal', {
 });
 
 
-new Vue({
+vm = new Vue({
     el: '#app',
     components: {
         'vss-cart': vssCart
@@ -161,7 +161,7 @@ new Vue({
         showModalReg: false,
         minprice: '',
         maxprice: '',
-        prodcount: vssCartData.data.products.length
+        prodcount: vssCart.data
     },
     prop: {
 
@@ -197,8 +197,7 @@ $(function() {
     $('.vss-cart-add-product').click(function(e) {
         e.preventDefault();
         var $product = $(this).closest('.js-product');
-        var $size = $($(this).siblings('.catalogue-item__size')).val();
-        console.log($size);
+        var $size = $($(this).siblings('.js-size')).val();
         vssCartBus.$emit('vss-cart-add-product', {
             id: $product.data('id'),
             title: $product.data('title'),
@@ -206,7 +205,11 @@ $(function() {
             price: $product.data('price'),
             size: $size,
             count: 1
-        })
+        });
+        // $('html, body').animate({
+        //     scrollTop: $("body").offset().top
+        // }, 500);
+
     });
 
 });

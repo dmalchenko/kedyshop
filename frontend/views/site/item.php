@@ -3,13 +3,13 @@
 /* @var $this \yii\web\View */
 /* @var $item \common\models\Item */
 
-var_dump($item->images);
+//var_dump($item->images);
 ?>
 
 <div class="product-page">
     <div class="product-page__row">
         <div class="product-page__product">
-            <div class="product" data-id="<?= $item->id ?>">
+            <div class="product js-product" data-id="<?= $item->id ?>" data-title="<?= $item->title ?>" data-price="<?= $item->new_price ?>">
                 <a class="product__title" href="<?= \yii\helpers\Url::toRoute(['site/item', 'id' => $item->id])?>"><?= $item->title ?></a>
                 <span class="product__articul">Артикул <?= $item->article ?></span>
                 <a class="product__img-link" href="<?= \yii\helpers\Url::toRoute(['site/item', 'id' => $item->id])?>">
@@ -43,20 +43,20 @@ var_dump($item->images);
                         }
                         ?>
                         <span class="product__price">Цена: <?= $item->new_price ?><span class="ruble">Р</span></span>
-                        <select class="product__size">
-                            <option>35 EUR / 22 см</option>
-                            <option>36 EUR / 22,5 см</option>
-                            <option>37 EUR / 23 см</option>
-                            <option>38 EUR / 23,5 см</option>
-                            <option>39 EUR / 24 см</option>
-                            <option>40 EUR / 24,5 см</option>
-                            <option>41 EUR / 25 см</option>
-                            <option>42 EUR / 26 см</option>
-                            <option>43 EUR / 26,5 см</option>
-                            <option>44 EUR / 27 см</option>
-                            <option>45 EUR / 28 см</option>
+                        <select class="product__size js-size">
+                            <option value="35">35 EUR / 22 см</option>
+                            <option value="36">36 EUR / 22,5 см</option>
+                            <option value="37">37 EUR / 23 см</option>
+                            <option value="38">38 EUR / 23,5 см</option>
+                            <option value="39">39 EUR / 24 см</option>
+                            <option value="40">40 EUR / 24,5 см</option>
+                            <option value="41">41 EUR / 25 см</option>
+                            <option value="42">42 EUR / 26 см</option>
+                            <option value="43">43 EUR / 26,5 см</option>
+                            <option value="44">44 EUR / 27 см</option>
+                            <option value="45">45 EUR / 28 см</option>
                         </select>
-                        <a class="btn btn--ebn btn--block btn--red btn--xl" href="">Заказать по акции</a>
+                        <a class="vss-cart-add-product btn btn--ebn btn--block btn--red btn--xl vss-cart-add-product" href="#" @click="showModalCart = true;">Заказать по акции</a>
                     </div>
                 </div>
             </div>
