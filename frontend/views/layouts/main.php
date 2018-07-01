@@ -28,7 +28,7 @@ $isContacts = $route == 'site/contacts' ? 'main-menu__list-item--active' : '';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
-    <title>ALISAMEGASTAR</title>
+    <title>Магазин брендовой обуви - AlisaMegaStar</title>
     <?php $this->head() ?>
 </head>
 <body>
@@ -157,7 +157,6 @@ $isContacts = $route == 'site/contacts' ? 'main-menu__list-item--active' : '';
                 <li><a class="link" href="">Главная</a></li>
                 <li><a class="link link--border-left" href="">Каталог</a></li>
                 <li><a class="link link--border-left" href="">Доставка</a></li>
-                <li><a class="link link--border-left" href="">О магазине</a></li>
                 <li><a class="link link--border-left" href="">Отзывы</a></li>
                 <li><a class="link link--border-left" href="">Контакты</a></li>
             </ul>
@@ -172,7 +171,7 @@ $isContacts = $route == 'site/contacts' ? 'main-menu__list-item--active' : '';
 <!--                    <span class="contacts-info__adress-text">г. Москва, ул. Илона Маска, 90, стр 1</span>-->
 <!--                </span>-->
             </div>
-            <div class="c-footer__copyright">2015-2018 © «ALICENEGASTAR»</div>
+            <div class="c-footer__copyright">2015-2018 © «ALISAMEGASTAR»</div>
         </footer>
     </div>
 </div>
