@@ -61,9 +61,9 @@ $isContacts = $route == 'site/contacts' ? 'main-menu__list-item--active' : '';
         <div slot="body">
             <div class="reg">
                 <label id="label-reg-name"></label>
-                <input id="reg-name" class="reg-input" type="text" placeholder="Ваше имя">
+                <input id="reg-name" class="reg-input" type="text" placeholder="Ваше имя *">
                 <label id="label-reg-phone"></label>
-                <input id="reg-phone" class="reg-input" type="text" placeholder="Телефон">
+                <input id="reg-phone" class="reg-input" type="text" placeholder="Телефон *">
                 <input id="reg-adress" class="reg-input" type="text" placeholder="Адрес">
             </div>
         </div>
@@ -251,6 +251,8 @@ $isContacts = $route == 'site/contacts' ? 'main-menu__list-item--active' : '';
 </script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="/js/base.js"></script>
 
 <?php $this->endBody() ?>

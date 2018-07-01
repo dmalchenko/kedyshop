@@ -263,6 +263,16 @@ $(function() {
                 location.href = '/';
             }
         });
+
+        var $mainSlider = $('#main-gallery');
+        if ($mainSlider.length) {
+            $mainSlider.slick({
+                infinite: true,
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 3000
+            });
+        }
     });
 
     $('.js-send-data').on('click', function () {

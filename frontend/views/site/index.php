@@ -5,9 +5,11 @@
 /* @var $categories \common\models\Category[] */
 
 ?>
-<div class="gallery">
+<div id="" class="gallery">
     <div class="gallery__row">
-        <div class="gallery__slider">
+        <div class="gallery__slider" id="main-gallery">
+            <img class="gallery__slider-img" src="/images/slider/image.png">
+            <img class="gallery__slider-img" src="/images/slider/image.png">
             <img class="gallery__slider-img" src="/images/slider/image.png">
         </div>
         <div class="gallery__descs">

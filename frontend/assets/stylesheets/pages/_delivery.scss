@@ -3,4 +3,20 @@
 .delivery {
   @include container;
   @include content-block;
+
+  &__img {
+    display: block;
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  p {
+    font-size: 1.8rem;
+    line-height: 1.4;
+
+    &.delivery__desc {
+      font-size: 1.4rem;
+      color: $COLOR_BACKGROUND_UNIMPORTANT;
+    }
+  }
 }

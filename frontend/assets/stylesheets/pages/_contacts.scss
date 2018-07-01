@@ -3,4 +3,26 @@
 .contacts {
   @include container;
   @include content-block;
+
+  &__wrap {
+    display: flex;
+  }
+
+  &__right {
+    max-width: 25%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  p {
+    font-size: 1.8rem;
+    line-height: 1.4;
+
+    a {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+  }
 }
