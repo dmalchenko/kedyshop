@@ -93,8 +93,6 @@ $isContacts = $route == 'site/contacts' ? 'main-menu__list-item--active' : '';
                 <path d="M.981 2.186H25.02A.977.977 0 0 0 26 1.214a.977.977 0 0 0-.981-.971H.98A.977.977 0 0 0 0 1.214c0 .537.44.972.981.972zM.981 9.471H25.02A.977.977 0 0 0 26 8.5a.977.977 0 0 0-.981-.971H.98A.977.977 0 0 0 0 8.5c0 .536.44.971.981.971zM.981 16.757H25.02a.977.977 0 0 0 .981-.971.977.977 0 0 0-.981-.972H.98a.977.977 0 0 0-.981.972c0 .536.44.971.981.971z"/>
             </g>
         </svg>
-        <span class="header-informer__text">Каталог</span>
-        <span class="header-informer__counter"></span>
     </a>
 
     <header class="c-header">
