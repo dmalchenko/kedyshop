@@ -101,4 +101,39 @@
     width: 80%;
     margin-bottom: 1rem;
   }
+
+  &__slider-thumbs {
+    display: flex;
+  }
+
+  &__slide-thumb {
+    width: 60px;
+    height: 60px;
+    margin: 0.5rem;
+
+    img {
+      width: 100%;
+      height:100%;
+      object-fit: cover;
+    }
+  }
+
+  .slick-slider {
+    margin-bottom: 2rem;
+  }
+
+  .slick-initialized .slick-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+
+    @media only screen and (max-width: 768px) {
+      height: 250px;
+    }
+    
+    img {
+      max-height: 100%;
+    }
+  }
 }

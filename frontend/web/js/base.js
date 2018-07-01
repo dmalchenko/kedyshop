@@ -273,9 +273,68 @@ $(function() {
                 autoplaySpeed: 3000
             });
         }
+
+
+        var $productSlider = $('#product-slider');
+        if ($productSlider.length) {
+            $productSlider.slick({
+                infinite: true,
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 5000
+            });
+        }
+
+
+        $("[data-fancybox]").fancybox({
+            speed : 330,
+// Бесконечная прокрутка галереи
+            loop : true,
+// Скорость появления/угасания прозрачности элементов
+            opacity : 'auto',
+// Отступы вокруг картинок (Игнорируется, если ширина окна менее 800px)
+            margin : [44, 0],
+// Горизонтальный отступ между слайдами
+            gutter : 30,
+// Панели управления
+            infobar : false,
+            buttons : true,
+// Какие кнопки на панели управления
+            slideShow  : true,
+            fullScreen : false,
+            thumbs     : true,
+            closeBtn   : true,
+            baseTpl	: '<div class="fancybox-container" role="dialog" tabindex="-1">' +
+            '<div class="fancybox-bg"></div>' +
+            '<div class="fancybox-controls">' +
+            '<div class="fancybox-infobar">' +
+            '<button data-fancybox-previous class="fancybox-button fancybox-button--left" title="Previous"></button>' +
+            '<div class="fancybox-infobar__body">' +
+            '<span class="js-fancybox-index"></span> / <span class="js-fancybox-count"></span>' +
+            '</div>' +
+            '<button data-fancybox-next class="fancybox-button fancybox-button--right" title="Next"></button>' +
+            '</div>' +
+            '<div class="fancybox-buttons">' +
+            '<button data-fancybox-close class="fancybox-button fancybox-button--close" title="Close (Esc)"></button>' +
+            '</div>' +
+            '</div>' +
+            '<div class="fancybox-slider-wrap">' +
+            '<div class="fancybox-slider"></div>' +
+            '</div>' +
+            '<div class="fancybox-caption-wrap"><div class="fancybox-caption"></div></div>' +
+            '</div>',
+// Индикатор загрузки
+            spinnerTpl : '<div class="fancybox-loading"></div>',
+// Шаблон для вывода ошибки
+            errorTpl : '<div class="fancybox-error"><p>The requested content cannot be loaded. <br /> Please try again later.<p></div>',
+// Шаблон для кнопки "Закрыть"
+            closeTpl : '<button data-fancybox-close class="fancybox-close-small">×</button>',
+// Куда вкладывать контейнер
+        });
     });
 
-    $('.js-send-data').on('click', function () {
+
+$('.js-send-data').on('click', function () {
         var megaProducts = vssCartData.data.products;
         var errors = 0;
 

@@ -253,6 +253,9 @@ $isContacts = $route == 'site/contacts' ? 'main-menu__list-item--active' : '';
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.min.css"/>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+
 <script src="/js/base.js"></script>
 
 <?php $this->endBody() ?>
