@@ -28,7 +28,11 @@ use dosamigos\fileupload\FileUpload;
 
     <?= $form->field($model, 'article')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'files[]')->fileInput(['multiple' => true]) ?>
+    <?= $form->field($model, 'files[0]')->fileInput([])->label('Image 1') ?>
+    <?= $form->field($model, 'files[1]')->fileInput([])->label('Image 2') ?>
+    <?= $form->field($model, 'files[2]')->fileInput([])->label('Image 3') ?>
+    <?= $form->field($model, 'files[3]')->fileInput([])->label('Image 4') ?>
+    <?= $form->field($model, 'files[5]')->fileInput([])->label('Image 5') ?>
 
     <?php
 

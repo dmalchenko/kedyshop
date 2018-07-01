@@ -34,7 +34,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'description',
             'old_price',
             'new_price',
-            'new_price',
             'image' => [
                 'format' => 'html',
                 'label' => 'Картинки',

@@ -78,7 +78,25 @@ class ItemController extends Controller
     {
         $model = new Item();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if (Yii::$app->request->isPost) {
+            $model->load(Yii::$app->request->post());
+            $model->files = UploadedFile::getInstances($model, 'files');
+            if ($model->validate()) {
+                $files = [];
+                foreach ($model->files as $file) {
+                    $fileName = uniqid('item_') . $file->baseName . '.' . $file->extension;
+                    $path = Yii::getAlias('@frontend/web/images/content/' . $fileName);
+                    $file->saveAs($path);
+                    Yii::info($fileName);
+                    $files[] = $fileName;
+                }
+                if ($files) {
+                    $model->image = json_encode($files);
+                }
+
+                $model->save(false);
+
+            }
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
@@ -99,6 +117,7 @@ class ItemController extends Controller
         $model = $this->findModel($id);
 
         if (Yii::$app->request->isPost) {
+            $model->load(Yii::$app->request->post());
             $model->files = UploadedFile::getInstances($model, 'files');
             if ($model->validate()) {
                 $files = [];
@@ -116,7 +135,6 @@ class ItemController extends Controller
                 $model->save(false);
 
             }
-
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
