@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use yii\helpers\Url;
 
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -27,7 +28,21 @@ $this->params['breadcrumbs'][] = $this->title;
             'description',
             'old_price',
             'new_price',
-            'image',
+            'image' => [
+                'format' => 'html',
+                'label' => 'Картинки',
+                'value' => function(\backend\models\Item $model) {
+                    $images = $model->images;
+                    $result = '';
+                    if ($images) {
+                        foreach ($images as $image) {
+                            $url = Url::to($image);
+                            $result .= Html::img(Yii::getAlias('@frontendUrl' . $url), ['height' => 100]);
+                        }
+                    }
+                    return $result;
+                }
+            ],
             'category_id',
             'article',
             //'created_at',

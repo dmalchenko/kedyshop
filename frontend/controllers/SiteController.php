@@ -273,7 +273,7 @@ class SiteController extends Controller
     {
         Yii::$app->response->format = Response::FORMAT_JSON;
         try {
-            $data = Yii::$app->request->get();
+            $data = Yii::$app->request->post();
         } catch (InvalidConfigException $e) {
             $data = [];
         }

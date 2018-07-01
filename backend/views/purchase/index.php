@@ -15,14 +15,12 @@ $this->title = 'Заказы';
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
             'id',
+            'title',
             'name',
             'phone',
             'address',
             'price',
-            //'title',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

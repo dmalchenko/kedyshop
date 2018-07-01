@@ -1,6 +1,7 @@
 <?php
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 use dosamigos\fileupload\FileUpload;
 
@@ -28,6 +29,21 @@ use dosamigos\fileupload\FileUpload;
     <?= $form->field($model, 'article')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'files[]')->fileInput(['multiple' => true]) ?>
+
+    <?php
+
+    $images = $model->images;
+    if ($images && is_array($images)) {
+            $result = '';
+            if ($images) {
+                foreach ($images as $image) {
+                    $url = Url::to($image);
+                    $result .= Html::img(Yii::getAlias('@frontendUrl' . $url), ['height' => 100]);
+                }
+            }
+            echo $result;
+        }
+    ?>
 
     <div class="form-group" style="margin-top: 20px">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
