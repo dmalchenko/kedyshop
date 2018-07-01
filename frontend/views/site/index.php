@@ -8,9 +8,9 @@
 <div id="" class="gallery">
     <div class="gallery__row">
         <div class="gallery__slider" id="main-gallery">
-            <img class="gallery__slider-img" src="/images/slider/image.png">
-            <img class="gallery__slider-img" src="/images/slider/image.png">
-            <img class="gallery__slider-img" src="/images/slider/image.png">
+            <img class="gallery__slider-img" src="/images/slider/image1.png">
+            <img class="gallery__slider-img" src="/images/slider/image2.png">
+            <img class="gallery__slider-img" src="/images/slider/image3.png">
         </div>
         <div class="gallery__descs">
             <div class="gallery__desc">

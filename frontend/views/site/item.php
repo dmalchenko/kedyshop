@@ -3,6 +3,11 @@
 /* @var $this \yii\web\View */
 /* @var $item \common\models\Item */
 
+
+use yii\helpers\Html;
+use yii\helpers\Url;
+
+
 //var_dump($item->images);
 ?>
 
@@ -12,9 +17,21 @@
             <div class="product js-product" data-id="<?= $item->id ?>" data-title="<?= $item->title ?>" data-price="<?= $item->new_price ?>">
                 <a class="product__title" href="<?= \yii\helpers\Url::toRoute(['site/item', 'id' => $item->id])?>"><?= $item->title ?></a>
                 <span class="product__articul">Артикул <?= $item->article ?></span>
-                <a class="product__img-link" href="<?= \yii\helpers\Url::toRoute(['site/item', 'id' => $item->id])?>">
-                    <img class="product__img" src="<?= $item->imageUrl ?>" alt="">
-                </a>
+                <div class="gallery__slider" id="main-gallery">
+                    <?php
+                    $images = $item->images;
+                    if ($images && is_array($images)) {
+                        $result = '';
+                        if ($images) {
+                            foreach ($images as $image) {
+                                $url = Yii::getAlias('@frontendUrl' . Url::to($image));
+                                $result .= Html::img($url, ['class' => 'gallery__slider-img']);
+                            }
+                        }
+                        echo $result;
+                    }
+                    ?>
+                </div>
                 <div class="product__info">
                     <div class="product__promo">
                         <div class="product__promo-item">
