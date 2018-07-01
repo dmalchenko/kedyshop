@@ -120,19 +120,19 @@ $isContacts = $route == 'site/contacts' ? 'main-menu__list-item--active' : '';
             </button>
             <ul class="c-menu__list">
                 <li>
-                    <a class="c-menu__btn" href="#">Главная</a>
+                    <a class="c-menu__btn" href="/">Главная</a>
                 </li>
                 <li>
-                    <a class="c-menu__btn" href="#">Каталог</a>
+                    <a class="c-menu__btn" href="/">Каталог</a>
                 </li>
                 <li>
-                    <a class="c-menu__btn c-menu__btn--active" href="#">Доставка</a>
+                    <a class="c-menu__btn c-menu__btn--active" href="/delivery">Доставка</a>
                 </li>
                 <li>
-                    <a class="c-menu__btn" href="#">Отзывы</a>
+                    <a class="c-menu__btn" href="/reviews">Отзывы</a>
                 </li>
                 <li>
-                    <a class="c-menu__btn" href="#">Контакты</a>
+                    <a class="c-menu__btn" href="/contacts">Контакты</a>
                 </li>
             </ul>
         </div>
