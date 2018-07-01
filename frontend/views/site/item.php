@@ -18,45 +18,42 @@ use yii\helpers\Url;
                 <a class="product__title" href="<?= \yii\helpers\Url::toRoute(['site/item', 'id' => $item->id])?>"><?= $item->title ?></a>
                 <span class="product__articul">Артикул <?= $item->article ?></span>
                 <div class="product__slider" id="product-slider">
-<!--                    --><?php
-//                    $images = $item->images;
-//                    if ($images && is_array($images)) {
-//                        $result = '';
-//                        if ($images) {
-//                            foreach ($images as $image) {
-//                                $url = Yii::getAlias('@frontendUrl' . Url::to($image));
-//                                $result .= Html::img($url, ['class' => 'product__slide']);
-//                            }
-//                        }
-//                        echo $result;
-//                    }
-//                    ?>
-                    <a href="//alisamegastar.ru/images/content/item_5b378ca2f26b46AtjAwInmxQ.jpg" class="product__slide" data-fancybox="images">
-                        <img src="//alisamegastar.ru/images/content/item_5b378ca2f26b46AtjAwInmxQ.jpg" alt="" class="product__slide-img">
-                    </a>
-                    <a href="//alisamegastar.ru/images/content/item_5b378ca2f27486d141f2a.jpg" class="product__slide" data-fancybox="images">
-                        <img src="//alisamegastar.ru/images/content/item_5b378ca2f27486d141f2a.jpg" alt="" class="product__slide-img">
-                    </a>
-                    <a href="//alisamegastar.ru/images/content/item_5b378ca2f27c28d3006d5.jpg" class="product__slide" data-fancybox="images">
-                        <img src="//alisamegastar.ru/images/content/item_5b378ca2f27c28d3006d5.jpg" alt="" class="product__slide-img">
-                    </a>
-                    <a href="//alisamegastar.ru/images/content/item_5b378ca2f282a9.jpg" class="product__slide" data-fancybox="images">
-                        <img src="//alisamegastar.ru/images/content/item_5b378ca2f282a9.jpg" alt="" class="product__slide-img">
-                    </a>
+                    <?php
+                    $images = $item->images;
+                    if ($images && is_array($images)) {
+                        $result = '';
+                        if ($images) {
+                            foreach ($images as $image) {
+                                $url = Yii::getAlias('@frontendUrl' . Url::to($image));
+                                $img = Html::img($url, ['class' => 'product__slide-img']);
+                                $result .= Html::a($img, $url,[
+                                    'class' => 'product__slide',
+                                    'data-fancybox' => 'images'
+                                ]);
+                            }
+                        }
+                        echo $result;
+                    }
+                    ?>
                 </div>
                 <div class="product__slider-thumbs">
-                    <a href="//alisamegastar.ru/images/content/item_5b378ca2f26b46AtjAwInmxQ.jpg" class="product__slide-thumb" data-fancybox="images">
-                        <img src="//alisamegastar.ru/images/content/item_5b378ca2f26b46AtjAwInmxQ.jpg" alt="" class="product__slide-img">
-                    </a>
-                    <a href="//alisamegastar.ru/images/content/item_5b378ca2f27486d141f2a.jpg" class="product__slide-thumb" data-fancybox="images">
-                        <img src="//alisamegastar.ru/images/content/item_5b378ca2f27486d141f2a.jpg" alt="" class="product__slide-img">
-                    </a>
-                    <a href="//alisamegastar.ru/images/content/item_5b378ca2f27c28d3006d5.jpg" class="product__slide-thumb" data-fancybox="images">
-                        <img src="//alisamegastar.ru/images/content/item_5b378ca2f27c28d3006d5.jpg" alt="" class="product__slide-img">
-                    </a>
-                    <a href="//alisamegastar.ru/images/content/item_5b378ca2f282a9.jpg" class="product__slide-thumb" data-fancybox="images">
-                        <img src="//alisamegastar.ru/images/content/item_5b378ca2f282a9.jpg" alt="" class="product__slide-img">
-                    </a>
+                    <?php
+                    $images = $item->images;
+                    if ($images && is_array($images)) {
+                        $result = '';
+                        if ($images) {
+                            foreach ($images as $image) {
+                                $url = Yii::getAlias('@frontendUrl' . Url::to($image));
+                                $img = Html::img($url, ['class' => 'product__slide-img']);
+                                $result .= Html::a($img, $url,[
+                                    'class' => 'product__slide-thumb',
+                                    'data-fancybox' => 'images'
+                                ]);
+                            }
+                        }
+                        echo $result;
+                    }
+                    ?>
                 </div>
                 <div class="product__info">
                     <div class="product__promo">
