@@ -99,7 +99,7 @@ $isContacts = $route == 'site/contacts' ? 'main-menu__list-item--active' : '';
         <nav class="c-header__wrap">
             <a class="c-header__logo" href="/">
                 <img src="/images/logo.png">
-                <span class="c-header__logo-desc">Магазин спортивной обуви</span>
+                <span class="c-header__logo-desc">Магазин брендовой обуви</span>
             </a>
             <div class="contacts-info">
                 <a class="contacts-info__phone" href="tel:+ 7 (499) 490-04-62">8 (499) 490-04-62</a>
