@@ -3,9 +3,10 @@
 .catalogue-sidebar {
   @include grid-item;
   @include col-lg-25;
+  @include col-xs-100;
 
   @media only screen and (max-width: $MD) {
-    display: none;
+    text-align: center;
   }
 
   &__wrap {
@@ -19,6 +20,10 @@
     font-weight: bold;
     padding: 1rem;
     border-radius: 8px 8px 0 0;
+
+    @media only screen and (max-width: $MD) {
+      margin-bottom: 0;
+    }
   }
 
   &__list {

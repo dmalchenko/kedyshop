@@ -41,10 +41,10 @@
     <div class="catalogue__row">
         <div class="catalogue-sidebar">
             <div class="catalogue-sidebar__wrap">
-                <div class="catalogue-sidebar__header">
+                <div class="catalogue-sidebar__header" @click="showSidebar = !showSidebar;">
                     Каталог
                 </div>
-                <ul class="catalogue-sidebar__list">
+                <ul class="catalogue-sidebar__list" v-show="showSidebar">
                     <li class="catalogue-sidebar__list">
                         <a href="/" class="catalogue-sidebar__link">Все</a>
                     </li>

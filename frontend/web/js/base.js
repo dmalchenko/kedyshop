@@ -185,6 +185,7 @@ vm = new Vue({
         showModalCart: false,
         showModalReg: false,
         showModalSuccess: false,
+        showSidebar: true,
         minprice: '',
         maxprice: '',
         productscount: vssCartData.data.productsCount
