@@ -19,6 +19,8 @@ Thumbs.db
 
 # composer vendor dir
 /vendor
+/node_modules
+/node-v8.11.3-linux-x64
 
 # composer itself is not needed
 composer.phar

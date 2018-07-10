@@ -102,8 +102,15 @@ $isContacts = $route == 'site/contacts' ? 'main-menu__list-item--active' : '';
                 <span class="c-header__logo-desc">Магазин брендовой обуви</span>
             </a>
             <div class="contacts-info">
-                <a class="contacts-info__phone" href="tel:+ 7 (499) 490-04-62">8 (499) 490-04-62</a>
-                <a class="contacts-info__phone" href="tel:+ 7 (499) 490-16-93">8 (499) 490-16-93</a>
+                <div class="contacts-info__row">
+                    <a href="https://www.instagram.com/megastar_brand/">
+                        <img src="/images/instagram.png" alt="" style="width: 26px;">
+                    </a>
+                    <a href="https://www.facebook.com/">
+                        <img src="/images/facebook.png" alt="" style="width: 26px;">
+                    </a>
+                    <a class="contacts-info__phone" href="tel:+ 7 (499) 490-04-62">8 (499) 490-04-62</a>
+                </div>
                 <span class="contacts-info__job-time">ВРЕМЯ РАБОТЫ: <span class="contacts-info__job-time--important">С 9:00 ДО 21:00 ЕЖЕДНЕВНО.</span></span>
                 <span class="contacts-info__job-time contacts-info__job-time--time">
                     <span>ЗАКАЗЫ ЧЕРЕЗ САЙТ ПРИНИМАЮТСЯ&nbsp;КРУГЛОСУТОЧНО.</span>
@@ -159,8 +166,13 @@ $isContacts = $route == 'site/contacts' ? 'main-menu__list-item--active' : '';
                 <li><a class="link link--border-left" href="">Контакты</a></li>
             </ul>
             <div class="contacts-info contacts-info--footer">
+                <a href="https://www.instagram.com/megastar_brand/">
+                    <img src="/images/instagram.png" alt="" style="width: 26px;">
+                </a>
+                <a href="https://www.facebook.com/">
+                    <img src="/images/facebook.png" alt="" style="width: 26px;">
+                </a>
                 <a class="contacts-info__phone" href="tel:+ 7 (499) 490-04-62">8 (499) 490-04-62</a>
-                <a class="contacts-info__phone" href="tel:+ 7 (499) 490-16-93">8 (499) 490-16-93</a>
 <!--                <span class="contacts-info__job-time">ПН-ВС с 09:00 до 21:00</span>-->
 <!--                <span class="contacts-info__address">-->
 <!--                    <svg width="15" height="20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">-->
