@@ -104,11 +104,13 @@ $isContacts = $route == 'site/contacts' ? 'main-menu__list-item--active' : '';
             <div class="contacts-info">
                 <div class="contacts-info__row">
                     <a href="https://www.instagram.com/megastar_brand/">
-                        <img src="/images/instagram.png" alt="" style="width: 26px;">
+                        <img src="/images/instagram.png" alt="" style="width: 64px;">
                     </a>
                     <a href="https://www.facebook.com/">
-                        <img src="/images/facebook.png" alt="" style="width: 26px;">
+                        <img src="/images/facebook.png" alt="" style="width: 64px;">
                     </a>
+                </div>
+                <div class="contacts-info__row">
                     <a class="contacts-info__phone" href="tel:+ 7 (499) 490-04-62">8 (499) 490-04-62</a>
                 </div>
                 <span class="contacts-info__job-time">ВРЕМЯ РАБОТЫ: <span class="contacts-info__job-time--important">С 9:00 ДО 21:00 ЕЖЕДНЕВНО.</span></span>
@@ -167,10 +169,10 @@ $isContacts = $route == 'site/contacts' ? 'main-menu__list-item--active' : '';
             </ul>
             <div class="contacts-info contacts-info--footer">
                 <a href="https://www.instagram.com/megastar_brand/">
-                    <img src="/images/instagram.png" alt="" style="width: 26px;">
+                    <img src="/images/instagram.png" alt="" style="width: 64px;">
                 </a>
                 <a href="https://www.facebook.com/">
-                    <img src="/images/facebook.png" alt="" style="width: 26px;">
+                    <img src="/images/facebook.png" alt="" style="width: 64px;">
                 </a>
                 <a class="contacts-info__phone" href="tel:+ 7 (499) 490-04-62">8 (499) 490-04-62</a>
 <!--                <span class="contacts-info__job-time">ПН-ВС с 09:00 до 21:00</span>-->

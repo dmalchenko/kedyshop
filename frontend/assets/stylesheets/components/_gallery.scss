@@ -2,7 +2,7 @@
   @include container;
 
   @media only screen and (max-width: 768px) {
-    display: none;
+    display: block;
   }
 
   &__row {
@@ -12,11 +12,13 @@
   &__slider {
     @include grid-item;
     @include col-lg-66;
+    @include col-xs-100;
   }
 
   &__slider-img {
     width: 100%;
     min-height: auto;
+    border-radius: 5px;
   }
 
   &__descs {
@@ -24,6 +26,9 @@
     @include col-lg-33;
     display: flex;
     flex-direction: column;
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
   }
 
   &__desc {

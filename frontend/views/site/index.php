@@ -49,18 +49,25 @@
                         <a href="/" class="catalogue-sidebar__link">Все</a>
                     </li>
                     <li class="catalogue-sidebar__list">
-                        <a href="/?sex=men" class="catalogue-sidebar__link">Мужские кроссовки</a>
+                        <a href="/?sex=men" class="catalogue-sidebar__link">Мужская обувь</a>
                     </li>
                     <li class="catalogue-sidebar__list">
-                        <a href="/?sex=women" class="catalogue-sidebar__link">Женские кроссовки</a>
+                        <a href="/?sex=women" class="catalogue-sidebar__link">Женская обувь</a>
                     </li>
-                    <?php
-                    if (is_array($categories)) {
-                        foreach ($categories as $category) {
-                            echo $this->render('_category_link', ['category' => $category]);
+                    <li class="catalogue-sidebar__list">
+                        <span class="catalogue-sidebar__link" @click="showSmallSidebar = !showSmallSidebar;">Бренды</span>
+                    </li>
+
+                    <div class="catalogue-sidebar__list" v-show="showSmallSidebar">
+                        <?php
+                        if (is_array($categories)) {
+                            foreach ($categories as $category) {
+                                echo $this->render('_category_link', ['category' => $category]);
+                            }
                         }
-                    }
-                    ?>
+                        ?>
+                    </div>
+
                 </ul>
                 <form class="search-form" @submit.prevent="submitForm" v-cloak>
                     <div class="search-form__prices">

@@ -12,7 +12,7 @@
 
 <?php
 if (isset($category['items']) && is_array($category['items'])) {
-    $template = '   <li class="catalogue-sidebar__list">
+    $template = '   <li class="catalogue-sidebar__list" v-show="showSmallSidebar">
                         <a href="/?category=%s" class="catalogue-sidebar__link">%s</a>
                     </li>';
     foreach ($category['items'] as $item) {
